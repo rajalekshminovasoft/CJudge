@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Tscout" Class="CJDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;Initial Catalog=Tscout;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TscoutConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.InfokitCategory" Member="InfokitCategories">
+    <Type Name="InfokitCategory">
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InfokitFileList" Member="InfokitFileLists">
+    <Type Name="InfokitFileList">
+      <Column Name="FileId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="InfoFileName" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InfokitDynamicContents" Member="InfokitDynamicContents">
+    <Type Name="InfokitDynamicContent">
+      <Column Name="InfokitId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PhotoImage" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Description1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image1" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Description2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image2" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Description3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image3" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Description4" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image4" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="Description5" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image5" Type="System.String" DbType="NVarChar(400)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="DisplayOrder" Parameter="displayOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddInfokitFileDetails" Method="AddInfokitFileDetails">
+    <Parameter Name="FileId" Parameter="fileId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DisplayName" Parameter="displayName" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="InfoFileName" Parameter="infoFileName" Type="System.String" DbType="VarChar(400)" />
+    <Parameter Name="DisplayOrder" Parameter="displayOrder" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddInfokitDynamicContent" Method="AddInfokitDynamicContent">
+    <Parameter Name="InfokitId" Parameter="infokitId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PhotoImage" Parameter="photoImage" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Description1" Parameter="description1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Image1" Parameter="image1" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Description2" Parameter="description2" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Image2" Parameter="image2" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Description3" Parameter="description3" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Image3" Parameter="image3" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Description4" Parameter="description4" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Image4" Parameter="image4" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Description5" Parameter="description5" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Image5" Parameter="image5" Type="System.String" DbType="NVarChar(400)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

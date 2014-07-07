@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CJDataClasses">
+  <DataContextMoniker Name="/CJDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3eba15d8-60c6-487c-87bb-04cfd4c29eb3" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/CJDataClassesDataContext/InfokitCategory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe0087e7-5543-4ae4-a4c2-e7d413fca375" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4aecc5dd-0ce6-4dc1-bfd6-78514058d099" absoluteBounds="2.75, 0.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/CJDataClassesDataContext/InfokitFileList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="afd49a1b-a979-4603-a4bb-22703ec04ab3" absoluteBounds="2.765, 0.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="05369cbb-7cd8-4a1b-8e9f-351ff920a6df" absoluteBounds="5.125, 0.5, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/CJDataClassesDataContext/InfokitDynamicContent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c30e59ac-a805-4aa4-a8a0-d93d23278f87" absoluteBounds="5.14, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

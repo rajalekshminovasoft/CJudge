@@ -1,0 +1,278 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CJMaster.master.cs" Inherits="CJMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<%--<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>--%>
+    <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CareerJudge</title>
+
+        <link href="style.css" rel="stylesheet" />
+<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+	<!-- End WOWSlider.com HEAD section -->
+
+
+
+    <link type="text/css" href="menu.css" rel="stylesheet" />  
+
+    <script type="text/javascript" src="menu.js"></script>
+
+    <div style="z-index:9999;visibility:visible;display:block;padding:3px;font:bold 11px Arial;position:absolute;top:10px;left:10px;"><a style="color:#000;" href="http://apycom.com/"></a></div>
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <%--<div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>--%>
+        <div id="main_box">
+	<div id="main_box_top"></div>
+    <div id="main_box_header">
+    	<div class="main_box_header_inner">
+        	<div class="header_inner_head">
+            	<div class="header_inner_head_inn"><img src="images/head.jpg" width="590" height="176" alt="" /></div>
+                <div class="header_inner_head_inn_1">
+           		  <div class="header_inner_head_inn_2">
+                        
+                        <div class="header_inner_head_inn_2_in">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">About Us</a>  &nbsp;&nbsp;&nbsp;!&nbsp;&nbsp;&nbsp; <a href="#">Contact Us</a> &nbsp;&nbsp;&nbsp; ! &nbsp;&nbsp;&nbsp; <a href="#">Apply Now</a>   </div>
+                        
+
+                        
+                        
+                        
+                        
+                        
+                  </div>
+                        <div class="header_inner_head_inn_3">
+                        
+                        
+                        <table width="200" border="0">
+  <tr>
+    <td style="color:#8cb6d6;">User ID</td>
+    <td style="color:#8cb6d6;">Password</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
+    <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
+    <td><a href="#"><img src="images/submit.jpg" width="56" height="24" alt="" /></a></td>
+  </tr>
+</table>
+
+                        
+                        
+                        
+                        
+                        </div>
+              </div>
+            </div>
+            <div class="header_menu">
+            
+            <div class="header_menu_inner">
+            
+            <div id="menu">
+
+    <ul class="menu">
+
+        <li><a href="index.html"><span>Home</span></a>    </li>
+
+        <li><a href="#" class="parent"><span>About Us</span></a>
+
+        <div><ul>
+
+               <!-- <li><a href="inner.html" class="parent"><span>Sub Item 1</span></a>
+
+                    <div><ul>
+
+                        <li><a href="#"><span>Sub Item 1.1</span></a>
+                       
+
+                        </li>
+
+                        <li><a href="#"><span>Sub Item 1.2</span></a></li>
+
+                        <li><a href="#"><span>Sub Item 1.3</span></a></li>
+
+                        <li><a href="#"><span>Sub Item 1.4</span></a></li>
+
+                        <li><a href="#"><span>Sub Item 1.5</span></a></li>
+
+                        <li><a href="#"><span>Sub Item 1.6</span></a></li>
+
+                        <li><a href="#"><span>Sub Item 1.7</span></a> </li>
+
+                    </ul></div>
+
+                </li>-->
+
+<li><a href="AboutUs.aspx?id=1"><span>About Us</span></a></li>
+            
+         <li><a href="AboutUs.aspx?id=2" ><span>Our Vision</span></a></li>
+         <li><a href="AboutUs.aspx?id=3"><span>Unique Stature</span></a></li>
+         <li><a href="AboutUs.aspx?id=4"><span>Our Values</span></a></li>
+
+            </ul></div>
+            
+        </li>
+
+        <li><a href="#" class="parent"><span>Products</span></a>
+            <div>
+                <ul>
+                     <li><a href="Products.aspx?id=5"><span>TalentScout</span></a></li>
+            
+         <li><a href="Products.aspx?id=6"><span>CODE-Informatics</span></a></li>
+         <li><a href="Products.aspx?id=7" ><span>Assesments</span></a></li>
+        
+                </ul>
+            </div>
+        </li>
+
+         <li><a href="#" class="parent"><span>Services</span></a>
+            <div>
+                <ul>
+                     <li><a href="Services.aspx?id=8" ><span>Corporate HR Services</span></a></li>
+            
+         <li><a href="Services.aspx?id=9"><span>Assessment Services</span></a></li>
+         <li><a href="Services.aspx?id=10"><span>Career Management Services</span></a></li>
+         <li><a href="Services.aspx?id=11"><span>Psychometric Services</span></a></li>   
+                    </ul> </div> 
+                </li> 
+        <li class="last"><a href="WebUserCreation.html"><span>Take a Test</span></a></li>
+        <li class="last"><a href="InfoKit.aspx"><span>Infokit</span></a></li>
+        <li class="last"><a href="Contact.aspx" ><span>Contacts</span></a></li>
+
+    </ul>
+
+</div>
+            
+            
+            </div>
+            
+             <div class="header_menu_inner_1">
+             	<div class="header_menu_icons">
+                	<a href="#" title="Facebook"><div class="header_menu_icons_1"></div></a>
+                    <a href="#" title="Twitter"><div class="header_menu_icons_2"></div></a>
+                    <a href="#" title="Pinterest"><div class="header_menu_icons_3"></div></a>
+                    <a href="#" title="Google+"><div class="header_menu_icons_4"></div></a>
+                    <a href="#" title="RSS"><div class="header_menu_icons_5"></div></a>
+                </div>
+             </div>
+            
+            
+            
+            
+            
+            
+            </div>
+            
+        </div>
+    </div>
+    <div id="main_box_bottom"></div>
+
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+            </div>
+
+<div id="footer">
+	<div class="footer_inn">
+    	<div class="footer_inn1">
+        	<div class="footer_inn1_head">CONTACT US</div>
+            <div class="footer_inn1_inner">
+            
+            
+            
+            # G2 14 AR Court; Kaveri Nagar; RT Nagar PO<br/>
+Near Hebbal; Bangalore - 560 032<br/>
+Karnataka; India<br/>
+Phone: +91 80 4207 0394<br/>
+Contact Person: Dr. NC Joseph (PhD)<br/>
+Mobile: +91-99860-09643<br/>
+E-mail: ncjoseph@careerjudge.com
+       
+            </div>
+        </div>
+        
+        
+        
+       <div class="footer_inn2">
+        	<div class="footer_inn2_head">CODE-I HR Solutions</div>
+            <div class="footer_inn2_inner">           
+          
+        <ul>
+        <li id="active"><a href="#">Job Analysis</a></li>
+        <li><a href="#">Job Description</a></li>
+        <li><a href="#">Competency Mapping</a></li>
+        <li><a href="#">Gap Analysis</a></li>
+        <li><a href="#">Benchmarking</a></li>
+        <li><a href="#">Performance Management</a></li>
+        <li><a href="#">Job Evaluation</a></li>
+       
+        </ul>
+
+            </div>
+        </div> 
+        
+        
+        
+        
+        
+        
+        
+        <div class="footer_inn2">
+        	<div class="footer_inn2_head">Assessment Solutions</div>
+            <div class="footer_inn2_inner">           
+          
+        <ul>
+        <li id="Li1"><a href="#">Customized Assessments</a></li>
+        <li><a href="#">Off-the-Shelf Assessments</a></li>
+        <li><a href="#">Psychometric Assessments</a></li>
+        <li><a href="#">Job-Specific Competency Tests</a></li>
+        <li><a href="#">Assesment centers</a></li>
+       
+       
+        </ul>
+
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <div class="footer_inn2">
+        	<div class="footer_inn2_head">Psychometric Services</div>
+            <div class="footer_inn2_inner">           
+          
+        <ul>
+        <li id="Li2"><a href="#">Psychometric Analyses</a></li>
+        <li><a href="#">Test Calibration</a></li>
+        <li><a href="#">Test Validation, and Norm Setting</a></li>
+         <li><a href="#">Cut-Score Setting</a></li>
+       
+        </ul>
+
+            </div>
+        </div>
+  
+    </div>
+</div>
+
+<div id="footer_bottom">
+	<div class="footer_bottom_inn">© 2014 CareerJudge. All Rights Reserved &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Designed & Developed by NOVASOFT</div>
+</div>
+    </form>
+</body>
+</html>
