@@ -58,7 +58,7 @@ public partial class InfoKit : System.Web.UI.Page
                     lblGroupname.Font.Size = 10;
                     lblGroupname.Text = categoryname;
                     trInfokitList = new HtmlTableRow();
-                    tcellInfokitList = new HtmlTableCell(); //tcellInfokitList.Style.Add("text-align", "center");
+                    tcellInfokitList = new HtmlTableCell(); 
                     tcellInfokitList.Controls.Add(lblGroupname);
                     trInfokitList.Cells.Add(tcellInfokitList);
                     dtInfikitList.Rows.Add(trInfokitList);

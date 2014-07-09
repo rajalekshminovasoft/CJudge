@@ -64,9 +64,15 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
-    <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
-    <td><a href="#"><img src="images/submit.jpg" width="56" height="24" alt="" /></a></td>
+    <td>
+        <asp:TextBox ID="txt_username" runat="server" style="background:#004173; border:1px #00559c solid; width:162px; height:20px;"></asp:TextBox>
+       <%-- <input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" />--%></td>
+    <td>
+        <asp:TextBox ID="txt_password" runat="server" style="background:#004173; border:1px #00559c solid; width:162px; height:20px;"></asp:TextBox>
+        <%--<input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" />--%></td>
+    <td>
+        <asp:ImageButton ID="imgbtn_Submit" runat="server" ImageUrl="images/submit.jpg" width="56px" height="24px" />
+        <%--<img src="images/submit.jpg" width="56" height="24" alt="" />--%></td>
   </tr>
 </table>
 
@@ -85,7 +91,7 @@
 
     <ul class="menu">
 
-        <li><a href="index.html"><span>Home</span></a>    </li>
+        <li><a href="Default.aspx"><span>Home</span></a>    </li>
 
         <li><a href="#" class="parent"><span>About Us</span></a>
 

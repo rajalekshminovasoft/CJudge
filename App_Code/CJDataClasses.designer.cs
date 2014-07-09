@@ -32,6 +32,21 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
   partial void InsertInfokitDynamicContent(InfokitDynamicContent instance);
   partial void UpdateInfokitDynamicContent(InfokitDynamicContent instance);
   partial void DeleteInfokitDynamicContent(InfokitDynamicContent instance);
+  partial void InsertDesignation(Designation instance);
+  partial void UpdateDesignation(Designation instance);
+  partial void DeleteDesignation(Designation instance);
+  partial void InsertIndustry(Industry instance);
+  partial void UpdateIndustry(Industry instance);
+  partial void DeleteIndustry(Industry instance);
+  partial void InsertJobCategory(JobCategory instance);
+  partial void UpdateJobCategory(JobCategory instance);
+  partial void DeleteJobCategory(JobCategory instance);
+  partial void InsertOrganization(Organization instance);
+  partial void UpdateOrganization(Organization instance);
+  partial void DeleteOrganization(Organization instance);
+  partial void InsertGroupUser(GroupUser instance);
+  partial void UpdateGroupUser(GroupUser instance);
+  partial void DeleteGroupUser(GroupUser instance);
   #endregion
 	
 	public CJDataClassesDataContext() : 
@@ -88,6 +103,54 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
+	public System.Data.Linq.Table<Designation> Designations
+	{
+		get
+		{
+			return this.GetTable<Designation>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Industry> Industries
+	{
+		get
+		{
+			return this.GetTable<Industry>();
+		}
+	}
+	
+	public System.Data.Linq.Table<JobCategory> JobCategories
+	{
+		get
+		{
+			return this.GetTable<JobCategory>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Qualification> Qualifications
+	{
+		get
+		{
+			return this.GetTable<Qualification>();
+		}
+	}
+	
+	public System.Data.Linq.Table<Organization> Organizations
+	{
+		get
+		{
+			return this.GetTable<Organization>();
+		}
+	}
+	
+	public System.Data.Linq.Table<GroupUser> GroupUsers
+	{
+		get
+		{
+			return this.GetTable<GroupUser>();
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddInfokitCategory")]
 	public int AddInfokitCategory([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryId", DbType="Int")] System.Nullable<int> categoryId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryName", DbType="VarChar(250)")] string categoryName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DisplayOrder", DbType="Int")] System.Nullable<int> displayOrder, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
 	{
@@ -106,6 +169,48 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 	public int AddInfokitDynamicContent([global::System.Data.Linq.Mapping.ParameterAttribute(Name="InfokitId", DbType="Int")] System.Nullable<int> infokitId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhotoImage", DbType="NVarChar(400)")] string photoImage, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description1", DbType="NVarChar(MAX)")] string description1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Image1", DbType="NVarChar(400)")] string image1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description2", DbType="NVarChar(400)")] string description2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Image2", DbType="NVarChar(400)")] string image2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description3", DbType="NVarChar(400)")] string description3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Image3", DbType="NVarChar(400)")] string image3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description4", DbType="NVarChar(400)")] string description4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Image4", DbType="NVarChar(400)")] string image4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description5", DbType="NVarChar(400)")] string description5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Image5", DbType="NVarChar(400)")] string image5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), infokitId, photoImage, description1, image1, description2, image2, description3, image3, description4, image4, description5, image5, status, createdBy);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddDesignation")]
+	public int AddDesignation([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PostId", DbType="Int")] System.Nullable<int> postId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PostName", DbType="NVarChar(50)")] string postName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), postId, postName, status, createdBy);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddIndustry")]
+	public int AddIndustry([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IndustryId", DbType="Int")] System.Nullable<int> industryId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Name", DbType="VarChar(50)")] string name, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), industryId, name, status, createdBy);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddJobCategory")]
+	public int AddJobCategory([global::System.Data.Linq.Mapping.ParameterAttribute(Name="JobCatCode", DbType="Int")] System.Nullable<int> jobCatCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="JobCatName", DbType="NVarChar(50)")] string jobCatName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), jobCatCode, jobCatName, status, createdBy, adminAccess);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddQualification")]
+	public int AddQualification([global::System.Data.Linq.Mapping.ParameterAttribute(Name="QualificationId", DbType="Int")] System.Nullable<int> qualificationId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Qualification", DbType="NVarChar(50)")] string qualification, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), qualificationId, qualification, status, createdBy);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddOrganization")]
+	public int AddOrganization([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrgCode", DbType="Int")] System.Nullable<int> orgCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrgName", DbType="VarChar(200)")] string orgName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LogoFileName", DbType="VarChar(200)")] string logoFileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LogoFileNameLeft", DbType="VarChar(200)")] string logoFileNameLeft, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LogoFileNameMiddle", DbType="VarChar(200)")] string logoFileNameMiddle)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), orgCode, orgName, status, createdBy, logoFileName, adminAccess, logoFileNameLeft, logoFileNameMiddle);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddGroupUser")]
+	public int AddGroupUser([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupUserID", DbType="Int")] System.Nullable<int> groupUserID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationID", DbType="Int")] System.Nullable<int> organizationID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="JobCatID", DbType="Int")] System.Nullable<int> jobCatID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupName", DbType="VarChar(100)")] string groupName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), groupUserID, organizationID, jobCatID, groupName, status, createdBy, adminAccess);
 		return ((int)(result.ReturnValue));
 	}
 }
@@ -873,6 +978,1363 @@ public partial class InfokitDynamicContent : INotifyPropertyChanging, INotifyPro
 				this._Status = value;
 				this.SendPropertyChanged("Status");
 				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Designation")]
+public partial class Designation : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _PostId;
+	
+	private string _PostName;
+	
+	private int _Status;
+	
+	private int _CreatedBy;
+	
+	private System.DateTime _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPostIdChanging(int value);
+    partial void OnPostIdChanged();
+    partial void OnPostNameChanging(string value);
+    partial void OnPostNameChanged();
+    partial void OnStatusChanging(int value);
+    partial void OnStatusChanged();
+    partial void OnCreatedByChanging(int value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedOnChanging(System.DateTime value);
+    partial void OnCreatedOnChanged();
+    partial void OnModifiedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedOnChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    #endregion
+	
+	public Designation()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int PostId
+	{
+		get
+		{
+			return this._PostId;
+		}
+		set
+		{
+			if ((this._PostId != value))
+			{
+				this.OnPostIdChanging(value);
+				this.SendPropertyChanging();
+				this._PostId = value;
+				this.SendPropertyChanged("PostId");
+				this.OnPostIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PostName", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+	public string PostName
+	{
+		get
+		{
+			return this._PostName;
+		}
+		set
+		{
+			if ((this._PostName != value))
+			{
+				this.OnPostNameChanging(value);
+				this.SendPropertyChanging();
+				this._PostName = value;
+				this.SendPropertyChanged("PostName");
+				this.OnPostNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int NOT NULL")]
+	public int Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this.OnStatusChanging(value);
+				this.SendPropertyChanging();
+				this._Status = value;
+				this.SendPropertyChanged("Status");
+				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int NOT NULL")]
+	public int CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this.OnCreatedByChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedBy = value;
+				this.SendPropertyChanged("CreatedBy");
+				this.OnCreatedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime NOT NULL")]
+	public System.DateTime CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this.OnModifiedOnChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedOn = value;
+				this.SendPropertyChanged("ModifiedOn");
+				this.OnModifiedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this.OnModifiedByChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedBy = value;
+				this.SendPropertyChanged("ModifiedBy");
+				this.OnModifiedByChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Industry")]
+public partial class Industry : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _IndustryID;
+	
+	private string _Name;
+	
+	private System.Nullable<int> _Status;
+	
+	private System.Nullable<int> _CreatedBy;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIndustryIDChanging(int value);
+    partial void OnIndustryIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnStatusChanging(System.Nullable<int> value);
+    partial void OnStatusChanged();
+    partial void OnCreatedByChanging(System.Nullable<int> value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnChanged();
+    partial void OnModifiedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedOnChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    #endregion
+	
+	public Industry()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IndustryID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int IndustryID
+	{
+		get
+		{
+			return this._IndustryID;
+		}
+		set
+		{
+			if ((this._IndustryID != value))
+			{
+				this.OnIndustryIDChanging(value);
+				this.SendPropertyChanging();
+				this._IndustryID = value;
+				this.SendPropertyChanged("IndustryID");
+				this.OnIndustryIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+	public string Name
+	{
+		get
+		{
+			return this._Name;
+		}
+		set
+		{
+			if ((this._Name != value))
+			{
+				this.OnNameChanging(value);
+				this.SendPropertyChanging();
+				this._Name = value;
+				this.SendPropertyChanged("Name");
+				this.OnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this.OnStatusChanging(value);
+				this.SendPropertyChanging();
+				this._Status = value;
+				this.SendPropertyChanged("Status");
+				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int")]
+	public System.Nullable<int> CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this.OnCreatedByChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedBy = value;
+				this.SendPropertyChanged("CreatedBy");
+				this.OnCreatedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this.OnModifiedOnChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedOn = value;
+				this.SendPropertyChanged("ModifiedOn");
+				this.OnModifiedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this.OnModifiedByChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedBy = value;
+				this.SendPropertyChanged("ModifiedBy");
+				this.OnModifiedByChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.JobCategory")]
+public partial class JobCategory : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _JobCatID;
+	
+	private string _Name;
+	
+	private System.Nullable<int> _Status;
+	
+	private System.Nullable<int> _CreatedBy;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+	private System.Nullable<int> _AdminAccess;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnJobCatIDChanging(int value);
+    partial void OnJobCatIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnStatusChanging(System.Nullable<int> value);
+    partial void OnStatusChanged();
+    partial void OnCreatedByChanging(System.Nullable<int> value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnChanged();
+    partial void OnModifiedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedOnChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    partial void OnAdminAccessChanging(System.Nullable<int> value);
+    partial void OnAdminAccessChanged();
+    #endregion
+	
+	public JobCategory()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobCatID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int JobCatID
+	{
+		get
+		{
+			return this._JobCatID;
+		}
+		set
+		{
+			if ((this._JobCatID != value))
+			{
+				this.OnJobCatIDChanging(value);
+				this.SendPropertyChanging();
+				this._JobCatID = value;
+				this.SendPropertyChanged("JobCatID");
+				this.OnJobCatIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+	public string Name
+	{
+		get
+		{
+			return this._Name;
+		}
+		set
+		{
+			if ((this._Name != value))
+			{
+				this.OnNameChanging(value);
+				this.SendPropertyChanging();
+				this._Name = value;
+				this.SendPropertyChanged("Name");
+				this.OnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this.OnStatusChanging(value);
+				this.SendPropertyChanging();
+				this._Status = value;
+				this.SendPropertyChanged("Status");
+				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int")]
+	public System.Nullable<int> CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this.OnCreatedByChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedBy = value;
+				this.SendPropertyChanged("CreatedBy");
+				this.OnCreatedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this.OnModifiedOnChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedOn = value;
+				this.SendPropertyChanged("ModifiedOn");
+				this.OnModifiedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this.OnModifiedByChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedBy = value;
+				this.SendPropertyChanged("ModifiedBy");
+				this.OnModifiedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminAccess", DbType="Int")]
+	public System.Nullable<int> AdminAccess
+	{
+		get
+		{
+			return this._AdminAccess;
+		}
+		set
+		{
+			if ((this._AdminAccess != value))
+			{
+				this.OnAdminAccessChanging(value);
+				this.SendPropertyChanging();
+				this._AdminAccess = value;
+				this.SendPropertyChanged("AdminAccess");
+				this.OnAdminAccessChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Qualifications")]
+public partial class Qualification
+{
+	
+	private int _QualificationId;
+	
+	private string _Qualification1;
+	
+	private System.Nullable<int> _Status;
+	
+	private System.Nullable<int> _CreatedBy;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	public Qualification()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QualificationId", AutoSync=AutoSync.Always, DbType="Int NOT NULL IDENTITY", IsDbGenerated=true)]
+	public int QualificationId
+	{
+		get
+		{
+			return this._QualificationId;
+		}
+		set
+		{
+			if ((this._QualificationId != value))
+			{
+				this._QualificationId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Qualification", Storage="_Qualification1", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+	public string Qualification1
+	{
+		get
+		{
+			return this._Qualification1;
+		}
+		set
+		{
+			if ((this._Qualification1 != value))
+			{
+				this._Qualification1 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this._Status = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int")]
+	public System.Nullable<int> CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this._CreatedBy = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this._CreatedOn = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this._ModifiedBy = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this._ModifiedOn = value;
+			}
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Organization")]
+public partial class Organization : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _OrganizationID;
+	
+	private string _Name;
+	
+	private System.Nullable<int> _Status;
+	
+	private System.Nullable<int> _CreatedBy;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+	private string _LogoFileName;
+	
+	private System.Nullable<int> _AdminAccess;
+	
+	private string _LogoFileNameLeft;
+	
+	private string _LogoFileNameMiddle;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnOrganizationIDChanging(int value);
+    partial void OnOrganizationIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnStatusChanging(System.Nullable<int> value);
+    partial void OnStatusChanged();
+    partial void OnCreatedByChanging(System.Nullable<int> value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnChanged();
+    partial void OnModifiedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedOnChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    partial void OnLogoFileNameChanging(string value);
+    partial void OnLogoFileNameChanged();
+    partial void OnAdminAccessChanging(System.Nullable<int> value);
+    partial void OnAdminAccessChanged();
+    partial void OnLogoFileNameLeftChanging(string value);
+    partial void OnLogoFileNameLeftChanged();
+    partial void OnLogoFileNameMiddleChanging(string value);
+    partial void OnLogoFileNameMiddleChanged();
+    #endregion
+	
+	public Organization()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrganizationID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int OrganizationID
+	{
+		get
+		{
+			return this._OrganizationID;
+		}
+		set
+		{
+			if ((this._OrganizationID != value))
+			{
+				this.OnOrganizationIDChanging(value);
+				this.SendPropertyChanging();
+				this._OrganizationID = value;
+				this.SendPropertyChanged("OrganizationID");
+				this.OnOrganizationIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+	public string Name
+	{
+		get
+		{
+			return this._Name;
+		}
+		set
+		{
+			if ((this._Name != value))
+			{
+				this.OnNameChanging(value);
+				this.SendPropertyChanging();
+				this._Name = value;
+				this.SendPropertyChanged("Name");
+				this.OnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this.OnStatusChanging(value);
+				this.SendPropertyChanging();
+				this._Status = value;
+				this.SendPropertyChanged("Status");
+				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int")]
+	public System.Nullable<int> CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this.OnCreatedByChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedBy = value;
+				this.SendPropertyChanged("CreatedBy");
+				this.OnCreatedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this.OnModifiedOnChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedOn = value;
+				this.SendPropertyChanged("ModifiedOn");
+				this.OnModifiedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this.OnModifiedByChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedBy = value;
+				this.SendPropertyChanged("ModifiedBy");
+				this.OnModifiedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoFileName", DbType="VarChar(200)")]
+	public string LogoFileName
+	{
+		get
+		{
+			return this._LogoFileName;
+		}
+		set
+		{
+			if ((this._LogoFileName != value))
+			{
+				this.OnLogoFileNameChanging(value);
+				this.SendPropertyChanging();
+				this._LogoFileName = value;
+				this.SendPropertyChanged("LogoFileName");
+				this.OnLogoFileNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminAccess", DbType="Int")]
+	public System.Nullable<int> AdminAccess
+	{
+		get
+		{
+			return this._AdminAccess;
+		}
+		set
+		{
+			if ((this._AdminAccess != value))
+			{
+				this.OnAdminAccessChanging(value);
+				this.SendPropertyChanging();
+				this._AdminAccess = value;
+				this.SendPropertyChanged("AdminAccess");
+				this.OnAdminAccessChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoFileNameLeft", DbType="VarChar(200)")]
+	public string LogoFileNameLeft
+	{
+		get
+		{
+			return this._LogoFileNameLeft;
+		}
+		set
+		{
+			if ((this._LogoFileNameLeft != value))
+			{
+				this.OnLogoFileNameLeftChanging(value);
+				this.SendPropertyChanging();
+				this._LogoFileNameLeft = value;
+				this.SendPropertyChanged("LogoFileNameLeft");
+				this.OnLogoFileNameLeftChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LogoFileNameMiddle", DbType="VarChar(200)")]
+	public string LogoFileNameMiddle
+	{
+		get
+		{
+			return this._LogoFileNameMiddle;
+		}
+		set
+		{
+			if ((this._LogoFileNameMiddle != value))
+			{
+				this.OnLogoFileNameMiddleChanging(value);
+				this.SendPropertyChanging();
+				this._LogoFileNameMiddle = value;
+				this.SendPropertyChanged("LogoFileNameMiddle");
+				this.OnLogoFileNameMiddleChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GroupUser")]
+public partial class GroupUser : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _GroupUserID;
+	
+	private System.Nullable<int> _OrganizationID;
+	
+	private System.Nullable<int> _JobCatID;
+	
+	private string _GroupName;
+	
+	private System.Nullable<int> _Status;
+	
+	private System.Nullable<int> _CreatedBy;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _ModifiedBy;
+	
+	private System.Nullable<int> _AdminAccess;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnGroupUserIDChanging(int value);
+    partial void OnGroupUserIDChanged();
+    partial void OnOrganizationIDChanging(System.Nullable<int> value);
+    partial void OnOrganizationIDChanged();
+    partial void OnJobCatIDChanging(System.Nullable<int> value);
+    partial void OnJobCatIDChanged();
+    partial void OnGroupNameChanging(string value);
+    partial void OnGroupNameChanged();
+    partial void OnStatusChanging(System.Nullable<int> value);
+    partial void OnStatusChanged();
+    partial void OnCreatedByChanging(System.Nullable<int> value);
+    partial void OnCreatedByChanged();
+    partial void OnCreatedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnChanged();
+    partial void OnModifiedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnModifiedOnChanged();
+    partial void OnModifiedByChanging(System.Nullable<int> value);
+    partial void OnModifiedByChanged();
+    partial void OnAdminAccessChanging(System.Nullable<int> value);
+    partial void OnAdminAccessChanged();
+    #endregion
+	
+	public GroupUser()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GroupUserID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int GroupUserID
+	{
+		get
+		{
+			return this._GroupUserID;
+		}
+		set
+		{
+			if ((this._GroupUserID != value))
+			{
+				this.OnGroupUserIDChanging(value);
+				this.SendPropertyChanging();
+				this._GroupUserID = value;
+				this.SendPropertyChanged("GroupUserID");
+				this.OnGroupUserIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrganizationID", DbType="Int")]
+	public System.Nullable<int> OrganizationID
+	{
+		get
+		{
+			return this._OrganizationID;
+		}
+		set
+		{
+			if ((this._OrganizationID != value))
+			{
+				this.OnOrganizationIDChanging(value);
+				this.SendPropertyChanging();
+				this._OrganizationID = value;
+				this.SendPropertyChanged("OrganizationID");
+				this.OnOrganizationIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_JobCatID", DbType="Int")]
+	public System.Nullable<int> JobCatID
+	{
+		get
+		{
+			return this._JobCatID;
+		}
+		set
+		{
+			if ((this._JobCatID != value))
+			{
+				this.OnJobCatIDChanging(value);
+				this.SendPropertyChanging();
+				this._JobCatID = value;
+				this.SendPropertyChanged("JobCatID");
+				this.OnJobCatIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GroupName", DbType="VarChar(100)")]
+	public string GroupName
+	{
+		get
+		{
+			return this._GroupName;
+		}
+		set
+		{
+			if ((this._GroupName != value))
+			{
+				this.OnGroupNameChanging(value);
+				this.SendPropertyChanging();
+				this._GroupName = value;
+				this.SendPropertyChanged("GroupName");
+				this.OnGroupNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this.OnStatusChanging(value);
+				this.SendPropertyChanging();
+				this._Status = value;
+				this.SendPropertyChanged("Status");
+				this.OnStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedBy", DbType="Int")]
+	public System.Nullable<int> CreatedBy
+	{
+		get
+		{
+			return this._CreatedBy;
+		}
+		set
+		{
+			if ((this._CreatedBy != value))
+			{
+				this.OnCreatedByChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedBy = value;
+				this.SendPropertyChanged("CreatedBy");
+				this.OnCreatedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this.OnModifiedOnChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedOn = value;
+				this.SendPropertyChanged("ModifiedOn");
+				this.OnModifiedOnChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedBy", DbType="Int")]
+	public System.Nullable<int> ModifiedBy
+	{
+		get
+		{
+			return this._ModifiedBy;
+		}
+		set
+		{
+			if ((this._ModifiedBy != value))
+			{
+				this.OnModifiedByChanging(value);
+				this.SendPropertyChanging();
+				this._ModifiedBy = value;
+				this.SendPropertyChanged("ModifiedBy");
+				this.OnModifiedByChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AdminAccess", DbType="Int")]
+	public System.Nullable<int> AdminAccess
+	{
+		get
+		{
+			return this._AdminAccess;
+		}
+		set
+		{
+			if ((this._AdminAccess != value))
+			{
+				this.OnAdminAccessChanging(value);
+				this.SendPropertyChanging();
+				this._AdminAccess = value;
+				this.SendPropertyChanged("AdminAccess");
+				this.OnAdminAccessChanged();
 			}
 		}
 	}
