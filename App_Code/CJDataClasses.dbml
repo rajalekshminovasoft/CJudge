@@ -121,6 +121,39 @@
       <Column Name="AdminAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TestSectionsList" Member="TestSectionsLists">
+    <Type Name="TestSectionsList">
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdminAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestLists" Member="TestLists">
+    <Type Name="TestList">
+      <Column Name="TestId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="OrganizationName" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PassMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Instructions" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReportType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AdminAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GroupReportAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Price" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
     <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
     <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
@@ -204,6 +237,31 @@
     <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
     <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
     <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddTestSectionsList" Method="AddTestSectionsList">
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddTestLists" Method="AddTestLists">
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestName" Parameter="testName" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="OrganizationName" Parameter="organizationName" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Instructions" Parameter="instructions" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="PassMark" Parameter="passMark" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportType" Parameter="reportType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GroupReportAccess" Parameter="groupReportAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NVarChar(MAX)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>
