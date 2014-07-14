@@ -14,4 +14,9 @@ public partial class CJMaster : System.Web.UI.MasterPage
             
         }
     }
+    protected void lnk_logout_Click(object sender, EventArgs e)
+    {
+        Session["Logged"]= false ;
+        Response.Redirect("../Default.aspx");
+    }
 }

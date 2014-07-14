@@ -8,7 +8,10 @@
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>--%>
+
     <head>
+         <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CareerJudge</title>
 
@@ -58,7 +61,8 @@
                         
                         
                         <table width="200" border="0">
-  <tr>
+
+  <%--<tr>
     <td style="color:#8cb6d6;">User ID</td>
     <td style="color:#8cb6d6;">Password</td>
     <td>&nbsp;</td>
@@ -67,7 +71,7 @@
     <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
     <td><input name="" type="text"  style="background:#004173; border:1px #00559c solid; width:162px; height:20px;" /></td>
     <td><a href="#"><img src="../images/submit.jpg" width="56" height="24" alt="" /></a></td>
-  </tr>
+  </tr>--%>
 </table>
 
                         
@@ -85,7 +89,7 @@
 
     <ul class="menu">
 
-        <li><a href="index.html"><span>Home</span></a>    </li>
+        <li><a href="Home.aspx"><span>Home</span></a>    </li>
 
         <li><a href="#" class="parent"><span>About Us</span></a>
 
@@ -148,9 +152,42 @@
          <li><a href="Services.aspx?id=11"><span>Psychometric Services</span></a></li>   
                     </ul> </div> 
                 </li> 
-        <li class="last"><a href="WebUserCreation.html"><span>Take a Test</span></a></li>
-        <li class="last"><a href="InfoKit.aspx"><span>Infokit</span></a></li>
-        <li class="last"><a href="Contact.aspx" ><span>Contacts</span></a></li>
+        <li><a href="#" class="parent" ><span>Parameters</span></a>
+            <div>
+                <ul>
+                    <li><a href="#" class="parent"><span>Add Users</span></a>
+
+                    <div><ul>
+
+                        <li><a href="AddUser.aspx"><span>Users</span></a></li>
+                        <li><a href="AddUser.aspx"><span>Users</span></a></li>
+                        </ul> 
+                        </div> 
+                        </li> 
+                    <li><a href="#" class="parent"><span>AddBasicDetails</span></a>
+
+                    <div><ul>
+
+                        <li><a href="AddOrganization.aspx"><span>Organization</span></a></li>
+                        <li><a href="AddBasicDetails.aspx"><span>Basics</span></a></li>
+                        </ul> 
+                        </div> 
+                        </li> 
+                    <li><a href="#" class="parent"><span>Test</span></a>
+
+                    <div><ul>
+
+                        <li><a href="AddTestDetails.aspx"><span>Add Test</span></a></li>
+                        <li><a href="AddTestSectionDetails.aspx"><span>Test Section</span></a></li>
+                        </ul> 
+                        </div> 
+                        </li> 
+                </ul>
+            </div>
+        </li>
+        <li class="last"><a href="InfokitDetails.aspx"><span>Infokit</span></a></li>
+        <li class="last" style="padding-top:15px;"><a href="Contact.aspx" >
+            <asp:LinkButton  ID="lnk_logout" runat="server" OnClick="lnk_logout_Click">LogOut</asp:LinkButton></a></li>
 
     </ul>
 

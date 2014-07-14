@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" ValidateRequest="false" Language="C#" MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="AddTestDetails.aspx.cs" Inherits="Admin_AddTestDetails" %>
 <%@ Register assembly="FreeTextBox" namespace="FreeTextBoxControls" tagprefix="FTB" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table align="center">
+    <table align="center" width="75%">
         <tr>
             <td><h3>Add Test Details</h3></td>
         </tr>
@@ -9,7 +9,7 @@
             <td class="label">
                 <asp:Label ID="lblOrganization" runat="server" Text="Organization"></asp:Label>
             </td>
-            <td colspan="2">
+            <td >
                 <asp:DropDownList ID="ddl_Org" runat="server" 
                     AppendDataBoundItems="True" AutoPostBack="True" Width="502px" DataSourceID="lnqOrg" DataTextField="Name" DataValueField="OrganizationID" >                    
                 </asp:DropDownList>
@@ -22,7 +22,7 @@
         <tr>
             <td class="label">
                 Test Name</td>
-            <td colspan="2">
+            <td >
                 <asp:TextBox ID="txt_TestName" runat="server" Width="500px" MaxLength="299"></asp:TextBox>
             </td>
         </tr>
@@ -70,7 +70,7 @@
         <tr>
             <td>
                 Status</td>
-            <td colspan="2">
+            <td >
                 <asp:DropDownList ID="ddlStatus" runat="server" Width="128px">
                     <asp:ListItem Value="1">Active</asp:ListItem>
                     <asp:ListItem Value="0">Inactive</asp:ListItem>
@@ -80,7 +80,7 @@
         <tr>
             <td>
                 &nbsp;</td>
-            <td colspan="2">
+            <td >
                 <asp:Label ID="lblMessage" runat="server" ForeColor="#CC3300"></asp:Label>
             </td>
         </tr>
@@ -90,8 +90,8 @@
                         </td>
              </tr> 
         <tr>
-            <td colspan="3">
-                 <asp:GridView ID="grd_designation" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50">
+            <td colspan="2">
+                 <asp:GridView ID="grd_designation" runat="server"  AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50">
                                 <Columns>
                                     <asp:CommandField ShowDeleteButton="false" ShowEditButton="True" />
                                     <asp:BoundField DataField="TestId" HeaderText="TestId" InsertVisible="False" ReadOnly="True" SortExpression="TestId" />

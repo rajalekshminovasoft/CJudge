@@ -67,7 +67,7 @@
                 <asp:FileUpload ID="flu_image" runat="server" /></td>
             </tr>
         <tr><td>Add Description</td>
-            <td>
+            <td colspan="3">
                  <FTB:FreeTextBox ID="txt_descriptioncontnt" runat="Server" Height="200px" Text="" 
                         ToolbarLayout="ParagraphMenu,FontFacesMenu,FontSizesMenu,FontForeColorsMenu|Bold,Italic,Underline,Strikethrough;Superscript,Subscript,RemoveFormat" 
                         ToolbarStyleConfiguration="NotSet" UpdateToolbar="True" Width="550px"></FTB:FreeTextBox>

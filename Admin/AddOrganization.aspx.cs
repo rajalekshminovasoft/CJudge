@@ -10,7 +10,8 @@ public partial class Admin_AddOrganization : System.Web.UI.Page
     CJDataClassesDataContext cjDataclass = new CJDataClassesDataContext();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["Logged"].ToString() == "False")
+            Response.Redirect("../Default.aspx");
     }
     protected void btn_addOrg_Click(object sender, EventArgs e)
     {

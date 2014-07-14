@@ -154,6 +154,43 @@
       <Column Name="Remark" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.UserProfile" Member="UserProfiles">
+    <Type Name="UserProfile">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="UserType" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OrganizationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="JobCategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GrpUserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TotWorkExpYrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotWorkExpMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresJobExpYrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PresJobExpMonths" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EducQualifications" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ProfCertifications" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginFromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LoginToDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PhoneNum" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="FirstLoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogoutDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdminAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Recruiter" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
     <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
     <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
@@ -262,6 +299,30 @@
     <Parameter Name="GroupReportAccess" Parameter="groupReportAccess" Type="System.Int32" DbType="Int" />
     <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
     <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserByAdmin" Method="AddUserByAdmin">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserType" Parameter="userType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="OrganizationID" Parameter="organizationID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GrpUserID" Parameter="grpUserID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LoginFromDate" Parameter="loginFromDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="LoginToDate" Parameter="loginToDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompanyID" Parameter="companyID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobCategoryID" Parameter="jobCategoryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Designation" Parameter="designation" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PhoneNum" Parameter="phoneNum" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Recruiter" Parameter="recruiter" Type="System.String" DbType="NVarChar(250)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

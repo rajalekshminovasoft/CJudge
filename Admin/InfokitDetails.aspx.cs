@@ -15,7 +15,8 @@ public partial class Admin_InfokitDetails : System.Web.UI.Page
     CJDataClassesDataContext cjDataclass = new CJDataClassesDataContext();
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["Logged"].ToString() == "False")
+            Response.Redirect("../Default.aspx");
     }
     private void ClearControl()
     {
