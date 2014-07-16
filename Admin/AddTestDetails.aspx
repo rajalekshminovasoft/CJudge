@@ -88,18 +88,21 @@
                         <td>
                 <asp:Button ID="btnAdd" runat="server"  Text="Add Test Details" OnClick="btnAdd_Click" />
                         </td>
+             <td>
+                 <asp:Button ID="btn_update" runat="server"  Text="Update Test Details" Visible="false" OnClick="btn_update_Click"  />
+             </td>
              </tr> 
         <tr>
             <td colspan="2">
-                 <asp:GridView ID="grd_designation" runat="server"  AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50">
+                 <asp:GridView ID="grd_designation" runat="server"    AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50" OnRowEditing="grd_designation_RowEditing" OnSelectedIndexChanged="grd_designation_SelectedIndexChanged">
                                 <Columns>
-                                    <asp:CommandField ShowDeleteButton="false" ShowEditButton="True" />
-                                    <asp:BoundField DataField="TestId" HeaderText="TestId" InsertVisible="False" ReadOnly="True" SortExpression="TestId" />
+                                    <asp:CommandField ShowSelectButton="True" SelectText="Edit" />
+                                    <asp:BoundField DataField="TestId" HeaderText="TestId"  InsertVisible="False" ReadOnly="True" SortExpression="TestId" />
                                     <asp:BoundField DataField="TestName" HeaderText="TestName" SortExpression="TestName" />
                                     <asp:BoundField DataField="OrganizationName" HeaderText="OrganizationName" SortExpression="OrganizationName" />
                                     <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
                                     <asp:BoundField DataField="PassMark" HeaderText="PassMark" SortExpression="PassMark" />
-                                    <asp:BoundField DataField="Instructions" HeaderText="Instructions" SortExpression="Instructions" ItemStyle-Height="100px" ItemStyle-Font-Size="X-Small" ItemStyle-Wrap="true"  />
+                                   <%-- <asp:BoundField DataField="Instructions" HeaderText="Instructions" SortExpression="Instructions" ItemStyle-Height="100px" ItemStyle-Font-Size="X-Small" ItemStyle-Wrap="true"  />--%>
                                     <asp:BoundField DataField="ReportType" HeaderText="ReportType" SortExpression="ReportType" />
                                     <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
                                     <asp:BoundField DataField="Remark" HeaderText="Remark" SortExpression="Remark" />
@@ -107,7 +110,7 @@
                                 <EditRowStyle ForeColor="Maroon" />
                                 <RowStyle ForeColor="#800000" />
                             </asp:GridView>
-                 <asp:LinqDataSource ID="lnqtest" runat="server" ContextTypeName="CJDataClassesDataContext" EnableDelete="True" EnableUpdate="True" TableName="TestLists">
+                 <asp:LinqDataSource ID="lnqtest" runat="server" ContextTypeName="CJDataClassesDataContext"  EnableDelete="True" EnableUpdate="True" TableName="TestLists">
                  </asp:LinqDataSource>
             </td>
         </tr>

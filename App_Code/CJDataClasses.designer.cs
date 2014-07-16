@@ -254,13 +254,6 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 		return ((int)(result.ReturnValue));
 	}
 	
-	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddTestLists")]
-	public int AddTestLists([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestName", DbType="NVarChar(300)")] string testName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationName", DbType="Int")] System.Nullable<int> organizationName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Instructions", DbType="VarChar(MAX)")] string instructions, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="VarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassMark", DbType="Int")] System.Nullable<int> passMark, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ReportType", DbType="VarChar(100)")] string reportType, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupReportAccess", DbType="Int")] System.Nullable<int> groupReportAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Price", DbType="Int")] System.Nullable<int> price, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Remark", DbType="NVarChar(MAX)")] string remark)
-	{
-		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), testId, testName, organizationName, status, instructions, description, passMark, createdBy, reportType, adminAccess, groupReportAccess, price, remark);
-		return ((int)(result.ReturnValue));
-	}
-	
 	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUserByAdmin")]
 	public int AddUserByAdmin(
 				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="VarChar(100)")] string userName, 
@@ -286,6 +279,47 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Recruiter", DbType="NVarChar(250)")] string recruiter)
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, password, userType, organizationID, grpUserID, loginFromDate, loginToDate, status, createdBy, emailId, adminAccess, firstName, middleName, lastName, gender, age, companyID, jobCategoryID, designation, phoneNum, recruiter);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddTestLists")]
+	public int AddTestLists([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestName", DbType="NVarChar(300)")] string testName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationName", DbType="Int")] System.Nullable<int> organizationName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Instructions", DbType="VarChar(MAX)")] string instructions, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="VarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassMark", DbType="Int")] System.Nullable<int> passMark, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ReportType", DbType="VarChar(100)")] string reportType, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GroupReportAccess", DbType="Int")] System.Nullable<int> groupReportAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Price", DbType="Int")] System.Nullable<int> price, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Remark", DbType="NVarChar(MAX)")] string remark)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), testId, testName, organizationName, status, instructions, description, passMark, createdBy, reportType, adminAccess, groupReportAccess, price, remark);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUser")]
+	public int AddUser(
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="VarChar(100)")] string userName, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="VarChar(100)")] string password, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserType", DbType="VarChar(20)")] string userType, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstName", DbType="NVarChar(100)")] string firstName, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MiddleName", DbType="NVarChar(100)")] string middleName, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="LastName", DbType="NVarChar(100)")] string lastName, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Gender", DbType="NVarChar(10)")] string gender, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Age", DbType="Int")] System.Nullable<int> age, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmailId", DbType="NVarChar(100)")] string emailId, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationID", DbType="Int")] System.Nullable<int> organizationID, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CompanyID", DbType="Int")] System.Nullable<int> companyID, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="JobCategoryID", DbType="Int")] System.Nullable<int> jobCategoryID, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GrpUserID", DbType="Int")] System.Nullable<int> grpUserID, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Designation", DbType="NVarChar(100)")] string designation, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TotWorkExpYrs", DbType="Int")] System.Nullable<int> totWorkExpYrs, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TotWorkExpMonths", DbType="Int")] System.Nullable<int> totWorkExpMonths, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PresJobExpYrs", DbType="Int")] System.Nullable<int> presJobExpYrs, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PresJobExpMonths", DbType="Int")] System.Nullable<int> presJobExpMonths, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EducQualifications", DbType="NVarChar(200)")] string educQualifications, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProfCertifications", DbType="NVarChar(200)")] string profCertifications, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedOn", DbType="DateTime")] System.Nullable<System.DateTime> createdOn, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PhoneNum", DbType="NVarChar(20)")] string phoneNum, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="AdminAccess", DbType="Int")] System.Nullable<int> adminAccess, 
+				[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Recruiter", DbType="NVarChar(250)")] string recruiter)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userId, userName, password, userType, firstName, middleName, lastName, gender, age, emailId, organizationID, companyID, jobCategoryID, grpUserID, designation, totWorkExpYrs, totWorkExpMonths, presJobExpYrs, presJobExpMonths, educQualifications, profCertifications, status, createdBy, createdOn, phoneNum, adminAccess, recruiter);
 		return ((int)(result.ReturnValue));
 	}
 }

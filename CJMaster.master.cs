@@ -12,12 +12,13 @@ public partial class CJMaster : System.Web.UI.MasterPage
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!Page.IsPostBack)
-        { 
+        {
             
         }
     }
     protected void imgbtn_Submit_Click(object sender, ImageClickEventArgs e)
-    {
+    
+{
         if (txt_username.Text != "" && txt_password.Text != "")
         {
             var Checkuser = from userdetails in cjDataclass.UserProfiles

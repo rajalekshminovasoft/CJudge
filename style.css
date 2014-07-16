@@ -865,3 +865,57 @@ border-top-right-radius: 5px;
 
 
 }
+
+.testlist
+
+{
+		width:710px;
+		height:500px;
+		float:left;
+		
+}
+
+.testlist1
+
+{
+		width:330px;
+		height:auto;
+		float:left;
+		background:#0CF;	
+		
+}
+
+.testlist_a
+
+{
+		width:350px;
+		height:auto;
+		float:left;
+		margin-left:9px;
+		background:#CCC;	
+		
+}
+
+
+
+.testlist1_head
+
+{
+		width:330px;
+		height:34px;
+		float:left;
+        padding-top:10px;
+        text-align:center;
+}
+
+.testlist2
+
+{
+		width:310px;
+		height:auto;
+		float:left;
+		background:#FFF;
+		margin-left:9px;
+		margin-bottom:9px;
+        overflow:hidden;
+}

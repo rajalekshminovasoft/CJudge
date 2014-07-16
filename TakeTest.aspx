@@ -30,7 +30,7 @@
      </tr>
      <tr>
          <td>
-             <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3"  NavigationStyle-VerticalAlign="Top" NavigationStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Top"  DisplaySideBar="true" >
+             <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3"  NavigationStyle-VerticalAlign="Top" NavigationStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Top"  DisplaySideBar="false" >
                     <HeaderStyle VerticalAlign="Top" />
             <NavigationButtonStyle ForeColor="#660033" />
                     <NavigationStyle VerticalAlign="Top" />
@@ -42,37 +42,24 @@
                         <tr>
                             <td>
                               
-                                 <asp:DataList ID="dtTestlist" runat="server" RepeatColumns="3" DataSourceID="lnqTestlist" CellSpacing="15"  >
-                                 <%--   <ItemTemplate>
-                                        
-                                                        TestId:
-                                                        <asp:Label ID="TestIdLabel" runat="server" Text='<%# Eval("TestId") %>' />
-                                                        <br />
-                                                        TestName:
-                                                        <asp:Label ID="TestNameLabel" runat="server" Text='<%# Eval("TestName") %>' />
-                                                        <br />
-                                                        Price:
-                                                        <asp:Label ID="PriceLabel" runat="server" Text='<%# Eval("Price") %>' />
-                                                        <br />
-                                                        Remark:
-                                                        <asp:Label ID="RemarkLabel" runat="server" Text='<%# Eval("Remark") %>' />
-                                                        <br />
-                                                        <br />
-                                                                                                                          </ItemTemplate>--%>
-                                     <EditItemStyle BackColor="#33CCCC" BorderStyle="None" Height="150px" HorizontalAlign="Justify" />
-                                     <ItemStyle BorderColor="Maroon" BorderStyle="Solid" BorderWidth="2px" ForeColor="Maroon" HorizontalAlign="Justify" VerticalAlign="Middle" Width="200px" />
-                                     <ItemTemplate>
+                                 <asp:DataList ID="dtTestlist" runat="server" RepeatColumns="3" DataSourceID="lnqTestlist"   >
+                                <ItemTemplate>
                                         
                                                         <div class="testlist1">
-        	<div class="testlist1_head"><asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#660033" Font-Bold="True"><%# Eval("TestName") %></asp:LinkButton></div>
-            <div class="testlist2"><asp:CheckBox ID="chktest" runat="server"  Text='<%# Eval("TestName") %>' />
-</div>
+        	<div class="testlist1_head">
+                <asp:LinkButton ID="LinkButton1" runat="server" ForeColor="#660033" Font-Bold="True" Font-Names="Calibri" ><%# Eval("TestName") %></asp:LinkButton>
+
+        	</div>
+            <div class="testlist2">
+                <asp:CheckBox ID="chktest" runat="server"  Text='<%# Eval("TestName") %>' />
+
+            </div>
              <div class="testlist2">         
                   Price:<asp:Label ID="Price" runat="server" Text='<%# Eval("Price") %>' />
                                                             <asp:Label ID="lbltestid" runat="server" Visible="false"  Text='<%# Eval("TestId") %>' /></div>
                                                             <div class="testlist2">          <asp:Label ID="Remark" runat="server" Text='<%# Eval("Remark") %>' /></div> 
         </div>
-                                                                                                                          </ItemTemplate>
+                             </ItemTemplate>
                                 </asp:DataList>
                                  <asp:LinqDataSource ID="lnqTestlist" runat="server" ContextTypeName="CJDataClassesDataContext" OrderBy="TestId desc" Select="new (TestId, TestName, Price, Remark)" TableName="TestLists" Where="Status == @Status &amp;&amp; OrganizationName == @OrganizationName">
                                      <WhereParameters>
@@ -94,7 +81,7 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div class="tab_box_butsign"><asp:LinkButton ID="lnkSignup" runat="server" ForeColor="#006600"  >Sign Up</asp:LinkButton></div>
+                                    <div class="tab_box_butsign"><asp:LinkButton ID="lnkSignup" runat="server" ForeColor="#006600" OnClick="lnkSignup_Click"  >Sign Up</asp:LinkButton></div>
                                     
                                 </td>
                             </tr>
@@ -132,7 +119,7 @@
 
                 </asp:WizardStep>
                 <asp:WizardStep ID="Stp3" runat="server" Title="Payment">
-                    <table>
+                    <%--<table>
                         <tr>
                             <td>Select Payment Option</td>
                             <td>
@@ -181,7 +168,7 @@
                             <td>Description</td>
                             <td><asp:TextBox ID="txtdescripion" runat="server"></asp:TextBox></td>
                         </tr>
-                    </table>
+                    </table>--%>
                     <asp:Button ID="btn_payment" runat="server" Text="Payment" />
                     
                                 <asp:Button ID="btntaketest" runat="server" Text="Take Test"    />
@@ -191,16 +178,16 @@
                     
         <table>
            
-            <tr>
+            <%--<tr>
                 <td align="left" valign="top">
                    
                                 <div class="titlemain">
                                     User Creation</div>
                             </td>
-                        </tr>
+                        </tr>--%>
              
       
-            <tr><td class="titlesub">Personal Details</td></tr>
+           <%-- <tr><td class="titlesub">Personal Details</td></tr>--%>
                         <tr>
             <td class="label1">
                 First Name:</td>
@@ -260,7 +247,7 @@
           
               <td>Are you recruited by someone?</td>
                 <td>
-                    <asp:DropDownList ID="ddlrecruiter" runat="server"  AutoPostBack="True" >
+                    <asp:DropDownList ID="ddlrecruiter" runat="server"  AutoPostBack="True" OnSelectedIndexChanged="ddlrecruiter_SelectedIndexChanged" >
                         <asp:ListItem >Select</asp:ListItem>
                         <asp:ListItem>Yes</asp:ListItem>
                         <asp:ListItem>No</asp:ListItem>
@@ -274,7 +261,7 @@
         </tr>
 
    
-            <tr><td class="titlesub">Working Details</td></tr>
+           <%-- <tr><td class="titlesub">Working Details</td></tr>--%>
         <tr>
             <td class="label1">
                 Industry:</td>
@@ -314,7 +301,7 @@
             <td class="label1">
                 Designation:</td>
             <td>
-                <asp:TextBox ID="txtJob" runat="server" MaxLength="100" Width="250px"></asp:TextBox>
+                <asp:TextBox ID="txtdesgnation" runat="server" MaxLength="100" Width="250px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -438,20 +425,23 @@
                 </table>
             </td>
         </tr>
-            <tr><td class="titlesub">Educational Details</td></tr>
+           <%-- <tr><td class="titlesub">Educational Details</td></tr>--%>
         <tr>
             <td class="label1">
                 Educational Qualification:</td>
             <td>
                 <asp:DropDownList ID="ddlQualification" runat="server" 
                     AppendDataBoundItems="True" AutoPostBack="True" 
-                                    Width="250px">
+                                    Width="250px" DataSourceID="lnqqual" DataTextField="Qualification1" DataValueField="QualificationId">
                     <asp:ListItem Value="0">-- Select --</asp:ListItem>
                 </asp:DropDownList>
-                <asp:LinqDataSource ID="LinqQualifications" runat="server" 
-                    ContextTypeName="AssesmentDataClassesDataContext" 
-                    Select="new (Qualification1, QualificationId)" TableName="Qualifications">
+                
+                <asp:LinqDataSource ID="lnqqual" runat="server" ContextTypeName="CJDataClassesDataContext" OrderBy="Qualification1" Select="new (QualificationId, Qualification1)" TableName="Qualifications" Where="Status == @Status">
+                    <WhereParameters>
+                        <asp:Parameter DefaultValue="1" Name="Status" Type="Int32" />
+                    </WhereParameters>
                 </asp:LinqDataSource>
+                
                 <asp:Label ID="Label4" runat="server" ForeColor="#FF3300" Text="*"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtEduQual" runat="server" Visible="False" Width="350px" 

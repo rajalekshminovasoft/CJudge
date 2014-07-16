@@ -285,22 +285,6 @@
     <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.AddTestLists" Method="AddTestLists">
-    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
-    <Parameter Name="TestName" Parameter="testName" Type="System.String" DbType="NVarChar(300)" />
-    <Parameter Name="OrganizationName" Parameter="organizationName" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Instructions" Parameter="instructions" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="PassMark" Parameter="passMark" Type="System.Int32" DbType="Int" />
-    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ReportType" Parameter="reportType" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
-    <Parameter Name="GroupReportAccess" Parameter="groupReportAccess" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NVarChar(MAX)" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.AddUserByAdmin" Method="AddUserByAdmin">
     <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(100)" />
@@ -322,6 +306,52 @@
     <Parameter Name="JobCategoryID" Parameter="jobCategoryID" Type="System.Int32" DbType="Int" />
     <Parameter Name="Designation" Parameter="designation" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="PhoneNum" Parameter="phoneNum" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="Recruiter" Parameter="recruiter" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddTestLists" Method="AddTestLists">
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestName" Parameter="testName" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="OrganizationName" Parameter="organizationName" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Instructions" Parameter="instructions" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="PassMark" Parameter="passMark" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ReportType" Parameter="reportType" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GroupReportAccess" Parameter="groupReportAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Price" Parameter="price" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Remark" Parameter="remark" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUser" Method="AddUser">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="UserType" Parameter="userType" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="OrganizationID" Parameter="organizationID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CompanyID" Parameter="companyID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="JobCategoryID" Parameter="jobCategoryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="GrpUserID" Parameter="grpUserID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Designation" Parameter="designation" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="TotWorkExpYrs" Parameter="totWorkExpYrs" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TotWorkExpMonths" Parameter="totWorkExpMonths" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PresJobExpYrs" Parameter="presJobExpYrs" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PresJobExpMonths" Parameter="presJobExpMonths" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EducQualifications" Parameter="educQualifications" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ProfCertifications" Parameter="profCertifications" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedOn" Parameter="createdOn" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="PhoneNum" Parameter="phoneNum" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
     <Parameter Name="Recruiter" Parameter="recruiter" Type="System.String" DbType="NVarChar(250)" />
     <Return Type="System.Int32" />
   </Function>
