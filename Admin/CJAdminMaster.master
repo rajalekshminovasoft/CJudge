@@ -169,7 +169,9 @@
                     <div><ul>
 
                         <li><a href="AddOrganization.aspx"><span>Organization</span></a></li>
+                        <li><a href="AddUserGroup.aspx"><span>Group</span></a></li>
                         <li><a href="AddBasicDetails.aspx"><span>Basics</span></a></li>
+                        <li><a href="AddSpecialAdminPermission.aspx"><span>SpecialAdminPermission</span></a></li>
                         </ul> 
                         </div> 
                         </li> 
@@ -179,6 +181,8 @@
 
                         <li><a href="AddTestDetails.aspx"><span>Add Test</span></a></li>
                         <li><a href="AddTestSectionDetails.aspx"><span>Test Section</span></a></li>
+                        <li><a href="SectionVariable.aspx"><span>Test Variable</span></a></li>
+                        <li><a href="AddQuestions.aspx"><span>Add Question</span></a></li>
                         </ul> 
                         </div> 
                         </li> 

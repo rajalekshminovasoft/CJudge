@@ -65,11 +65,11 @@ public partial class TakeTest : System.Web.UI.Page
                          select userdetails;
         if (lastUserID.Count() > 0)
         {
-            Username = txtFsName.Text.Trim().Substring(0, 4) + "00" + (lastUserID.First().UserId + 1);
+            Username = (txtFsName.Text.Trim().Substring(0, 4)).ToUpper() + "00" + (lastUserID.First().UserId + 1);
         }
         else
         {
-            Username = txtFsName.Text.Trim().Substring(0, 4) + "00" + 1;
+            Username = (txtFsName.Text.Trim().Substring(0, 4)).ToUpper() + "00" + 1;
         }
         return Username;
     }
@@ -77,20 +77,30 @@ public partial class TakeTest : System.Web.UI.Page
     {
         if (txtAge.Text != "")
         {
-            if (txtEmailId.Text!="" &&  txtFsName.Text!="" && txtLstName.Text!="")
+            if (txtEmailId.Text != "" && txtFsName.Text != "" && txtLstName.Text != "")
             {
-                if (CheckAge() == true)
+                if (chkAgree.Checked == true)
                 {
-                    CreateUsernamePwd();
-                    cjDataclass.AddUser(0, Username, Username, "User", txtFsName.Text, txtMidName.Text, txtLstName.Text, ddlGender.SelectedValue, int.Parse(txtAge.Text), txtEmailId.Text, 1, 0, int.Parse(ddlJobCatgy.SelectedValue), 1, txtdesgnation.Text, int.Parse(ddlTotExpYears.SelectedValue), int.Parse(ddlTotExpMonths.SelectedValue), int.Parse(ddlCurExpYears.SelectedValue), int.Parse(ddlCurExpMonths.SelectedValue), txtEduQual.Text, txtProffQual.Text, 1, 1, DateTime.Now, txtPhoneNumber.Text, 1, txtrecrutr.Text);
-                    Wizard1.ActiveStepIndex = 2;
+                    if (CheckAge() == true)
+                    {
+                        CreateUsernamePwd();
+                        cjDataclass.AddUser(0, Username, Username, "User", txtFsName.Text, txtMidName.Text, txtLstName.Text, ddlGender.SelectedValue, int.Parse(txtAge.Text), txtEmailId.Text, 1, 0, int.Parse(ddlJobCatgy.SelectedValue), 1, txtdesgnation.Text, int.Parse(ddlTotExpYears.SelectedValue), int.Parse(ddlTotExpMonths.SelectedValue), int.Parse(ddlCurExpYears.SelectedValue), int.Parse(ddlCurExpMonths.SelectedValue), txtEduQual.Text, txtProffQual.Text, 1, 1, DateTime.Now, txtPhoneNumber.Text, 1, txtrecrutr.Text);
+                        //EMail sending code
+
+                        Wizard1.ActiveStepIndex = 2;
+                    }
+                    else
+                    {
+                        lblMessage.Text = "Enter valid age";
+                        return;
+                    }
+
                 }
-                else
-                {
-                    lblMessage.Text = "Enter valid age";
-                    return;
-                }
-                
+            }
+            else
+            {
+                lblMessage.Text = "Agree T&C";
+                return;
             }
         }
     }
@@ -118,6 +128,43 @@ public partial class TakeTest : System.Web.UI.Page
         else
         {
             txtrecrutr.Enabled = false;
+        }
+    }
+    protected void lnklogin_Click(object sender, EventArgs e)
+    {
+        // Check for Agreement
+
+        if (txtuname.Text != "" && txtpwd.Text != "")
+        {
+            var userlgin=from userlogin in cjDataclass.UserProfiles
+                          where userlogin.UserName==txtuname.Text.Trim() && userlogin.Password==txtpwd.Text.Trim()
+                         select userlogin;
+            if (userlgin.Count() > 0)
+            {
+                //Check for test taken or not-- if all test taken then go to Home page
+                                             // else redirect to test page
+                Response.Redirect("/Admin/Home.aspx?id="+ userlgin.First().UserId +"");
+            }
+        }
+    }
+    protected void lnk_forgotpwd_Click(object sender, EventArgs e)
+    {
+        if (txtFrgetemail.Text != "")
+        {
+            // Send mail Password details
+            if (txtuname.Text != "" && txtpwd.Text != "")
+            {
+                var userlgin = from userlogin in cjDataclass.UserProfiles
+                               where userlogin.EmailId == txtFrgetemail.Text.Trim() 
+                               select userlogin;
+                if (userlgin.Count() > 0)
+                {
+                    //Send Mail
+                    string Username = userlgin.First().UserName;
+                    string password = userlgin.First().Password;
+                    //Mail  classsssssss
+                }
+            }
         }
     }
 }

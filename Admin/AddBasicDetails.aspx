@@ -198,7 +198,77 @@
     </table>
                       </td>
                    </tr>
-    
+    <tr>
+        <td colspan="2">
+            <table align="center">
+        <tr>
+            <td>
+                <h3>Add Section Category</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>Category Code</td>
+            <td>
+                <asp:TextBox ID="txt_secCategoryCode" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+                  <tr>
+                      <td>
+                          Category Name
+                      </td>
+            <td>
+                <asp:TextBox ID="txt_SecCategoryName" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+                 <tr>
+                      <td>
+                          Category Brief Name
+                      </td>
+            <td>
+                <asp:TextBox ID="txt_secCategbrifname" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+        <tr><td>Status</td>
+            <td>
+                <asp:DropDownList ID="drp_catstatus" runat="server">
+                    <asp:ListItem Text="Active" Value="1">Active</asp:ListItem>
+                    <asp:ListItem Text="Inactive" Value="0">InActive</asp:ListItem>
+                </asp:DropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Button ID="btn_AddCategry" runat="server" Text="Add Section Category" OnClick="btn_AddCategry_Click"  />
+            </td>
+        </tr>
+                               <tr>
+                        <td>
+                            <asp:Label ID="lbl_catmsg" runat="server" ></asp:Label>
+                        </td>
+                    </tr>
+<tr>
+    <td colspan="2">
+        <asp:GridView ID="grd_secCat" runat="server" AllowPaging="True" AutoGenerateColumns="False"  EnableModelValidation="True"  PageSize="50" DataKeyNames="SectionCategoryId" DataSourceID="lnqseccat" >
+                                <Columns>
+                                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True"  />
+                                    <asp:BoundField DataField="SectionCategoryId" HeaderText="SectionCategoryId" InsertVisible="False" SortExpression="SectionCategoryId" ReadOnly="True" />
+                                    <asp:BoundField DataField="SectionCategoryCode" HeaderText="SectionCategoryCode" SortExpression="SectionCategoryCode" />
+                                    <asp:BoundField DataField="SectionCategoryName" HeaderText="SectionCategoryName" SortExpression="SectionCategoryName" />
+                                    <asp:BoundField DataField="SectionCategoryBriefName" HeaderText="SectionCategoryBriefName" SortExpression="SectionCategoryBriefName" />
+                                    <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
+                                </Columns>
+                                <EditRowStyle ForeColor="Maroon" />
+                                <RowStyle ForeColor="#800000" />
+                            </asp:GridView>
+       
+        <asp:LinqDataSource ID="lnqseccat" runat="server" ContextTypeName="CJDataClassesDataContext" EnableDelete="True" EnableUpdate="True" OrderBy="SectionCategoryName" TableName="SectionCategories">
+        </asp:LinqDataSource>
+       
+    </td>
+</tr>
+    </table>
+        </td>
+    </tr>
           
    </table>
      

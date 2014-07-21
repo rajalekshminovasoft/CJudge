@@ -30,6 +30,10 @@ public partial class CJMaster : System.Web.UI.MasterPage
                 //Test Details page if user
                 //Userlist page if Group admin
                 Session.Add("Logged", true);
+                Session.Add("UserID", Checkuser.First().UserId);
+                Session.Add("usertype", Checkuser.First().UserType);
+                if (Checkuser.First().OrganizationID != null && Checkuser.First().OrganizationID != 0)
+                    Session.Add("AdminOrganizationID",Checkuser.First().OrganizationID);
                 Response.Redirect("Admin/Home.aspx");
             }
         }

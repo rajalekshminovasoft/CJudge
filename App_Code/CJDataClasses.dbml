@@ -191,6 +191,304 @@
       <Column Name="Recruiter" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TestSectionResultBands" Member="TestSectionResultBands">
+    <Type Name="TestSectionResultBand">
+      <Column Name="SectionBandId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BenchMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SectionCategory" Member="SectionCategories">
+    <Type Name="SectionCategory">
+      <Column Name="SectionCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionCategoryCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="SectionCategoryName" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="SectionCategoryBriefName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SectionDetail" Member="SectionDetails">
+    <Type Name="SectionDetail">
+      <Column Name="SectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdminAccess" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionCategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemmoryTestImageQuesCollection" Member="MemmoryTestImageQuesCollections">
+    <Type Name="MemmoryTestImageQuesCollection">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image6" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image7" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image8" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image9" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image10" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image11" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image12" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image13" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image14" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image15" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image16" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image17" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image18" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image19" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Image20" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="OptionFile1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="OptionFile2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="OptionFile3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="OptionFile4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="OptionFile5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayDuration" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DisplayType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionCode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MemmoryTestTextQuesCollection" Member="MemmoryTestTextQuesCollections">
+    <Type Name="MemmoryTestTextQuesCollection">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionNameSub1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Unit1" Type="System.String" DbType="VarChar(2000)" CanBeNull="true" />
+      <Column Name="Unit2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit6" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit7" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit8" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit9" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit10" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit11" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit12" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit13" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit14" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit15" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit16" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit17" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit18" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit19" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unit20" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DisplayDuration" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisplayType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionCode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuestionCollection" Member="QuestionCollections">
+    <Type Name="QuestionCollection">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="SectionNameSub1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option6" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option7" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option8" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option9" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option10" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionFileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option1FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option2FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option3FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option4FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ScoringStyle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Option5FileName" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="QuestionFileNameSub1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="QuestionCode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.QuestionCount" Member="QuestionCounts">
+    <Type Name="QuestionCount">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="SectionNameSub2" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ObjQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FillBlanksQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RatingQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VideoQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AudioQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WordTypeMemQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ImageTypeMemQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhotoTypeQuestionCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestBaseQuestionList" Member="TestBaseQuestionLists">
+    <Type Name="TestBaseQuestionList">
+      <Column Name="UserTestId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecondVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThirdVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestVariableResultBands" Member="TestVariableResultBands">
+    <Type Name="TestVariableResultBand">
+      <Column Name="VariableBandId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BenchMark" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarkTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(5000)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ScoreTable" Member="ScoreTables">
+    <Type Name="ScoreTable">
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SectionName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="SectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestSectionVariablewiseInstructions" Member="TestSectionVariablewiseInstructions">
+    <Type Name="TestSectionVariablewiseInstruction">
+      <Column Name="InstructionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InstructionDetails" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecondVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="InstructionImage1" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="InstructionDetails2" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="InstructionImage2" Type="System.String" DbType="VarChar(300)" CanBeNull="true" />
+      <Column Name="InstructionDetails3" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrganizationQuestionTypes" Member="OrganizationQuestionTypes">
+    <Type Name="OrganizationQuestionType">
+      <Column Name="OrgQuestionTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrganizationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionTypeName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="QuestionTypeDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MenuCollection" Member="MenuCollections">
+    <Type Name="MenuCollection">
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MenuName" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="MenuControl" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserPermissions" Member="UserPermissions">
+    <Type Name="UserPermission">
+      <Column Name="PermissionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="MenuId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
     <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
     <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
@@ -353,6 +651,219 @@
     <Parameter Name="PhoneNum" Parameter="phoneNum" Type="System.String" DbType="NVarChar(20)" />
     <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
     <Parameter Name="Recruiter" Parameter="recruiter" Type="System.String" DbType="NVarChar(250)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddTestSectionResultBands" Method="AddTestSectionResultBands">
+    <Parameter Name="SectionBandId" Parameter="sectionBandId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="BenchMark" Parameter="benchMark" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MarkFrom" Parameter="markFrom" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MarkTo" Parameter="markTo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DisplayName" Parameter="displayName" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="VarChar(5000)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddSectionCategory" Method="AddSectionCategory">
+    <Parameter Name="SectionCategoryId" Parameter="sectionCategoryId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionCategoryCode" Parameter="sectionCategoryCode" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="SectionCategoryName" Parameter="sectionCategoryName" Type="System.String" DbType="VarChar(350)" />
+    <Parameter Name="SectionCategoryBriefName" Parameter="sectionCategoryBriefName" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddSectionDetail" Method="AddSectionDetail">
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="AdminAccess" Parameter="adminAccess" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OrganizationId" Parameter="organizationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionCategoryId" Parameter="sectionCategoryId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSectionNameForAll" Method="UpdateSectionNameForAll">
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameOld" Parameter="sectionNameOld" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSectionNameSub2ForAll" Method="UpdateSectionNameSub2ForAll">
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1" Parameter="sectionNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub2" Parameter="sectionNameSub2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub2Old" Parameter="sectionNameSub2Old" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateSectionNameSub1ForAll" Method="UpdateSectionNameSub1ForAll">
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1" Parameter="sectionNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1Old" Parameter="sectionNameSub1Old" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteSectionDetail" Method="DeleteSectionDetail">
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteDataRelatedToVariable" Method="DeleteDataRelatedToVariable">
+    <Parameter Name="FirstVariableId" Parameter="firstVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecondVariableId" Parameter="secondVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ThirdVariableId" Parameter="thirdVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstVariableName" Parameter="firstVariableName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="SecondVariableName" Parameter="secondVariableName" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ThirdVariableName" Parameter="thirdVariableName" Type="System.String" DbType="NVarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteSectionDetailWithParentId" Method="DeleteSectionDetailWithParentId">
+    <Parameter Name="ParentId" Parameter="parentId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddMemmoryTestTextQuesCollection" Method="AddMemmoryTestTextQuesCollection">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1" Parameter="sectionNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub2" Parameter="sectionNameSub2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Unit1" Parameter="unit1" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="Unit2" Parameter="unit2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit3" Parameter="unit3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit4" Parameter="unit4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit5" Parameter="unit5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit6" Parameter="unit6" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit7" Parameter="unit7" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit8" Parameter="unit8" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit9" Parameter="unit9" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit10" Parameter="unit10" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit11" Parameter="unit11" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit12" Parameter="unit12" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit13" Parameter="unit13" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit14" Parameter="unit14" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit15" Parameter="unit15" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit16" Parameter="unit16" Type="System.String" DbType="VarChar(2000)" />
+    <Parameter Name="Unit17" Parameter="unit17" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit18" Parameter="unit18" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit19" Parameter="unit19" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Unit20" Parameter="unit20" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option1" Parameter="option1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option2" Parameter="option2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option3" Parameter="option3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option4" Parameter="option4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option5" Parameter="option5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="DisplayDuration" Parameter="displayDuration" Type="System.Double" DbType="Float" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DisplayType" Parameter="displayType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionCode" Parameter="questionCode" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddMemmoryTestImageQuesCollection" Method="AddMemmoryTestImageQuesCollection">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1" Parameter="sectionNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub2" Parameter="sectionNameSub2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Image1" Parameter="image1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image2" Parameter="image2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image3" Parameter="image3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image4" Parameter="image4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image5" Parameter="image5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image6" Parameter="image6" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image7" Parameter="image7" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image8" Parameter="image8" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image9" Parameter="image9" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image10" Parameter="image10" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image11" Parameter="image11" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image12" Parameter="image12" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image13" Parameter="image13" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image14" Parameter="image14" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image15" Parameter="image15" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image16" Parameter="image16" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image17" Parameter="image17" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image18" Parameter="image18" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image19" Parameter="image19" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Image20" Parameter="image20" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="OptionFile1" Parameter="optionFile1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="OptionFile2" Parameter="optionFile2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="OptionFile3" Parameter="optionFile3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="OptionFile4" Parameter="optionFile4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="OptionFile5" Parameter="optionFile5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option1" Parameter="option1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option2" Parameter="option2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option3" Parameter="option3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option4" Parameter="option4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option5" Parameter="option5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="DisplayDuration" Parameter="displayDuration" Type="System.Double" DbType="Float" />
+    <Parameter Name="DisplayType" Parameter="displayType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionCode" Parameter="questionCode" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddQuestions" Method="AddQuestions">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionId" Parameter="sectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SectionName" Parameter="sectionName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub1" Parameter="sectionNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="SectionNameSub2" Parameter="sectionNameSub2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option1" Parameter="option1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option2" Parameter="option2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option3" Parameter="option3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option4" Parameter="option4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option5" Parameter="option5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option6" Parameter="option6" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option7" Parameter="option7" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option8" Parameter="option8" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option9" Parameter="option9" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option10" Parameter="option10" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="QuestionFileName" Parameter="questionFileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option1FileName" Parameter="option1FileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option2FileName" Parameter="option2FileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option3FileName" Parameter="option3FileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option4FileName" Parameter="option4FileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ScoringStyle" Parameter="scoringStyle" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Option5FileName" Parameter="option5FileName" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="QuestionFileNameSub1" Parameter="questionFileNameSub1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="QuestionCode" Parameter="questionCode" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteQuestion" Method="DeleteQuestion">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Index" Parameter="index" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddOrganizationQuestionTypes" Method="AddOrganizationQuestionTypes">
+    <Parameter Name="OrganizationId" Parameter="organizationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionTypeName" Parameter="questionTypeName" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="QuestionTypeDescription" Parameter="questionTypeDescription" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeletUserPermissions" Method="DeletUserPermissions">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserPermissions" Method="AddUserPermissions">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="MenuId" Parameter="menuId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteOrganizationQuestionTypes" Method="DeleteOrganizationQuestionTypes">
+    <Parameter Name="OrganizationId" Parameter="organizationId" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

@@ -46,4 +46,12 @@ public partial class Admin_AddBasicDetails : System.Web.UI.Page
             lbl_addqualfn.Text = "Qualification added";
         }
     }
+    protected void btn_AddCategry_Click(object sender, EventArgs e)
+    {
+        if (txt_secCategoryCode.Text != "" && txt_SecCategoryName.Text != "")
+        {
+            cjDataclass.AddSectionCategory(0, txt_secCategoryCode.Text, txt_SecCategoryName.Text, txt_secCategbrifname.Text, int.Parse(drp_catstatus.SelectedValue), 1);
+            lbl_catmsg.Text = "Section Category Added";
+        }
+    }
 }

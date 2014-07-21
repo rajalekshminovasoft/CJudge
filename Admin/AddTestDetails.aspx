@@ -94,9 +94,10 @@
              </tr> 
         <tr>
             <td colspan="2">
-                 <asp:GridView ID="grd_designation" runat="server"    AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50" OnRowEditing="grd_designation_RowEditing" OnSelectedIndexChanged="grd_designation_SelectedIndexChanged">
+                 <asp:GridView ID="grd_designation" runat="server"    AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="TestId" DataSourceID="lnqtest" EnableModelValidation="True" PageSize="50" OnRowEditing="grd_designation_RowEditing" OnSelectedIndexChanged="grd_designation_SelectedIndexChanged" OnRowDataBound="grd_designation_RowDataBound"  >
                                 <Columns>
-                                    <asp:CommandField ShowSelectButton="True" SelectText="Edit" />
+                                    <asp:CommandField ShowSelectButton="True" SelectText="Edit"   />
+                                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
                                     <asp:BoundField DataField="TestId" HeaderText="TestId"  InsertVisible="False" ReadOnly="True" SortExpression="TestId" />
                                     <asp:BoundField DataField="TestName" HeaderText="TestName" SortExpression="TestName" />
                                     <asp:BoundField DataField="OrganizationName" HeaderText="OrganizationName" SortExpression="OrganizationName" />

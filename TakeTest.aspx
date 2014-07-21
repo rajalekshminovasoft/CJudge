@@ -30,7 +30,8 @@
      </tr>
      <tr>
          <td>
-             <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3"  NavigationStyle-VerticalAlign="Top" NavigationStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Top"  DisplaySideBar="false" >
+             <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="3"  NavigationStyle-VerticalAlign="Top" 
+                 NavigationStyle-HorizontalAlign="NotSet" HeaderStyle-VerticalAlign="Top"  DisplaySideBar="false" >
                     <HeaderStyle VerticalAlign="Top" />
             <NavigationButtonStyle ForeColor="#660033" />
                     <NavigationStyle VerticalAlign="Top" />
@@ -103,7 +104,7 @@
                 <tr>
                     <td>
                         <div class="tab_box_butsign">
-                            <asp:LinkButton ID="lnklogin" runat="server" ForeColor="#006600" >Log In</asp:LinkButton>
+                            <asp:LinkButton ID="lnklogin" runat="server" ForeColor="#006600" OnClick="lnklogin_Click" >Log In</asp:LinkButton>
                         </div> 
                     </td>
                 </tr>
@@ -113,7 +114,23 @@
             </div> 
         <div class="tab_box_login1">       
         <div class="tab_box_login1_head">Forgot Password</div>
-        <div class="tab_box_login1_inner"></div>       
+        <div class="tab_box_login1_inner">
+            <table>
+                <tr>
+                    <td>EMailId</td>
+                    <td>
+                        <asp:TextBox ID="txtFrgetemail" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="tab_box_butsign">
+                            <asp:LinkButton ID="lnk_forgotpwd" runat="server" ForeColor="#006600" OnClick="lnk_forgotpwd_Click"  >Send</asp:LinkButton>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>       
         </div> 
       </div>
 
@@ -471,7 +488,8 @@
                         </tr>
                         <tr>
                             <td >
-                                &nbsp;</td>
+                                <asp:CheckBox ID="chkAgree" runat="server" />I Agree To the <a href="#" style="text-decoration:none; color:#ff6a00;"> Privacy Policy</a> and <a href="#" style="text-decoration:none; color:#ff6a00;">T&C</a>
+                            </td>
                             <td>
                                 <asp:Button ID="btnSave" runat="server" Text="Submit" OnClick="btnSave_Click"  />
                               

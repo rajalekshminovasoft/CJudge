@@ -54,9 +54,10 @@
         </tr>
         <tr>
             <td>
-                 <asp:GridView ID="grd_organ" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="GroupUserID" EnableModelValidation="True" PageSize="50" DataSourceID="lnqgrpuser" >
+                 <asp:GridView ID="grd_organ" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="GroupUserID" EnableModelValidation="True" PageSize="50" DataSourceID="lnqgrpuser" OnRowDataBound="grd_organ_RowDataBound" >
                                 <Columns>
                                     <asp:CommandField ShowEditButton="True" />
+                                    <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
                                     <asp:BoundField DataField="GroupUserID" HeaderText="GroupUserID" InsertVisible="False" ReadOnly="True" SortExpression="GroupUserID" />
                                     <asp:BoundField DataField="GroupName" HeaderText="GroupName" SortExpression="GroupName" />
                                     <asp:BoundField DataField="Status" HeaderText="Status" SortExpression="Status" />
