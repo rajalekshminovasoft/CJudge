@@ -171,7 +171,11 @@
                         <li><a href="AddOrganization.aspx"><span>Organization</span></a></li>
                         <li><a href="AddUserGroup.aspx"><span>Group</span></a></li>
                         <li><a href="AddBasicDetails.aspx"><span>Basics</span></a></li>
+                        <li><a href="AddSpecialAdmin.aspx"><span>AddSpecialAdmin</span></a></li>
                         <li><a href="AddSpecialAdminPermission.aspx"><span>SpecialAdminPermission</span></a></li>
+                        <li><a href="AddInstrByDisplayType.aspx"><span>AddInstr.ByDisplayType</span></a></li>
+                        <li><a href="AssignQuestion.aspx"><span>AssignQuestion</span></a></li>
+                        <li><a href="SetQuestionCount.aspx"><span>SetQunCount</span></a></li>
                         </ul> 
                         </div> 
                         </li> 

@@ -35,11 +35,11 @@ public partial class Admin_AddUser : System.Web.UI.Page
                          select userdetails;
         if (lastUserID.Count() > 0)
         {
-            Username = txtFsName.Text.Trim().Substring(0, 4) +"00"+ (lastUserID.First().UserId + 1);
+            Username = txtFsName.Text.Trim().Substring(0, 4).ToUpper() +"00"+ (lastUserID.First().UserId + 1);
         }
         else
         {
-            Username = txtFsName.Text.Trim().Substring(0, 4) + "00"+1;
+            Username = txtFsName.Text.Trim().Substring(0, 4).ToUpper() + "00"+1;
         }
         return Username;
     }
