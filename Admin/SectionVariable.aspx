@@ -34,7 +34,7 @@
             <td>
                 <asp:DropDownList ID="ddlSectionName" runat="server" 
                     AppendDataBoundItems="True" AutoPostBack="True" DataTextField="SectionName" 
-                    DataValueField="SectionId Width="310px">
+                    DataValueField="SectionId Width="310px" OnSelectedIndexChanged="ddlSectionName_SelectedIndexChanged">
                     <asp:ListItem Value="0">-- Select --</asp:ListItem>
                 </asp:DropDownList>
             </td>

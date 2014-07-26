@@ -488,4 +488,29 @@ public partial class Admin_SectionVariable : System.Web.UI.Page
         pnlsublevel2.Enabled = true;
         ResetSecondLevelVar();
     }
+    protected void ddlSectionName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlSectionName.SelectedIndex > 0)
+        {
+            // txtSectionName.Visible = true;
+            if (ddlSectionName.SelectedValue != "0" && ddlSectionName.SelectedValue != "00")
+            {
+                ResetFirstLevelVar(); ResetSecondLevelVar();
+                txtSectionName.Text = ddlSectionName.SelectedItem.Text;
+                Session["sectionIndex"] = ddlSectionName.SelectedIndex;
+                FillSubLevel1Sections();
+            }
+            else
+            {
+                pnlSublevel1.Enabled = false; pnlsublevel2.Enabled = false;
+                txtSectionName2.Text = ""; ResetFirstLevelVar(); ResetSecondLevelVar();//txtSectionName.Text = "";
+            }
+
+        }
+        else
+        {
+            Session["SecName"] = null; pnlSublevel1.Enabled = false; txtSectionName.Text = "";
+            pnlsublevel2.Enabled = false; ResetFirstLevelVar(); ResetSecondLevelVar();
+        }
+    }
 }

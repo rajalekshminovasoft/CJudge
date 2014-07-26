@@ -91,7 +91,7 @@
 
         <li><a href="Home.aspx"><span>Home</span></a>    </li>
 
-        <li><a href="#" class="parent"><span>About Us</span></a>
+        <li><a href="#" class="parent"><span>BasicDet.</span></a>
 
         <div><ul>
 
@@ -119,80 +119,86 @@
                     </ul></div>
 
                 </li>-->
-
-<li><a href="AboutUs.aspx?id=1"><span>About Us</span></a></li>
-            
-         <li><a href="AboutUs.aspx?id=2" ><span>Our Vision</span></a></li>
-         <li><a href="AboutUs.aspx?id=3"><span>Unique Stature</span></a></li>
-         <li><a href="AboutUs.aspx?id=4"><span>Our Values</span></a></li>
-
-            </ul></div>
-            
-        </li>
-
-        <li><a href="#" class="parent"><span>Products</span></a>
-            <div>
-                <ul>
-                     <li><a href="Products.aspx?id=5"><span>TalentScout</span></a></li>
-            
-         <li><a href="Products.aspx?id=6"><span>CODE-Informatics</span></a></li>
-         <li><a href="Products.aspx?id=7" ><span>Assesments</span></a></li>
-        
-                </ul>
-            </div>
-        </li>
-
-         <li><a href="#" class="parent"><span>Services</span></a>
-            <div>
-                <ul>
-                     <li><a href="Services.aspx?id=8" ><span>Corporate HR Services</span></a></li>
-            
-         <li><a href="Services.aspx?id=9"><span>Assessment Services</span></a></li>
-         <li><a href="Services.aspx?id=10"><span>Career Management Services</span></a></li>
-         <li><a href="Services.aspx?id=11"><span>Psychometric Services</span></a></li>   
-                    </ul> </div> 
-                </li> 
-        <li><a href="#" class="parent" ><span>Parameters</span></a>
-            <div>
-                <ul>
-                    <li><a href="#" class="parent"><span>Add Users</span></a>
+             <li><a href="#" class="parent"><span>AddBasicDetails</span></a>
 
                     <div><ul>
 
-                        <li><a href="AddUser.aspx"><span>Users</span></a></li>
-                        <li><a href="AddUser.aspx"><span>Users</span></a></li>
-                        </ul> 
-                        </div> 
-                        </li> 
-                    <li><a href="#" class="parent"><span>AddBasicDetails</span></a>
-
-                    <div><ul>
-
-                        <li><a href="AddOrganization.aspx"><span>Organization</span></a></li>
-                        <li><a href="AddUserGroup.aspx"><span>Group</span></a></li>
+                        
                         <li><a href="AddBasicDetails.aspx"><span>Basics</span></a></li>
-                        <li><a href="AddSpecialAdmin.aspx"><span>AddSpecialAdmin</span></a></li>
-                        <li><a href="AddSpecialAdminPermission.aspx"><span>SpecialAdminPermission</span></a></li>
-                        <li><a href="AddInstrByDisplayType.aspx"><span>AddInstr.ByDisplayType</span></a></li>
                         <li><a href="AssignQuestion.aspx"><span>AssignQuestion</span></a></li>
                         <li><a href="SetQuestionCount.aspx"><span>SetQunCount</span></a></li>
                         </ul> 
                         </div> 
                         </li> 
-                    <li><a href="#" class="parent"><span>Test</span></a>
+
+            
+         <li><a href="AddOrganization.aspx"><span>Organization</span></a></li>
+                        <li><a href="AddUserGroup.aspx"><span>Group</span></a></li>
+
+            </ul></div>
+            
+        </li>
+
+        <li><a href="#" class="parent"><span>User</span></a>
+            <div>
+                <ul>
+                    <li><a href="AddUser.aspx"><span>Users</span></a></li>
+                    <li><a href="#" class="parent"><span>SpecialAdmin</span></a>
+            <div>
+                <ul>
+<li><a href="AddSpecialAdmin.aspx"><span>AddSpecialAdmin</span></a></li>
+                        <li><a href="AddSpecialAdminPermission.aspx"><span>SpecialAdminPermission</span></a></li>
+                    </ul> </div> </li> 
+                </ul>
+            </div>
+        </li>
+
+         <li><a href="#" class="parent"><span>Qun.Bank</span></a>
+            <div>
+                <ul>
+                    <li><a href="AddQuestions.aspx"><span>Add Question</span></a></li>
+                    </ul> </div> 
+                </li> 
+        <li><a href="#" class="parent" ><span>Parameters</span></a>
+            <div>
+                <ul>
+                    
+                   
+                    <li><a href="#" class="parent"><span>Test Details</span></a>
 
                     <div><ul>
 
-                        <li><a href="AddTestDetails.aspx"><span>Add Test</span></a></li>
+                        <li><a href="AddTestDetails.aspx"><span>Test</span></a></li>
                         <li><a href="AddTestSectionDetails.aspx"><span>Test Section</span></a></li>
                         <li><a href="SectionVariable.aspx"><span>Test Variable</span></a></li>
-                        <li><a href="AddQuestions.aspx"><span>Add Question</span></a></li>
+                        <li><a href="SetTestTimeInterval.aspx"><span>SetTestTime</span></a></li>
+                        </ul> 
+                        </div> 
+                        </li> 
+                      <li><a href="#" class="parent"><span>AddInstruction</span></a>
+
+                    <div><ul>
+                        <li><a href="AddInstructionByTest.aspx"><span>TestInstrn.ByTest</span></a></li>
+                        <li><a href="AddInstructionBySection.aspx"><span>TestInstrn.BySection</span></a></li>
+                        <li><a href="AddInstructionByVariable.aspx"><span>TestInstrn.ByVariable</span></a></li>
+                        <li><a href="AddInstrByDisplayType.aspx"><span>TestInstrn.ByDisplyType</span></a></li>
+                        </ul> </div> </li> 
+                    <li><a href="#" class="parent"><span>Report</span></a>
+
+                    <div><ul>
+
+                        <li><a href="AddReportDescription.aspx"><span>AddRep.Descriptn</span></a></li>
+                        <%--<li><a href="AddTestSectionDetails.aspx"><span>Test Section</span></a></li>
+                        <li><a href="SectionVariable.aspx"><span>Test Variable</span></a></li>
+                        <li><a href="SetTestTimeInterval.aspx"><span>SetTestTime</span></a></li>--%>
                         </ul> 
                         </div> 
                         </li> 
                 </ul>
             </div>
         </li>
+      
+
         <li class="last"><a href="InfokitDetails.aspx"><span>Infokit</span></a></li>
         <li class="last" style="padding-top:15px;"><a href="Contact.aspx" >
             <asp:LinkButton  ID="lnk_logout" runat="server" OnClick="lnk_logout_Click">LogOut</asp:LinkButton></a></li>
