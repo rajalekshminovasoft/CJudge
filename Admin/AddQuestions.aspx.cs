@@ -22,47 +22,49 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     {
         try
         {
-
-            if (Session["usertype"].ToString() == "SpecialAdmin")
+            if (!Page.IsPostBack)
             {
-                bool perassigned = false;
-                specialadmin = true; OrganizationID = int.Parse(Session["AdminOrganizationID"].ToString());
-                ListItem litem = new ListItem("-- select --", "0");
-                ddlCategory.Items.Clear();
-                ddlCategory.Items.Add(litem);
-
-                var getQuestionTypes = from questiontypes in cjDataclass.OrganizationQuestionTypes where questiontypes.OrganizationId == OrganizationID select questiontypes;
-                if (getQuestionTypes.Count() > 0)
+                if (Session["usertype"].ToString() == "SpecialAdmin")
                 {
-                    foreach (var orgQuestionTypes in getQuestionTypes)
+                    bool perassigned = false;
+                    specialadmin = true; OrganizationID = int.Parse(Session["AdminOrganizationID"].ToString());
+                    ListItem litem = new ListItem("-- select --", "0");
+                    ddlCategory.Items.Clear();
+                    ddlCategory.Items.Add(litem);
+
+                    var getQuestionTypes = from questiontypes in cjDataclass.OrganizationQuestionTypes where questiontypes.OrganizationId == OrganizationID select questiontypes;
+                    if (getQuestionTypes.Count() > 0)
                     {
-                        litem = new ListItem(orgQuestionTypes.QuestionTypeDescription.ToString(), orgQuestionTypes.QuestionTypeName.ToString());
-                        ddlCategory.Items.Add(litem);
-                        perassigned = true;
+                        foreach (var orgQuestionTypes in getQuestionTypes)
+                        {
+                            litem = new ListItem(orgQuestionTypes.QuestionTypeDescription.ToString(), orgQuestionTypes.QuestionTypeName.ToString());
+                            ddlCategory.Items.Add(litem);
+                            perassigned = true;
+                        }
                     }
+                    if (perassigned == false)
+                    { lblMessage.Text = "Please contact your site admin to approve question types to get permissions to add questions"; return; }
                 }
-                if (perassigned == false)
-                { lblMessage.Text = "Please contact your site admin to approve question types to get permissions to add questions"; return; }
+
+
+                //FillSessionslist(); 
+                FillSectionCategory();
+
+                int catindex = 0;
+                if (Session["catindex"] != null)
+                {
+                    catindex = int.Parse(Session["catindex"].ToString());
+                    ddlCategory.SelectedIndex = catindex;
+                    if (ddlCategory.SelectedValue == "RatingType")
+                    { pnlRatingStyle.Visible = true; pnlAnswer.Visible = false; }
+                    else if (ddlCategory.SelectedValue == "FillBlanks")
+                    { pnlAnswer.Visible = false; }
+                }
+
+                FillGrid();
+
+                FillAnswerOptions();
             }
-
-
-            //FillSessionslist(); 
-            FillSectionCategory();
-
-            int catindex = 0;
-            if (Session["catindex"] != null)
-            {
-                catindex = int.Parse(Session["catindex"].ToString());
-                ddlCategory.SelectedIndex = catindex;
-                if (ddlCategory.SelectedValue == "RatingType")
-                { pnlRatingStyle.Visible = true; pnlAnswer.Visible = false; }
-                else if (ddlCategory.SelectedValue == "FillBlanks")
-                { pnlAnswer.Visible = false; }
-            }
-
-            FillGrid();
-
-            FillAnswerOptions();
         }
         catch (Exception ex)
         { }

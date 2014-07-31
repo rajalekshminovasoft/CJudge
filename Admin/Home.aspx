@@ -6,7 +6,7 @@
     <table align="center" width="80%">
         <tr>
             <td style="width:20%; text-align:center;" >
-                <asp:imagebutton id="imgbtn" runat="server" width="100px" hight="100px" ImageUrl="~/images/TestList.png" ></asp:imagebutton><br />
+                <asp:imagebutton id="imgbtn_testlist" runat="server" width="100px" hight="100px" ImageUrl="~/images/TestList.png" OnClick="imgbtn_testlist_Click"  ></asp:imagebutton><br />
                 <center><asp:label id="LAbel" runat="server" text="Test List" Font-Bold="True" ForeColor="Maroon"></asp:label></center>
             </td>
              <td style="width:20%; text-align:center;" >

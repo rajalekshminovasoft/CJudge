@@ -107,6 +107,9 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
   partial void InsertReportDescription(ReportDescription instance);
   partial void UpdateReportDescription(ReportDescription instance);
   partial void DeleteReportDescription(ReportDescription instance);
+  partial void InsertUserTestList(UserTestList instance);
+  partial void UpdateUserTestList(UserTestList instance);
+  partial void DeleteUserTestList(UserTestList instance);
   #endregion
 	
 	public CJDataClassesDataContext() : 
@@ -424,6 +427,22 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<ReportDescription>();
+		}
+	}
+	
+	public System.Data.Linq.Table<UserTestList> UserTestLists
+	{
+		get
+		{
+			return this.GetTable<UserTestList>();
+		}
+	}
+	
+	public System.Data.Linq.Table<View_UserTest> View_UserTests
+	{
+		get
+		{
+			return this.GetTable<View_UserTest>();
 		}
 	}
 	
@@ -936,6 +955,13 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 	public int DeleteReportDescriptions([global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationId", DbType="Int")] System.Nullable<int> organizationId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId)
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), organizationId, testId);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUserTestList")]
+	public int AddUserTestList([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserTestId", DbType="Int")] System.Nullable<int> userTestId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PaymentStatus", DbType="VarChar(50)")] string paymentStatus, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestStatus", DbType="VarChar(50)")] string testStatus, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PaymentDate", DbType="DateTime")] System.Nullable<System.DateTime> paymentDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ReportAccess", DbType="Int")] System.Nullable<int> reportAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestLoginDate", DbType="DateTime")] System.Nullable<System.DateTime> testLoginDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestLogoutDate", DbType="DateTime")] System.Nullable<System.DateTime> testLogoutDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestPrice", DbType="Int")] System.Nullable<int> testPrice)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), testId, userTestId, userId, paymentStatus, testStatus, paymentDate, reportAccess, testLoginDate, testLogoutDate, testPrice);
 		return ((int)(result.ReturnValue));
 	}
 }
@@ -13204,6 +13230,581 @@ public partial class ReportDescription : INotifyPropertyChanging, INotifyPropert
 		if ((this.PropertyChanged != null))
 		{
 			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTestList")]
+public partial class UserTestList : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _TestId;
+	
+	private int _UserTestId;
+	
+	private int _UserId;
+	
+	private string _PaymentStatus;
+	
+	private string _TestStatus;
+	
+	private System.Nullable<System.DateTime> _PaymentDate;
+	
+	private System.Nullable<int> _ReportAccess;
+	
+	private System.Nullable<System.DateTime> _TestLoginDate;
+	
+	private System.Nullable<System.DateTime> _TestLogoutDate;
+	
+	private System.Nullable<int> _TestPrice;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnTestIdChanging(int value);
+    partial void OnTestIdChanged();
+    partial void OnUserTestIdChanging(int value);
+    partial void OnUserTestIdChanged();
+    partial void OnUserIdChanging(int value);
+    partial void OnUserIdChanged();
+    partial void OnPaymentStatusChanging(string value);
+    partial void OnPaymentStatusChanged();
+    partial void OnTestStatusChanging(string value);
+    partial void OnTestStatusChanged();
+    partial void OnPaymentDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnPaymentDateChanged();
+    partial void OnReportAccessChanging(System.Nullable<int> value);
+    partial void OnReportAccessChanged();
+    partial void OnTestLoginDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnTestLoginDateChanged();
+    partial void OnTestLogoutDateChanging(System.Nullable<System.DateTime> value);
+    partial void OnTestLogoutDateChanged();
+    partial void OnTestPriceChanging(System.Nullable<int> value);
+    partial void OnTestPriceChanged();
+    #endregion
+	
+	public UserTestList()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this.OnTestIdChanging(value);
+				this.SendPropertyChanging();
+				this._TestId = value;
+				this.SendPropertyChanged("TestId");
+				this.OnTestIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTestId", DbType="Int NOT NULL")]
+	public int UserTestId
+	{
+		get
+		{
+			return this._UserTestId;
+		}
+		set
+		{
+			if ((this._UserTestId != value))
+			{
+				this.OnUserTestIdChanging(value);
+				this.SendPropertyChanging();
+				this._UserTestId = value;
+				this.SendPropertyChanged("UserTestId");
+				this.OnUserTestIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+	public int UserId
+	{
+		get
+		{
+			return this._UserId;
+		}
+		set
+		{
+			if ((this._UserId != value))
+			{
+				this.OnUserIdChanging(value);
+				this.SendPropertyChanging();
+				this._UserId = value;
+				this.SendPropertyChanged("UserId");
+				this.OnUserIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentStatus", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string PaymentStatus
+	{
+		get
+		{
+			return this._PaymentStatus;
+		}
+		set
+		{
+			if ((this._PaymentStatus != value))
+			{
+				this.OnPaymentStatusChanging(value);
+				this.SendPropertyChanging();
+				this._PaymentStatus = value;
+				this.SendPropertyChanged("PaymentStatus");
+				this.OnPaymentStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestStatus", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string TestStatus
+	{
+		get
+		{
+			return this._TestStatus;
+		}
+		set
+		{
+			if ((this._TestStatus != value))
+			{
+				this.OnTestStatusChanging(value);
+				this.SendPropertyChanging();
+				this._TestStatus = value;
+				this.SendPropertyChanged("TestStatus");
+				this.OnTestStatusChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> PaymentDate
+	{
+		get
+		{
+			return this._PaymentDate;
+		}
+		set
+		{
+			if ((this._PaymentDate != value))
+			{
+				this.OnPaymentDateChanging(value);
+				this.SendPropertyChanging();
+				this._PaymentDate = value;
+				this.SendPropertyChanged("PaymentDate");
+				this.OnPaymentDateChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportAccess", DbType="Int")]
+	public System.Nullable<int> ReportAccess
+	{
+		get
+		{
+			return this._ReportAccess;
+		}
+		set
+		{
+			if ((this._ReportAccess != value))
+			{
+				this.OnReportAccessChanging(value);
+				this.SendPropertyChanging();
+				this._ReportAccess = value;
+				this.SendPropertyChanged("ReportAccess");
+				this.OnReportAccessChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestLoginDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> TestLoginDate
+	{
+		get
+		{
+			return this._TestLoginDate;
+		}
+		set
+		{
+			if ((this._TestLoginDate != value))
+			{
+				this.OnTestLoginDateChanging(value);
+				this.SendPropertyChanging();
+				this._TestLoginDate = value;
+				this.SendPropertyChanged("TestLoginDate");
+				this.OnTestLoginDateChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestLogoutDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> TestLogoutDate
+	{
+		get
+		{
+			return this._TestLogoutDate;
+		}
+		set
+		{
+			if ((this._TestLogoutDate != value))
+			{
+				this.OnTestLogoutDateChanging(value);
+				this.SendPropertyChanging();
+				this._TestLogoutDate = value;
+				this.SendPropertyChanged("TestLogoutDate");
+				this.OnTestLogoutDateChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestPrice", DbType="Int")]
+	public System.Nullable<int> TestPrice
+	{
+		get
+		{
+			return this._TestPrice;
+		}
+		set
+		{
+			if ((this._TestPrice != value))
+			{
+				this.OnTestPriceChanging(value);
+				this.SendPropertyChanging();
+				this._TestPrice = value;
+				this.SendPropertyChanged("TestPrice");
+				this.OnTestPriceChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.View_UserTest")]
+public partial class View_UserTest
+{
+	
+	private int _TestId;
+	
+	private int _UserTestId;
+	
+	private int _UserId;
+	
+	private string _PaymentStatus;
+	
+	private string _TestStatus;
+	
+	private System.Nullable<System.DateTime> _PaymentDate;
+	
+	private System.Nullable<int> _ReportAccess;
+	
+	private System.Nullable<System.DateTime> _TestLoginDate;
+	
+	private System.Nullable<System.DateTime> _TestLogoutDate;
+	
+	private System.Nullable<int> _TestPrice;
+	
+	private string _TestName;
+	
+	private string _UserName;
+	
+	private string _EmailId;
+	
+	private System.Nullable<int> _Status;
+	
+	private string _PhoneNum;
+	
+	private System.Nullable<int> _OrganizationID;
+	
+	public View_UserTest()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", DbType="Int NOT NULL")]
+	public int TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this._TestId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTestId", DbType="Int NOT NULL")]
+	public int UserTestId
+	{
+		get
+		{
+			return this._UserTestId;
+		}
+		set
+		{
+			if ((this._UserTestId != value))
+			{
+				this._UserTestId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int NOT NULL")]
+	public int UserId
+	{
+		get
+		{
+			return this._UserId;
+		}
+		set
+		{
+			if ((this._UserId != value))
+			{
+				this._UserId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentStatus", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string PaymentStatus
+	{
+		get
+		{
+			return this._PaymentStatus;
+		}
+		set
+		{
+			if ((this._PaymentStatus != value))
+			{
+				this._PaymentStatus = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestStatus", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string TestStatus
+	{
+		get
+		{
+			return this._TestStatus;
+		}
+		set
+		{
+			if ((this._TestStatus != value))
+			{
+				this._TestStatus = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PaymentDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> PaymentDate
+	{
+		get
+		{
+			return this._PaymentDate;
+		}
+		set
+		{
+			if ((this._PaymentDate != value))
+			{
+				this._PaymentDate = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ReportAccess", DbType="Int")]
+	public System.Nullable<int> ReportAccess
+	{
+		get
+		{
+			return this._ReportAccess;
+		}
+		set
+		{
+			if ((this._ReportAccess != value))
+			{
+				this._ReportAccess = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestLoginDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> TestLoginDate
+	{
+		get
+		{
+			return this._TestLoginDate;
+		}
+		set
+		{
+			if ((this._TestLoginDate != value))
+			{
+				this._TestLoginDate = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestLogoutDate", DbType="DateTime")]
+	public System.Nullable<System.DateTime> TestLogoutDate
+	{
+		get
+		{
+			return this._TestLogoutDate;
+		}
+		set
+		{
+			if ((this._TestLogoutDate != value))
+			{
+				this._TestLogoutDate = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestPrice", DbType="Int")]
+	public System.Nullable<int> TestPrice
+	{
+		get
+		{
+			return this._TestPrice;
+		}
+		set
+		{
+			if ((this._TestPrice != value))
+			{
+				this._TestPrice = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestName", DbType="NVarChar(300)")]
+	public string TestName
+	{
+		get
+		{
+			return this._TestName;
+		}
+		set
+		{
+			if ((this._TestName != value))
+			{
+				this._TestName = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserName", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+	public string UserName
+	{
+		get
+		{
+			return this._UserName;
+		}
+		set
+		{
+			if ((this._UserName != value))
+			{
+				this._UserName = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmailId", DbType="NVarChar(100)")]
+	public string EmailId
+	{
+		get
+		{
+			return this._EmailId;
+		}
+		set
+		{
+			if ((this._EmailId != value))
+			{
+				this._EmailId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Status", DbType="Int")]
+	public System.Nullable<int> Status
+	{
+		get
+		{
+			return this._Status;
+		}
+		set
+		{
+			if ((this._Status != value))
+			{
+				this._Status = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNum", DbType="NVarChar(20)")]
+	public string PhoneNum
+	{
+		get
+		{
+			return this._PhoneNum;
+		}
+		set
+		{
+			if ((this._PhoneNum != value))
+			{
+				this._PhoneNum = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrganizationID", DbType="Int")]
+	public System.Nullable<int> OrganizationID
+	{
+		get
+		{
+			return this._OrganizationID;
+		}
+		set
+		{
+			if ((this._OrganizationID != value))
+			{
+				this._OrganizationID = value;
+			}
 		}
 	}
 }

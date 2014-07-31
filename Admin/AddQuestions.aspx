@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation="false"  MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="AddQuestions.aspx.cs" Inherits="Admin_AddQuestions" %>
+﻿<%@ Page Title="" Language="C#" EnableEventValidation="false"  MasterPageFile="~/Admin/CJAdminMaster.master" ValidateRequest="false"  AutoEventWireup="true" CodeFile="AddQuestions.aspx.cs" Inherits="Admin_AddQuestions" %>
 <%@ Register assembly="FreeTextBox" namespace="FreeTextBoxControls" tagprefix="FTB" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">

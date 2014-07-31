@@ -168,10 +168,11 @@
 
                     <div><ul>
 
-                        <li><a href="AddTestDetails.aspx"><span>Test</span></a></li>
+                        <li><a href="AddTestDetails.aspx"><span>Add Test</span></a></li>
                         <li><a href="AddTestSectionDetails.aspx"><span>Test Section</span></a></li>
                         <li><a href="SectionVariable.aspx"><span>Test Variable</span></a></li>
                         <li><a href="SetTestTimeInterval.aspx"><span>SetTestTime</span></a></li>
+                        <li><a href="AssignTestByAdmin.aspx"><span>Assign Test</span></a></li>
                         </ul> 
                         </div> 
                         </li> 

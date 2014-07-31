@@ -12,4 +12,11 @@ public partial class Admin_Home : System.Web.UI.Page
         if (Session["Logged"].ToString() == "False")
             Response.Redirect("../Default.aspx");
     }
+    protected void imgbtn_testlist_Click(object sender, ImageClickEventArgs e)
+    {
+        //User View
+        Response.Redirect("ViewUserTestDetails.aspx");
+        //Admin View
+
+    }
 }
