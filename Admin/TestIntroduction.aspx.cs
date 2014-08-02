@@ -13,36 +13,40 @@ public partial class Admin_TestIntroduction : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
-            //FillText();
+            FillText();
         }
     }
-    //private void FillText()
-    //{
-    //    Panel1.Visible = true;
-    //    container.InnerHtml = "";
-    //    int testid = 0;
-    //    if (Session["curtestid"] != null)
-    //    {
-    //        testid = int.Parse(Session["curtestid"].ToString());
-    //        var Details = from det in cjDataclass.TestLists
-    //                      where det.TestId == testid
-    //                      select det;
-    //        if (Details.Count() > 0)
-    //        {
-    //            string trainingdetails = "<div>";
-    //            if (Details.First().Instructions != null && Details.First().Instructions != "")
-    //                trainingdetails += Details.First().Instructions.ToString();
+    private void FillText()
+    {
+        Panel1.Visible = true;
+        container.InnerHtml = "";
+        Session.Add("curtestid", Request.QueryString["Id"]);
+        int testid = 0;
+        if (Session["curtestid"] != null)
+        {
+            testid = int.Parse(Session["curtestid"].ToString());
+            var Details = from det in cjDataclass.TestLists
+                          where det.TestId == testid
+                          select det;
+            if (Details.Count() > 0)
+            {
+                string trainingdetails = "<div>";
+                if (Details.First().Instructions != null && Details.First().Instructions != "")
+                    trainingdetails += Details.First().Instructions.ToString();
 
-    //            if (Details.First().Description != null && Details.First().Description != "")
-    //                trainingdetails += "<br/>" + Details.First().Description.ToString();
-    //            if (trainingdetails != "<div>")
-    //            {
-    //                container.InnerHtml = trainingdetails;
-    //                return;
-    //            }
-    //        }
-    //        //////   ShowNextControl();
-    //    }
-        
-    //}
+                if (Details.First().Description != null && Details.First().Description != "")
+                    trainingdetails += "<br/>" + Details.First().Description.ToString();
+                if (trainingdetails != "<div>")
+                {
+                    container.InnerHtml = trainingdetails;
+                    return;
+                }
+            }
+        }
+
+    }
+    protected void btnProceed_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("TakeTest.aspx?Id=" + Request.QueryString["Id"].Trim() + "");
+    }
 }

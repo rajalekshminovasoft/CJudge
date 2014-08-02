@@ -58,9 +58,23 @@ public partial class Admin_AddUser : System.Web.UI.Page
                 DateTime frmdate = Convert.ToDateTime(txtLoginFromDate.Text.Trim());
                 DateTime todate = Convert.ToDateTime(txtLoginToDate.Text.Trim());
                 cjDataclass.AddUserByAdmin(Username, Username, ddlUserType.SelectedItem.Text, int.Parse(drp_org.SelectedValue), int.Parse(drp_groupuser.SelectedValue), frmdate ,todate , int.Parse(drp_Status.SelectedValue), 1, txtEmailId.Text.Trim(), 1, txtFsName.Text.Trim(), txtMidName.Text.Trim(), txtLstName.Text.Trim(), ddlGender.SelectedItem.Text, int.Parse(txtAge.Text.Trim()), 0, 0, "", "", "");
+                grd_User.DataBind();
                 lblMessage.Text = "User Details Added";
             }
             
+        }
+    }
+    protected void drp_recruiter_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (drp_recruiter.SelectedItem.Text == "Yes")
+        {
+            txtrecrutr.Text = "";
+            txtrecrutr.Enabled = true;
+        }
+        else if (drp_recruiter.SelectedItem.Text=="No")
+        {            
+            txtrecrutr.Text = "NotApplicable";
+            txtrecrutr.ReadOnly = true;
         }
     }
 }

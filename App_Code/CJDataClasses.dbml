@@ -665,6 +665,54 @@
       <Column Name="OrganizationID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.UserTestSectionDetails" Member="UserTestSectionDetails">
+    <Type Name="UserTestSectionDetail">
+      <Column Name="UserTestSectionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrganizationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EvaluationResult" Member="EvaluationResults">
+    <Type Name="EvaluationResult">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Category" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTestPageIndex_Temp" Member="UserTestPageIndex_Temps">
+    <Type Name="UserTestPageIndex_Temp">
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecondVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageIndex" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserTestQuestions_Temp" Member="UserTestQuestions_Temps">
+    <Type Name="UserTestQuestions_Temp">
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TestSectionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FirstVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SecondVariableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionType" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
     <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
     <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
@@ -1241,6 +1289,51 @@
     <Parameter Name="TestLoginDate" Parameter="testLoginDate" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="TestLogoutDate" Parameter="testLogoutDate" Type="System.DateTime" DbType="DateTime" />
     <Parameter Name="TestPrice" Parameter="testPrice" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.QuesAnswers" Method="QuesAnswers">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserCode" Parameter="userCode" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Category" Parameter="category" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserTestSectionDetails" Method="AddUserTestSectionDetails">
+    <Parameter Name="UserTestSectionId" Parameter="userTestSectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="OrganizationId" Parameter="organizationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserTestQuestions_Temp" Method="AddUserTestQuestions_Temp">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstVariableId" Parameter="firstVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecondVariableId" Parameter="secondVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionId" Parameter="questionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionType" Parameter="questionType" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddUserTestPageIndex_Temp" Method="AddUserTestPageIndex_Temp">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FirstVariableId" Parameter="firstVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SecondVariableId" Parameter="secondVariableId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageIndex" Parameter="pageIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionType" Parameter="questionType" Type="System.String" DbType="VarChar(200)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteUserTest_TempValues" Method="DeleteUserTest_TempValues">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

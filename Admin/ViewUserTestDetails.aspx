@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="ViewUserTestDetails.aspx.cs" Inherits="Admin_ViewUserTestDetails" %>
+﻿<%@ Page Title="" Language="C#" ValidateRequest="false"  MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="ViewUserTestDetails.aspx.cs" Inherits="Admin_ViewUserTestDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -6,7 +6,7 @@
     <table width="75%" align="center">
         <tr>
             <td>
-                <asp:gridview id="grd_usertest" runat="server" AllowPaging="True" AutoGenerateColumns="False"  EnableModelValidation="True" width="80%" align="center">
+                <asp:gridview id="grd_usertest" runat="server" AllowPaging="True" AutoGenerateColumns="False"  EnableModelValidation="True" width="85%" align="center">
                     <Columns>
 
                         <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
@@ -19,9 +19,10 @@
                         <asp:BoundField DataField="EmailId" HeaderText="EmailId" SortExpression="EmailId" />
                         
                         <asp:TemplateField>
-                            <ItemTemplate><a href="#">
-                            <asp:Button id="btnReport" Text="Report"  runat="server"  ></asp:Button></a>
-                            <a href="#">  <asp:Button id="btntest" Text="TakeTest"  runat="server" ></asp:Button></a>
+                            <ItemTemplate><a target="_blank"  href="TestIntroduction.aspx?Id=<%#Eval("UserTestId") %>" >
+                            <asp:Label id="btnReport" Text="Report" ForeColor="#800000"  runat="server"  ></asp:Label></a>
+                            <a target="_blank"  href="TestIntroduction.aspx?Id=<%#Eval("UserTestId") %>">  
+                                <asp:Label id="btntest"  Text="TakeTest" ForeColor="#800000"  runat="server" ></asp:Label></a>
                             </ItemTemplate>
                         </asp:TemplateField>
                         

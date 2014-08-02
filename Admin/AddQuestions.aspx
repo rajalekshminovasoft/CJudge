@@ -295,12 +295,16 @@
                                         <td>
                                             Image</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeA" runat="server" style="width: 300px" 
+                                            
+                                            <asp:FileUpload ID="FileUpload1" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeA" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages" runat="server" onclick="btnDeleteMemTypeImages_Click" Text="Delete" />
+                                            <%--<input ID="txtfilenameMemTypeA" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button4" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeA');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages" runat="server" 
-                                                onclick="btnDeleteMemTypeImages_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -311,12 +315,15 @@
                                         <td>
                                             Image 2</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeB" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload2" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeB" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages2" runat="server" onclick="btnDeleteMemTypeImages2_Click" Text="Delete" />
+                                            <%--<input ID="txtfilenameMemTypeB" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button5" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeB');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages2" runat="server" 
-                                                onclick="btnDeleteMemTypeImages2_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages2_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -327,12 +334,15 @@
                                         <td>
                                             Image 3</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeC" runat="server" style="width: 300px" 
+                                             <asp:FileUpload ID="FileUpload3" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeC" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages3" runat="server" onclick="btnDeleteMemTypeImages3_Click" Text="Delete" />
+                                            <%--<input ID="txtfilenameMemTypeC" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button6" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeC');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages3" runat="server" 
-                                                onclick="btnDeleteMemTypeImages3_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages3_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -343,12 +353,15 @@
                                         <td>
                                             Image 4</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeD" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload4" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeD" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages4" runat="server" onclick="btnDeleteMemTypeImages3_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeD" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button7" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeD');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages4" runat="server" 
-                                                onclick="btnDeleteMemTypeImages4_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages4_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -359,12 +372,16 @@
                                         <td>
                                             Image 5</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeE" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload5" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeE" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages5" runat="server" onclick="btnDeleteMemTypeImages5_Click" Text="Delete" />
+
+<%--                                            <input ID="txtfilenameMemTypeE" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button8" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeE');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages5" runat="server" 
-                                                onclick="btnDeleteMemTypeImages5_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages5_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -375,12 +392,15 @@
                                         <td>
                                             Image 6</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeF" runat="server" style="width: 300px" 
+                                             <asp:FileUpload ID="FileUpload6" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeF" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages6" runat="server" onclick="btnDeleteMemTypeImages6_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeF" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button9" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeF');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages6" runat="server" 
-                                                onclick="btnDeleteMemTypeImages6_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages6_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -391,12 +411,16 @@
                                         <td>
                                             Image 7</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeG" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload7" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeG" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages7" runat="server" onclick="btnDeleteMemTypeImages7_Click" Text="Delete" />
+
+                                          <%--  <input ID="txtfilenameMemTypeG" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button10" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeG');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages7" runat="server" 
-                                                onclick="btnDeleteMemTypeImages7_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages7_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -407,12 +431,15 @@
                                         <td>
                                             Image 8</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeH" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload8" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeH" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages8" runat="server" onclick="btnDeleteMemTypeImages8_Click" Text="Delete" />
+                                        <%--    <input ID="txtfilenameMemTypeH" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button11" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeH');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages8" runat="server" 
-                                                onclick="btnDeleteMemTypeImages8_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages8_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -423,12 +450,15 @@
                                         <td>
                                             Image 9</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeI" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload9" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeI" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages9" runat="server" onclick="btnDeleteMemTypeImages9_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeI" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button12" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeI');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages9" runat="server" 
-                                                onclick="btnDeleteMemTypeImages9_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages9_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -439,12 +469,15 @@
                                         <td>
                                             Image 10</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeJ" runat="server" style="width: 300px" 
+                                             <asp:FileUpload ID="FileUpload10" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeJ" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages10" runat="server" onclick="btnDeleteMemTypeImages10_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeJ" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button13" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeJ');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages10" runat="server" 
-                                                onclick="btnDeleteMemTypeImages10_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages10_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -455,12 +488,15 @@
                                         <td>
                                             Image 11</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeK" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload11" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeK" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages11" runat="server" onclick="btnDeleteMemTypeImages11_Click" Text="Delete" />
+                                          <%--  <input ID="txtfilenameMemTypeK" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button14" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeK');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages11" runat="server" 
-                                                onclick="btnDeleteMemTypeImages11_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages11_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -471,12 +507,16 @@
                                         <td>
                                             Image 12</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeL" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload12" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeL" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages12" runat="server" onclick="btnDeleteMemTypeImages12_Click" Text="Delete" />
+
+                                            <%--<input ID="txtfilenameMemTypeL" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button15" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeL');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages12" runat="server" 
-                                                onclick="btnDeleteMemTypeImages12_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages12_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -487,12 +527,15 @@
                                         <td>
                                             Image 13</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeM" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload13" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeM" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages13" runat="server" onclick="btnDeleteMemTypeImages13_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeM" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button16" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeM');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages13" runat="server" 
-                                                onclick="btnDeleteMemTypeImages13_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages13_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -503,12 +546,15 @@
                                         <td>
                                             Image 14</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeN" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload14" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeN" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages14" runat="server" onclick="btnDeleteMemTypeImages14_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeN" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button17" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeN');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages14" runat="server" 
-                                                onclick="btnDeleteMemTypeImages14_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages14_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -519,12 +565,15 @@
                                         <td>
                                             Image 15</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeO" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload15" runat="server" />
+                                            <asp:TextBox ID="txtfilenameMemTypeO" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages15" runat="server" onclick="btnDeleteMemTypeImages15_Click" Text="Delete" />
+<%--                                            <input ID="txtfilenameMemTypeO" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button18" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeO');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages15" runat="server" 
-                                                onclick="btnDeleteMemTypeImages15_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages15_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -535,12 +584,15 @@
                                         <td>
                                             Image 16</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeP" runat="server" style="width: 300px" 
+                                             <asp:FileUpload ID="FileUpload16" runat="server" />
+                                          <asp:TextBox ID="txtfilenameMemTypeP" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages16" runat="server" onclick="btnDeleteMemTypeImages16_Click" Text="Delete" />
+                                            <%--<input ID="txtfilenameMemTypeP" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button19" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeP');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages16" runat="server" 
-                                                onclick="btnDeleteMemTypeImages16_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages16_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -551,12 +603,16 @@
                                         <td>
                                             Image 17</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeQ" runat="server" style="width: 300px" 
+                                             <asp:FileUpload ID="FileUpload17" runat="server" />
+                                          <asp:TextBox ID="txtfilenameMemTypeQ" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages17" runat="server" onclick="btnDeleteMemTypeImages17_Click" Text="Delete" />
+
+                                            <%--<input ID="txtfilenameMemTypeQ" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button20" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeQ');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages17" runat="server" 
-                                                onclick="btnDeleteMemTypeImages17_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages17_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -567,12 +623,16 @@
                                         <td>
                                             Image 18</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeR" runat="server" style="width: 300px" 
+                                         <asp:FileUpload ID="FileUpload18" runat="server" />
+                                          <asp:TextBox ID="txtfilenameMemTypeR" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages18" runat="server" onclick="btnDeleteMemTypeImages18_Click" Text="Delete" />
+
+                                           <%-- <input ID="txtfilenameMemTypeR" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button21" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeR');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages18" runat="server" 
-                                                onclick="btnDeleteMemTypeImages18_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages18_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -583,12 +643,15 @@
                                         <td>
                                             Image 19</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeS" runat="server" style="width: 300px" 
+                                            <asp:FileUpload ID="FileUpload19" runat="server" />
+                                          <asp:TextBox ID="txtfilenameMemTypeS" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages19" runat="server" onclick="btnDeleteMemTypeImages19_Click" Text="Delete" />
+                                           <%-- <input ID="txtfilenameMemTypeS" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button22" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeS');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages19" runat="server" 
-                                                onclick="btnDeleteMemTypeImages19_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages19_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -599,12 +662,16 @@
                                         <td>
                                             Image 20</td>
                                         <td>
-                                            <input ID="txtfilenameMemTypeT" runat="server" style="width: 300px" 
+                                              <asp:FileUpload ID="FileUpload20" runat="server" />
+                                          <asp:TextBox ID="txtfilenameMemTypeT" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteMemTypeImages20" runat="server" onclick="btnDeleteMemTypeImages20_Click" Text="Delete" />
+
+                                           <%-- <input ID="txtfilenameMemTypeT" runat="server" style="width: 300px" 
                                                 type="text" /><input ID="Button23" 
                                                 onclick="dispQuestionFile('txtfilenameMemTypeT');" style="width: 100px" 
                                                 type="button" value="Browse a File .." /><asp:Button 
                                                 ID="btnDeleteMemTypeImages20" runat="server" 
-                                                onclick="btnDeleteMemTypeImages20_Click" Text="Delete" Width="55px" />
+                                                onclick="btnDeleteMemTypeImages20_Click" Text="Delete" Width="55px" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -662,10 +729,14 @@
                                             Question<br />
                                             File</td>
                                         <td>
-                                            <input ID="txtFileName_main" runat="server" readonly="readonly" 
+                                                 <asp:FileUpload ID="FileUpload21" runat="server" />
+                                          <asp:TextBox ID="txtFileName_main" runat="server"></asp:TextBox>
+                                         <%--   <asp:Button ID="btnBrowse_main" runat="server" onclick="btnDeleteMemTypeImages20_Click" Text="Delete" />--%>
+
+                                        <%--    <input ID="txtFileName_main" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse_main" 
                                                 onclick="dispQuestionFile('txtFileName_main');" type="button" 
-                                                value="Browse ..." /></td>
+                                                value="Browse ..." />--%></td>
                                         <td>
                                             <asp:Button ID="btnDeleteQuestionFilemain" runat="server" 
                                                 onclick="btnDeleteQuestionFilemain_Click" Text="Delete" />
@@ -680,10 +751,12 @@
                                                             Question<br />
                                                             File (Sub)</td>
                                                         <td>
-                                                            <input ID="txtFileName_sub" runat="server" readonly="readonly" 
+                                                            <asp:FileUpload ID="FileUpload22" runat="server" />
+                                          <asp:TextBox ID="txtFileName_sub" runat="server"></asp:TextBox>
+                                                          <%--  <input ID="txtFileName_sub" runat="server" readonly="readonly" 
                                                                 style="width: 350px" type="text" /><input ID="btnBrowse_sub" 
                                                                 onclick="dispQuestionFile('txtFileName_sub');" type="button" 
-                                                                value="Browse ..." /></td>
+                                                                value="Browse ..." />--%></td>
                                                         <td>
                                                             <asp:Button ID="btnDeleteQuestionFileSub" runat="server" 
                                                                 onclick="btnDeleteQuestionFileSub_Click" Text="Delete" />
@@ -801,11 +874,14 @@
                                         <td>
                                             Option1</td>
                                         <td>
-                                            <input ID="txtFileName1" runat="server" readonly="readonly" 
+                                              <asp:FileUpload ID="FileUpload23" runat="server" />
+                                          <asp:TextBox ID="txtFileName1" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteQuestionFileOption1" runat="server" onclick="btnDeleteQuestionFileOption1_Click" Text="Delete" />
+                                            <%--<input ID="txtFileName1" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse1" 
                                                 onclick="dispQuestionFile('txtFileName1');" type="button" value="Browse ..." /><asp:Button 
                                                 ID="btnDeleteQuestionFileOption1" runat="server" 
-                                                onclick="btnDeleteQuestionFileOption1_Click" Text="Delete" />
+                                                onclick="btnDeleteQuestionFileOption1_Click" Text="Delete" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -814,11 +890,15 @@
                                         <td>
                                             Option2</td>
                                         <td>
-                                            <input ID="txtFileName2" runat="server" readonly="readonly" 
+                                                <asp:FileUpload ID="FileUpload24" runat="server" />
+                                          <asp:TextBox ID="txtFileName2" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteQuestionFileOption2" runat="server" onclick="btnDeleteQuestionFileOption2_Click" Text="Delete" />
+
+<%--                                            <input ID="txtFileName2" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse2" 
                                                 onclick="dispQuestionFile('txtFileName2');" type="button" value="Browse ..." /><asp:Button 
                                                 ID="btnDeleteQuestionFileOption2" runat="server" 
-                                                onclick="btnDeleteQuestionFileOption2_Click" Text="Delete" />
+                                                onclick="btnDeleteQuestionFileOption2_Click" Text="Delete" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -827,11 +907,14 @@
                                         <td>
                                             Option3</td>
                                         <td>
-                                            <input ID="txtFileName3" runat="server" readonly="readonly" 
+                                                    <asp:FileUpload ID="FileUpload25" runat="server" />
+                                          <asp:TextBox ID="txtFileName3" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteQuestionFileOption3" runat="server" onclick="btnDeleteQuestionFileOption3_Click" Text="Delete" />
+                                          <%--  <input ID="txtFileName3" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse3" 
                                                 onclick="dispQuestionFile('txtFileName3');" type="button" value="Browse ..." /><asp:Button 
                                                 ID="btnDeleteQuestionFileOption3" runat="server" 
-                                                onclick="btnDeleteQuestionFileOption3_Click" Text="Delete" />
+                                                onclick="btnDeleteQuestionFileOption3_Click" Text="Delete" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -840,11 +923,14 @@
                                         <td>
                                             Option4</td>
                                         <td>
-                                            <input ID="txtFileName4" runat="server" readonly="readonly" 
+                                             <asp:FileUpload ID="FileUpload26" runat="server" />
+                                          <asp:TextBox ID="txtFileName4" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteQuestionFileOption4" runat="server" onclick="btnDeleteQuestionFileOption4_Click" Text="Delete" />
+                                           <%-- <input ID="txtFileName4" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse4" 
                                                 onclick="dispQuestionFile('txtFileName4');" type="button" value="Browse ..." /><asp:Button 
                                                 ID="btnDeleteQuestionFileOption4" runat="server" 
-                                                onclick="btnDeleteQuestionFileOption4_Click" Text="Delete" />
+                                                onclick="btnDeleteQuestionFileOption4_Click" Text="Delete" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>
@@ -853,11 +939,14 @@
                                         <td>
                                             Option5</td>
                                         <td>
-                                            <input ID="txtFileName5" runat="server" readonly="readonly" 
+                                <asp:FileUpload ID="FileUpload27" runat="server" />
+                                          <asp:TextBox ID="txtFileName5" runat="server"></asp:TextBox>
+                                            <asp:Button ID="btnDeleteQuestionFileOption5" runat="server" onclick="btnDeleteQuestionFileOption5_Click" Text="Delete" />
+                                            <%--<input ID="txtFileName5" runat="server" readonly="readonly" 
                                                 style="width: 350px" type="text" /><input ID="btnBrowse5" 
                                                 onclick="dispQuestionFile('txtFileName5');" type="button" value="Browse ..." /><asp:Button 
                                                 ID="btnDeleteQuestionFileOption5" runat="server" 
-                                                onclick="btnDeleteQuestionFileOption5_Click" Text="Delete" />
+                                                onclick="btnDeleteQuestionFileOption5_Click" Text="Delete" />--%>
                                         </td>
                                         <td>
                                             &nbsp;</td>

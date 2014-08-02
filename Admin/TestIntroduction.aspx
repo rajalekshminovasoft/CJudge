@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table width="75%" align="center">
         <tr><td>
-            <%--<table width="650">
+            <table width="650">
         <tr>
             <td align="left" valign="top">
     <table>
@@ -26,10 +26,10 @@
                 </td>
         </tr>
         <tr valign="bottom" style="height: 20px">
-            <td align="right" height="20">
+            <%--<td align="right" height="20">
                 <asp:Button ID="btnPrevious" runat="server" onclick="ptnPrevious_Click" 
                     Text="Go to Previous Page" onclientclick="ShowSelProcess();" />
-            </td>
+            </td>--%>
             <td align="right" height="20">
                 <asp:Button ID="btnProceed" runat="server" onclick="btnProceed_Click" 
                     Text="Go to next Page" onclientclick="ShowSelProcess();" />
@@ -40,7 +40,7 @@
     </table>
             </td>
         </tr>
-    </table>--%>
+    </table>
             </td></tr>
     </table>
 </asp:Content>

@@ -143,6 +143,7 @@
             <div>
                 <ul>
                     <li><a href="AddUser.aspx"><span>Users</span></a></li>
+                    <li><a href="AssignTestByAdmin.aspx"><span>Assign Test</span></a></li>
                     <li><a href="#" class="parent"><span>SpecialAdmin</span></a>
             <div>
                 <ul>
@@ -231,7 +232,7 @@
         </div>
     </div>
     <div id="main_box_bottom"></div>
-
+            <asp:ScriptManager runat="server" ID="Scriptmanager1" ></asp:ScriptManager>
                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>

@@ -73,8 +73,8 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     private void FillWordTypeMemQuestions(int sectionid)
     {
 
-        gvwWordTypeMemQuestions.DataSource = "";
-        gvwWordTypeMemQuestions.DataBind();
+        //gvwWordTypeMemQuestions.DataSource = "";
+        //gvwWordTypeMemQuestions.DataBind();
         var memQues1 = from memQues in cjDataclass.MemmoryTestTextQuesCollections
                        where memQues.SectionId == sectionid
                        select memQues;
@@ -124,8 +124,8 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     private void FillImageTypeMemQuestions(int sectionid)
     {
         // ClearControls();
-        gvwImageTypeMemQuestions.DataSource = "";
-        gvwImageTypeMemQuestions.DataBind();
+        //gvwImageTypeMemQuestions.DataSource = "";
+        //gvwImageTypeMemQuestions.DataBind();
         var memQues1 = from memQues in cjDataclass.MemmoryTestImageQuesCollections
                        where memQues.SectionId == sectionid
                        select memQues;
@@ -866,15 +866,15 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         //ddlCategory.SelectedIndex = 0;
         txtOption1.Text = ""; txtOption2.Text = ""; txtOption3.Text = ""; txtOption4.Text = ""; txtOption5.Text = "";
         txtOption6.Text = ""; txtOption7.Text = ""; txtOption8.Text = ""; txtOption9.Text = ""; txtOption10.Text = "";
-        txtFileName_main.Value = ""; txtFileName_sub.Value = "";
-        txtFileName1.Value = ""; txtFileName2.Value = ""; txtFileName3.Value = ""; txtFileName4.Value = ""; txtFileName5.Value = "";
-        txtfilenameMemTypeA.Value = ""; txtMemTypeWords.Text = "";
+        txtFileName_main.Text = ""; txtFileName_sub.Text = "";
+        txtFileName1.Text = ""; txtFileName2.Text = ""; txtFileName3.Text = ""; txtFileName4.Text = ""; txtFileName5.Text = "";
+        txtfilenameMemTypeA.Text = ""; txtMemTypeWords.Text = "";
         ddlOption.SelectedIndex = 0;
 
-        txtfilenameMemTypeB.Value = ""; txtfilenameMemTypeC.Value = ""; txtfilenameMemTypeD.Value = ""; txtfilenameMemTypeE.Value = "";
-        txtfilenameMemTypeF.Value = ""; txtfilenameMemTypeG.Value = ""; txtfilenameMemTypeH.Value = ""; txtfilenameMemTypeI.Value = ""; txtfilenameMemTypeJ.Value = "";
-        txtfilenameMemTypeK.Value = ""; txtfilenameMemTypeL.Value = ""; txtfilenameMemTypeM.Value = ""; txtfilenameMemTypeN.Value = ""; txtfilenameMemTypeO.Value = "";
-        txtfilenameMemTypeP.Value = ""; txtfilenameMemTypeQ.Value = ""; txtfilenameMemTypeR.Value = ""; txtfilenameMemTypeS.Value = ""; txtfilenameMemTypeT.Value = "";
+        txtfilenameMemTypeB.Text = ""; txtfilenameMemTypeC.Text = ""; txtfilenameMemTypeD.Text = ""; txtfilenameMemTypeE.Text = "";
+        txtfilenameMemTypeF.Text = ""; txtfilenameMemTypeG.Text = ""; txtfilenameMemTypeH.Text = ""; txtfilenameMemTypeI.Text = ""; txtfilenameMemTypeJ.Text = "";
+        txtfilenameMemTypeK.Text = ""; txtfilenameMemTypeL.Text = ""; txtfilenameMemTypeM.Text = ""; txtfilenameMemTypeN.Text = ""; txtfilenameMemTypeO.Text = "";
+        txtfilenameMemTypeP.Text = ""; txtfilenameMemTypeQ.Text = ""; txtfilenameMemTypeR.Text = ""; txtfilenameMemTypeS.Text = ""; txtfilenameMemTypeT.Text = "";
         txtMemTypeWord2.Text = ""; txtMemTypeWord3.Text = ""; txtMemTypeWord4.Text = ""; txtMemTypeWord5.Text = "";
         txtMemTypeWord6.Text = ""; txtMemTypeWord7.Text = ""; txtMemTypeWord8.Text = ""; txtMemTypeWord9.Text = ""; txtMemTypeWord10.Text = "";
         txtMemTypeWord11.Text = ""; txtMemTypeWord12.Text = ""; txtMemTypeWord13.Text = ""; txtMemTypeWord14.Text = ""; txtMemTypeWord15.Text = "";
@@ -1057,33 +1057,33 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
 
                 if (Ques1.First().QuestionFileName != null)
                 {
-                    txtFileName_main.Value = Ques1.First().QuestionFileName.ToString();
+                    txtFileName_main.Text = Ques1.First().QuestionFileName.ToString();
                 }
 
                 if (Ques1.First().QuestionFileNameSub1 != null)
                 {
-                    txtFileName_sub.Value = Ques1.First().QuestionFileNameSub1.ToString();
+                    txtFileName_sub.Text = Ques1.First().QuestionFileNameSub1.ToString();
                 }
 
                 if (Ques1.First().Option1FileName != null)
                 {
-                    txtFileName1.Value = Ques1.First().Option1FileName.ToString();
+                    txtFileName1.Text = Ques1.First().Option1FileName.ToString();
                 }
                 if (Ques1.First().Option2FileName != null)
                 {
-                    txtFileName2.Value = Ques1.First().Option2FileName.ToString();
+                    txtFileName2.Text = Ques1.First().Option2FileName.ToString();
                 }
                 if (Ques1.First().Option3FileName != null)
                 {
-                    txtFileName3.Value = Ques1.First().Option3FileName.ToString();
+                    txtFileName3.Text = Ques1.First().Option3FileName.ToString();
                 }
                 if (Ques1.First().Option4FileName != null)
                 {
-                    txtFileName4.Value = Ques1.First().Option4FileName.ToString();
+                    txtFileName4.Text = Ques1.First().Option4FileName.ToString();
                 }
                 if (Ques1.First().Option5FileName != null)
                 {
-                    txtFileName5.Value = Ques1.First().Option5FileName.ToString();
+                    txtFileName5.Text = Ques1.First().Option5FileName.ToString();
                 }
 
                 if (Ques1.First().SectionName != null)
@@ -1311,45 +1311,45 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                 }
                 //dispaly dynamic images
                 if (Ques1.First().Image1 != null)
-                    txtfilenameMemTypeA.Value = Ques1.First().Image1.ToString();
+                    txtfilenameMemTypeA.Text = Ques1.First().Image1.ToString();
                 if (Ques1.First().Image2 != null)
-                    txtfilenameMemTypeB.Value = Ques1.First().Image2.ToString();
+                    txtfilenameMemTypeB.Text = Ques1.First().Image2.ToString();
                 if (Ques1.First().Image3 != null)
-                    txtfilenameMemTypeC.Value = Ques1.First().Image3.ToString();
+                    txtfilenameMemTypeC.Text = Ques1.First().Image3.ToString();
                 if (Ques1.First().Image4 != null)
-                    txtfilenameMemTypeD.Value = Ques1.First().Image4.ToString();
+                    txtfilenameMemTypeD.Text = Ques1.First().Image4.ToString();
                 if (Ques1.First().Image5 != null)
-                    txtfilenameMemTypeE.Value = Ques1.First().Image5.ToString();
+                    txtfilenameMemTypeE.Text = Ques1.First().Image5.ToString();
                 if (Ques1.First().Image6 != null)
-                    txtfilenameMemTypeF.Value = Ques1.First().Image6.ToString();
+                    txtfilenameMemTypeF.Text = Ques1.First().Image6.ToString();
                 if (Ques1.First().Image7 != null)
-                    txtfilenameMemTypeG.Value = Ques1.First().Image7.ToString();
+                    txtfilenameMemTypeG.Text = Ques1.First().Image7.ToString();
                 if (Ques1.First().Image8 != null)
-                    txtfilenameMemTypeH.Value = Ques1.First().Image8.ToString();
+                    txtfilenameMemTypeH.Text = Ques1.First().Image8.ToString();
                 if (Ques1.First().Image9 != null)
-                    txtfilenameMemTypeI.Value = Ques1.First().Image9.ToString();
+                    txtfilenameMemTypeI.Text = Ques1.First().Image9.ToString();
                 if (Ques1.First().Image10 != null)
-                    txtfilenameMemTypeJ.Value = Ques1.First().Image10.ToString();
+                    txtfilenameMemTypeJ.Text = Ques1.First().Image10.ToString();
                 if (Ques1.First().Image11 != null)
-                    txtfilenameMemTypeK.Value = Ques1.First().Image11.ToString();
+                    txtfilenameMemTypeK.Text = Ques1.First().Image11.ToString();
                 if (Ques1.First().Image12 != null)
-                    txtfilenameMemTypeL.Value = Ques1.First().Image12.ToString();
+                    txtfilenameMemTypeL.Text = Ques1.First().Image12.ToString();
                 if (Ques1.First().Image13 != null)
-                    txtfilenameMemTypeM.Value = Ques1.First().Image13.ToString();
+                    txtfilenameMemTypeM.Text = Ques1.First().Image13.ToString();
                 if (Ques1.First().Image14 != null)
-                    txtfilenameMemTypeN.Value = Ques1.First().Image14.ToString();
+                    txtfilenameMemTypeN.Text = Ques1.First().Image14.ToString();
                 if (Ques1.First().Image15 != null)
-                    txtfilenameMemTypeO.Value = Ques1.First().Image15.ToString();
+                    txtfilenameMemTypeO.Text = Ques1.First().Image15.ToString();
                 if (Ques1.First().Image16 != null)
-                    txtfilenameMemTypeP.Value = Ques1.First().Image16.ToString();
+                    txtfilenameMemTypeP.Text = Ques1.First().Image16.ToString();
                 if (Ques1.First().Image17 != null)
-                    txtfilenameMemTypeQ.Value = Ques1.First().Image17.ToString();
+                    txtfilenameMemTypeQ.Text = Ques1.First().Image17.ToString();
                 if (Ques1.First().Image18 != null)
-                    txtfilenameMemTypeR.Value = Ques1.First().Image18.ToString();
+                    txtfilenameMemTypeR.Text = Ques1.First().Image18.ToString();
                 if (Ques1.First().Image19 != null)
-                    txtfilenameMemTypeS.Value = Ques1.First().Image19.ToString();
+                    txtfilenameMemTypeS.Text = Ques1.First().Image19.ToString();
                 if (Ques1.First().Image20 != null)
-                    txtfilenameMemTypeT.Value = Ques1.First().Image20.ToString();
+                    txtfilenameMemTypeT.Text = Ques1.First().Image20.ToString();
 
                 // word options ...
 
@@ -1386,35 +1386,35 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                 //image options
                 if (Ques1.First().OptionFile1 != null)
                 {
-                    txtFileName1.Value = Ques1.First().OptionFile1.ToString();
+                    txtFileName1.Text = Ques1.First().OptionFile1.ToString();
                     if (Ques1.First().Answer != null)
                         if (Ques1.First().Answer.ToString() == "1")
                             ddlOption.SelectedIndex = 1;
                 }
                 if (Ques1.First().OptionFile2 != null)
                 {
-                    txtFileName2.Value = Ques1.First().OptionFile2.ToString();
+                    txtFileName2.Text = Ques1.First().OptionFile2.ToString();
                     if (Ques1.First().Answer != null)
                         if (Ques1.First().Answer.ToString() == "2")
                             ddlOption.SelectedIndex = 2;
                 }
                 if (Ques1.First().OptionFile3 != null)
                 {
-                    txtFileName3.Value = Ques1.First().OptionFile3.ToString();
+                    txtFileName3.Text = Ques1.First().OptionFile3.ToString();
                     if (Ques1.First().Answer != null)
                         if (Ques1.First().Answer.ToString() == "3")
                             ddlOption.SelectedIndex = 3;
                 }
                 if (Ques1.First().OptionFile4 != null)
                 {
-                    txtFileName4.Value = Ques1.First().OptionFile4.ToString();
+                    txtFileName4.Text = Ques1.First().OptionFile4.ToString();
                     if (Ques1.First().Answer != null)
                         if (Ques1.First().Answer.ToString() == "4")
                             ddlOption.SelectedIndex = 4;
                 }
                 if (Ques1.First().OptionFile5 != null)
                 {
-                    txtFileName5.Value = Ques1.First().OptionFile5.ToString();
+                    txtFileName5.Text = Ques1.First().OptionFile5.ToString();
                     if (Ques1.First().Answer != null)
                         if (Ques1.First().Answer.ToString() == "5")
                             ddlOption.SelectedIndex = 5;
@@ -1501,9 +1501,9 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         txtQues.Text = "";
         txtOption1.Text = ""; txtOption2.Text = ""; txtOption3.Text = ""; txtOption4.Text = ""; txtOption5.Text = "";
         txtOption6.Text = ""; txtOption7.Text = ""; txtOption8.Text = ""; txtOption9.Text = ""; txtOption10.Text = "";
-        txtfilenameMemTypeA.Value = ""; txtMemTypeWords.Text = "";
-        txtFileName_main.Value = ""; txtFileName_sub.Value = "";
-        txtFileName1.Value = ""; txtFileName2.Value = ""; txtFileName3.Value = ""; txtFileName4.Value = ""; txtFileName5.Value = "";
+        txtfilenameMemTypeA.Text = ""; txtMemTypeWords.Text = "";
+        txtFileName_main.Text = ""; txtFileName_sub.Text = "";
+        txtFileName1.Text = ""; txtFileName2.Text = ""; txtFileName3.Text = ""; txtFileName4.Text = ""; txtFileName5.Text = "";
     }
     protected void ddlCategory_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -1587,49 +1587,49 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     }
     private bool SaveMemTypeImages()
     {
-        if (txtfilenameMemTypeA.Value.Trim() != "" || txtfilenameMemTypeB.Value.Trim() != "" || txtfilenameMemTypeC.Value.Trim() != "" || txtfilenameMemTypeD.Value.Trim() != "" || txtfilenameMemTypeE.Value.Trim() != "" || txtfilenameMemTypeF.Value.Trim() != "" || txtfilenameMemTypeG.Value.Trim() != "" || txtfilenameMemTypeH.Value.Trim() != "" || txtfilenameMemTypeI.Value.Trim() != "" || txtfilenameMemTypeJ.Value.Trim() != "" ||
-            txtfilenameMemTypeK.Value.Trim() != "" || txtfilenameMemTypeL.Value.Trim() != "" || txtfilenameMemTypeM.Value.Trim() != "" || txtfilenameMemTypeN.Value.Trim() != "" || txtfilenameMemTypeO.Value.Trim() != "" || txtfilenameMemTypeP.Value.Trim() != "" || txtfilenameMemTypeQ.Value.Trim() != "" || txtfilenameMemTypeR.Value.Trim() != "" || txtfilenameMemTypeS.Value.Trim() != "" || txtfilenameMemTypeT.Value.Trim() != "")
+        if (txtfilenameMemTypeA.Text.Trim() != "" || txtfilenameMemTypeB.Text.Trim() != "" || txtfilenameMemTypeC.Text.Trim() != "" || txtfilenameMemTypeD.Text.Trim() != "" || txtfilenameMemTypeE.Text.Trim() != "" || txtfilenameMemTypeF.Text.Trim() != "" || txtfilenameMemTypeG.Text.Trim() != "" || txtfilenameMemTypeH.Text.Trim() != "" || txtfilenameMemTypeI.Text.Trim() != "" || txtfilenameMemTypeJ.Text.Trim() != "" ||
+            txtfilenameMemTypeK.Text.Trim() != "" || txtfilenameMemTypeL.Text.Trim() != "" || txtfilenameMemTypeM.Text.Trim() != "" || txtfilenameMemTypeN.Text.Trim() != "" || txtfilenameMemTypeO.Text.Trim() != "" || txtfilenameMemTypeP.Text.Trim() != "" || txtfilenameMemTypeQ.Text.Trim() != "" || txtfilenameMemTypeR.Text.Trim() != "" || txtfilenameMemTypeS.Text.Trim() != "" || txtfilenameMemTypeT.Text.Trim() != "")
         {
-            if (txtfilenameMemTypeA.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeA.Value.Trim());
-            if (txtfilenameMemTypeB.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeB.Value.Trim());
-            if (txtfilenameMemTypeC.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeC.Value.Trim());
-            if (txtfilenameMemTypeD.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeD.Value.Trim());
-            if (txtfilenameMemTypeE.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeE.Value.Trim());
-            if (txtfilenameMemTypeF.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeF.Value.Trim());
-            if (txtfilenameMemTypeG.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeG.Value.Trim());
-            if (txtfilenameMemTypeH.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeH.Value.Trim());
-            if (txtfilenameMemTypeI.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeI.Value.Trim());
-            if (txtfilenameMemTypeJ.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeJ.Value.Trim());
-            if (txtfilenameMemTypeK.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeK.Value.Trim());
-            if (txtfilenameMemTypeL.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeL.Value.Trim());
-            if (txtfilenameMemTypeM.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeM.Value.Trim());
-            if (txtfilenameMemTypeN.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeN.Value.Trim());
-            if (txtfilenameMemTypeO.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeO.Value.Trim());
-            if (txtfilenameMemTypeP.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeP.Value.Trim());
-            if (txtfilenameMemTypeQ.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeQ.Value.Trim());
-            if (txtfilenameMemTypeR.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeR.Value.Trim());
-            if (txtfilenameMemTypeS.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeS.Value.Trim());
-            if (txtfilenameMemTypeT.Value.Trim() != "")
-                SaveFile(txtfilenameMemTypeT.Value.Trim());
+            if (txtfilenameMemTypeA.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeA.Text.Trim());
+            if (txtfilenameMemTypeB.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeB.Text.Trim());
+            if (txtfilenameMemTypeC.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeC.Text.Trim());
+            if (txtfilenameMemTypeD.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeD.Text.Trim());
+            if (txtfilenameMemTypeE.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeE.Text.Trim());
+            if (txtfilenameMemTypeF.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeF.Text.Trim());
+            if (txtfilenameMemTypeG.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeG.Text.Trim());
+            if (txtfilenameMemTypeH.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeH.Text.Trim());
+            if (txtfilenameMemTypeI.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeI.Text.Trim());
+            if (txtfilenameMemTypeJ.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeJ.Text.Trim());
+            if (txtfilenameMemTypeK.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeK.Text.Trim());
+            if (txtfilenameMemTypeL.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeL.Text.Trim());
+            if (txtfilenameMemTypeM.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeM.Text.Trim());
+            if (txtfilenameMemTypeN.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeN.Text.Trim());
+            if (txtfilenameMemTypeO.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeO.Text.Trim());
+            if (txtfilenameMemTypeP.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeP.Text.Trim());
+            if (txtfilenameMemTypeQ.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeQ.Text.Trim());
+            if (txtfilenameMemTypeR.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeR.Text.Trim());
+            if (txtfilenameMemTypeS.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeS.Text.Trim());
+            if (txtfilenameMemTypeT.Text.Trim() != "")
+                SaveFile(txtfilenameMemTypeT.Text.Trim());
 
             return true;
 
@@ -1705,35 +1705,35 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         }
         else
         {
-            if (txtFileName1.Value.Trim() != "" || txtFileName2.Value.Trim() != "" || txtFileName3.Value.Trim() != "" || txtFileName4.Value.Trim() != "" || txtFileName5.Value.Trim() != "")
+            if (txtFileName1.Text.Trim() != "" || txtFileName2.Text.Trim() != "" || txtFileName3.Text.Trim() != "" || txtFileName4.Text.Trim() != "" || txtFileName5.Text.Trim() != "")
             {
                 if (ddlOption.SelectedValue == "1")
                 {
-                    if (txtFileName1.Value.Trim() == "")
+                    if (txtFileName1.Text.Trim() == "")
                     { lblMessage.Text = "No value for 1st option"; }//return;
                     else Answer = "1";
                 }
                 else if (ddlOption.SelectedValue == "2")
                 {
-                    if (txtFileName2.Value.Trim() == "")
+                    if (txtFileName2.Text.Trim() == "")
                     { lblMessage.Text = "No value for 2nd option"; }//return;
                     else Answer = "2";
                 }
                 else if (ddlOption.SelectedValue == "3")
                 {
-                    if (txtFileName3.Value.Trim() == "")
+                    if (txtFileName3.Text.Trim() == "")
                     { lblMessage.Text = "No value for 3rd option"; }//return;
                     else Answer = "3";
                 }
                 else if (ddlOption.SelectedValue == "4")
                 {
-                    if (txtFileName4.Value.Trim() == "")
+                    if (txtFileName4.Text.Trim() == "")
                     { lblMessage.Text = "No value for 4th option"; }//return;
                     else Answer = "4";
                 }
                 else if (ddlOption.SelectedValue == "5")
                 {
-                    if (txtFileName5.Value.Trim() == "")
+                    if (txtFileName5.Text.Trim() == "")
                     { lblMessage.Text = "No value for 4th option"; }//return;
                     else Answer = "5";
                 }
@@ -1942,7 +1942,7 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         }
         else if (ddlCategory.SelectedValue == "VideoType" || ddlCategory.SelectedValue == "AudioType")
         {
-            if (txtFileName_main.Value.Trim() == "")
+            if (txtFileName_main.Text.Trim() == "")
             {
                 lblMessage.Text = "Browse a reference file for current question";
                 return;
@@ -1953,13 +1953,13 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                 return;
             }
             // code to insert image file. to "QuestionAnswerFiles" folder
-            SaveFile(txtFileName_main.Value.Trim());
+            SaveFile(txtFileName_main.Text.Trim());
         }
         else if (ddlCategory.SelectedValue == "ImageType" || ddlCategory.SelectedValue == "MemTestImages" || ddlCategory.SelectedValue == "PhotoType") //021209 bip
         {
             if (ddlCategory.SelectedValue == "ImageType" || ddlCategory.SelectedValue == "PhotoType")// 021209 bip
             {
-                if (txtFileName_main.Value.Trim() == "" && txtFileName_sub.Value.Trim() == "")
+                if (txtFileName_main.Text.Trim() == "" && txtFileName_sub.Text.Trim() == "")
                 {
                     lblMessage.Text = "Browse a reference file for current question";
                     return;
@@ -1995,18 +1995,18 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                     return;
                 }
             }
-            else if (txtFileName1.Value.Trim() != "" || txtFileName2.Value.Trim() != "" || txtFileName3.Value.Trim() != "" || txtFileName4.Value.Trim() != "" || txtFileName5.Value.Trim() != "")
+            else if (txtFileName1.Text.Trim() != "" || txtFileName2.Text.Trim() != "" || txtFileName3.Text.Trim() != "" || txtFileName4.Text.Trim() != "" || txtFileName5.Text.Trim() != "")
             {
                 int optioncount = 0;
-                if (txtFileName1.Value.Trim() != "")
+                if (txtFileName1.Text.Trim() != "")
                     optioncount += 1;
-                if (txtFileName2.Value.Trim() != "")
+                if (txtFileName2.Text.Trim() != "")
                     optioncount += 1;
-                if (txtFileName3.Value.Trim() != "")
+                if (txtFileName3.Text.Trim() != "")
                     optioncount += 1;
-                if (txtFileName4.Value.Trim() != "")
+                if (txtFileName4.Text.Trim() != "")
                     optioncount += 1;
-                if (txtFileName5.Value.Trim() != "")
+                if (txtFileName5.Text.Trim() != "")
                     optioncount += 1;
 
                 if (optioncount < 2)
@@ -2015,16 +2015,16 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                     return;
                 }
 
-                if (txtFileName1.Value.Trim() != "")
-                    SaveFile(txtFileName1.Value.Trim());
-                if (txtFileName2.Value.Trim() != "")
-                    SaveFile(txtFileName2.Value.Trim());
-                if (txtFileName3.Value.Trim() != "")
-                    SaveFile(txtFileName3.Value.Trim());
-                if (txtFileName4.Value.Trim() != "")
-                    SaveFile(txtFileName4.Value.Trim());
-                if (txtFileName5.Value.Trim() != "")
-                    SaveFile(txtFileName5.Value.Trim());
+                if (txtFileName1.Text.Trim() != "")
+                    SaveFile(txtFileName1.Text.Trim());
+                if (txtFileName2.Text.Trim() != "")
+                    SaveFile(txtFileName2.Text.Trim());
+                if (txtFileName3.Text.Trim() != "")
+                    SaveFile(txtFileName3.Text.Trim());
+                if (txtFileName4.Text.Trim() != "")
+                    SaveFile(txtFileName4.Text.Trim());
+                if (txtFileName5.Text.Trim() != "")
+                    SaveFile(txtFileName5.Text.Trim());
             }
             else
             {
@@ -2033,10 +2033,10 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
             }
 
             // code to insert image file.   "QuestionAnswerFiles" folder.
-            if (txtFileName_main.Value.Trim() != "")
-                SaveFile(txtFileName_main.Value.Trim());
-            if (txtFileName_sub.Value.Trim() != "")
-                SaveFile(txtFileName_sub.Value.Trim());
+            if (txtFileName_main.Text.Trim() != "")
+                SaveFile(txtFileName_main.Text.Trim());
+            if (txtFileName_sub.Text.Trim() != "")
+                SaveFile(txtFileName_sub.Text.Trim());
         }
         else
         {
@@ -2078,12 +2078,12 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         {
             if (txtOption1.Text.Trim() != "" || txtOption2.Text.Trim() != "" || txtOption3.Text.Trim() != "" || txtOption4.Text.Trim() != "" || txtOption5.Text.Trim() != "")
             {
-                if (txtFileName1.Value.Trim() != "" || txtFileName2.Value.Trim() != "" || txtFileName3.Value.Trim() != "" || txtFileName4.Value.Trim() != "" || txtFileName5.Value.Trim() != "")
+                if (txtFileName1.Text.Trim() != "" || txtFileName2.Text.Trim() != "" || txtFileName3.Text.Trim() != "" || txtFileName4.Text.Trim() != "" || txtFileName5.Text.Trim() != "")
                 { lblMessage.Text = "You can't select both options(image options and text options)  at a time"; return; }
             }
             else
             {
-                if (txtFileName1.Value.Trim() == "" && txtFileName2.Value.Trim() == "" && txtFileName3.Value.Trim() == "" && txtFileName4.Value.Trim() == "" && txtFileName5.Value.Trim() == "")
+                if (txtFileName1.Text.Trim() == "" && txtFileName2.Text.Trim() == "" && txtFileName3.Text.Trim() == "" && txtFileName4.Text.Trim() == "" && txtFileName5.Text.Trim() == "")
                 { lblMessage.Text = "Please enter answer options"; return; }
 
             }
@@ -2238,10 +2238,10 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                 displaytype = int.Parse(ddlDisplayType_Images.SelectedValue);
             else { lblMessage.Text = "Please select image display type."; return; }
 
-            if (txtfilenameMemTypeA.Value.Trim() == "" && txtfilenameMemTypeB.Value.Trim() == "" && txtfilenameMemTypeC.Value.Trim() == "" && txtfilenameMemTypeD.Value.Trim() == "" && txtfilenameMemTypeE.Value.Trim() == "" &&
-                txtfilenameMemTypeF.Value.Trim() == "" && txtfilenameMemTypeG.Value.Trim() == "" && txtfilenameMemTypeH.Value.Trim() == "" && txtfilenameMemTypeI.Value.Trim() == "" && txtfilenameMemTypeJ.Value.Trim() == "" &&
-                txtfilenameMemTypeK.Value.Trim() == "" && txtfilenameMemTypeL.Value.Trim() == "" && txtfilenameMemTypeM.Value.Trim() == "" && txtfilenameMemTypeN.Value.Trim() == "" && txtfilenameMemTypeO.Value.Trim() == "" &&
-                txtfilenameMemTypeP.Value.Trim() == "" && txtfilenameMemTypeQ.Value.Trim() == "" && txtfilenameMemTypeR.Value.Trim() == "" && txtfilenameMemTypeS.Value.Trim() == "" && txtfilenameMemTypeT.Value.Trim() == "")
+            if (txtfilenameMemTypeA.Text.Trim() == "" && txtfilenameMemTypeB.Text.Trim() == "" && txtfilenameMemTypeC.Text.Trim() == "" && txtfilenameMemTypeD.Text.Trim() == "" && txtfilenameMemTypeE.Text.Trim() == "" &&
+                txtfilenameMemTypeF.Text.Trim() == "" && txtfilenameMemTypeG.Text.Trim() == "" && txtfilenameMemTypeH.Text.Trim() == "" && txtfilenameMemTypeI.Text.Trim() == "" && txtfilenameMemTypeJ.Text.Trim() == "" &&
+                txtfilenameMemTypeK.Text.Trim() == "" && txtfilenameMemTypeL.Text.Trim() == "" && txtfilenameMemTypeM.Text.Trim() == "" && txtfilenameMemTypeN.Text.Trim() == "" && txtfilenameMemTypeO.Text.Trim() == "" &&
+                txtfilenameMemTypeP.Text.Trim() == "" && txtfilenameMemTypeQ.Text.Trim() == "" && txtfilenameMemTypeR.Text.Trim() == "" && txtfilenameMemTypeS.Text.Trim() == "" && txtfilenameMemTypeT.Text.Trim() == "")
                 lblMessage.Text = "Enter Image files";
             else
             {
@@ -2249,10 +2249,10 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                 //int memTypeImageQuesID = 0;
                 //if (Session["MemTypeImageQuesID"] != null)
                 //    memTypeImageQuesID = int.Parse(Session["MemTypeWordQuesID"].ToString());
-                cjDataclass.AddMemmoryTestImageQuesCollection(quesID, sectionid, sectionname, subsection1, subsection2, ddlCategory.SelectedValue, txtQues.Text, txtfilenameMemTypeA.Value.Trim(), txtfilenameMemTypeB.Value.Trim(), txtfilenameMemTypeC.Value.Trim(), txtfilenameMemTypeD.Value.Trim(), txtfilenameMemTypeE.Value.Trim(),
-                    txtfilenameMemTypeF.Value.Trim(), txtfilenameMemTypeG.Value.Trim(), txtfilenameMemTypeH.Value.Trim(), txtfilenameMemTypeI.Value.Trim(), txtfilenameMemTypeJ.Value.Trim(), txtfilenameMemTypeK.Value.Trim(), txtfilenameMemTypeL.Value.Trim(), txtfilenameMemTypeM.Value.Trim(), txtfilenameMemTypeN.Value.Trim(), txtfilenameMemTypeO.Value.Trim(),
-                    txtfilenameMemTypeP.Value.Trim(), txtfilenameMemTypeQ.Value.Trim(), txtfilenameMemTypeR.Value.Trim(), txtfilenameMemTypeS.Value.Trim(), txtfilenameMemTypeT.Value.Trim(),
-                    txtFileName1.Value.Trim(), txtFileName2.Value.Trim(), txtFileName3.Value.Trim(), txtFileName4.Value.Trim(), txtFileName5.Value.Trim(), txtOption1.Text.Trim(), txtOption2.Text.Trim(), txtOption3.Text.Trim(), txtOption4.Text.Trim(), txtOption5.Text.Trim(), Answer, duration, displaytype, 0, userid, txtQuestionCode.Text);
+                cjDataclass.AddMemmoryTestImageQuesCollection(quesID, sectionid, sectionname, subsection1, subsection2, ddlCategory.SelectedValue, txtQues.Text, txtfilenameMemTypeA.Text.Trim(), txtfilenameMemTypeB.Text.Trim(), txtfilenameMemTypeC.Text.Trim(), txtfilenameMemTypeD.Text.Trim(), txtfilenameMemTypeE.Text.Trim(),
+                    txtfilenameMemTypeF.Text.Trim(), txtfilenameMemTypeG.Text.Trim(), txtfilenameMemTypeH.Text.Trim(), txtfilenameMemTypeI.Text.Trim(), txtfilenameMemTypeJ.Text.Trim(), txtfilenameMemTypeK.Text.Trim(), txtfilenameMemTypeL.Text.Trim(), txtfilenameMemTypeM.Text.Trim(), txtfilenameMemTypeN.Text.Trim(), txtfilenameMemTypeO.Text.Trim(),
+                    txtfilenameMemTypeP.Text.Trim(), txtfilenameMemTypeQ.Text.Trim(), txtfilenameMemTypeR.Text.Trim(), txtfilenameMemTypeS.Text.Trim(), txtfilenameMemTypeT.Text.Trim(),
+                    txtFileName1.Text.Trim(), txtFileName2.Text.Trim(), txtFileName3.Text.Trim(), txtFileName4.Text.Trim(), txtFileName5.Text.Trim(), txtOption1.Text.Trim(), txtOption2.Text.Trim(), txtOption3.Text.Trim(), txtOption4.Text.Trim(), txtOption5.Text.Trim(), Answer, duration, displaytype, 0, userid, txtQuestionCode.Text);
 
             }
         }
@@ -2260,22 +2260,22 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         else if (ddlCategory.SelectedValue == "FillBlanks")
         {
             /// bip 13052010 code to insert questionimage file.   
-            if (txtFileName_main.Value.Trim() != "")
-                SaveFile(txtFileName_main.Value.Trim());
-            if (txtFileName_sub.Value.Trim() != "")
-                SaveFile(txtFileName_sub.Value.Trim());
+            if (txtFileName_main.Text.Trim() != "")
+                SaveFile(txtFileName_main.Text.Trim());
+            if (txtFileName_sub.Text.Trim() != "")
+                SaveFile(txtFileName_sub.Text.Trim());
             ///
 
             cjDataclass.AddQuestions(quesID, sectionid, sectionname, subsection1, subsection2, ddlCategory.SelectedValue,
                 txtQues.Text, filblankanswer, txtOption1.Text, txtOption2.Text, txtOption3.Text, txtOption4.Text, txtOption5.Text,
-                txtOption6.Text, txtOption7.Text, txtOption8.Text, txtOption9.Text, txtOption10.Text, txtFileName_main.Value,
-                txtFileName1.Value, txtFileName2.Value, txtFileName3.Value, txtFileName4.Value, 0, userid, ratingscale, txtFileName5.Value.Trim(), txtFileName_sub.Value.Trim(), txtQuestionCode.Text);
+                txtOption6.Text, txtOption7.Text, txtOption8.Text, txtOption9.Text, txtOption10.Text, txtFileName_main.Text,
+                txtFileName1.Text, txtFileName2.Text, txtFileName3.Text, txtFileName4.Text, 0, userid, ratingscale, txtFileName5.Text.Trim(), txtFileName_sub.Text.Trim(), txtQuestionCode.Text);
         }
         else
             cjDataclass.AddQuestions(quesID, sectionid, sectionname, subsection1, subsection2, ddlCategory.SelectedValue, txtQues.Text,
                 Answer, txtOption1.Text, txtOption2.Text, txtOption3.Text, txtOption4.Text, txtOption5.Text, txtOption6.Text, txtOption7.Text,
-                txtOption8.Text, txtOption9.Text, txtOption10.Text, txtFileName_main.Value, txtFileName1.Value, txtFileName2.Value,
-                txtFileName3.Value, txtFileName4.Value, 0, userid, ratingscale, txtFileName5.Value.Trim(), txtFileName_sub.Value.Trim(), txtQuestionCode.Text);
+                txtOption8.Text, txtOption9.Text, txtOption10.Text, txtFileName_main.Text, txtFileName1.Text, txtFileName2.Text,
+                txtFileName3.Text, txtFileName4.Text, 0, userid, ratingscale, txtFileName5.Text.Trim(), txtFileName_sub.Text.Trim(), txtQuestionCode.Text);
 
         lblMessage.Text = "Question is Posted Successfully";
         Session["optionIndex"] = null; Session["QuesID"] = null;
@@ -2311,10 +2311,10 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     }
     protected void btnDeleteQuestionFileSub_Click(object sender, EventArgs e)
     {
-        if (txtFileName_sub.Value.Trim() != "")
+        if (txtFileName_sub.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName_sub.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtFileName_sub.Value = ""; }
+            if (DeleteFile(txtFileName_sub.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtFileName_sub.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
@@ -2337,205 +2337,205 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
 
     protected void btnDeleteQuestionFilemain_Click(object sender, EventArgs e)
     {
-        if (txtFileName_main.Value.Trim() != "")
+        if (txtFileName_main.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName_main.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtFileName_main.Value = ""; }
+            if (DeleteFile(txtFileName_main.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtFileName_main.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteQuestionFileOption1_Click(object sender, EventArgs e)
     {
-        if (txtFileName1.Value.Trim() != "")
+        if (txtFileName1.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName1.Value.Trim()) == true)
+            if (DeleteFile(txtFileName1.Text.Trim()) == true)
             { lblMessage.Text = "File deleted successfully.."; }
             else lblMessage.Text = "File not found..";
-            txtFileName1.Value = "";
+            txtFileName1.Text = "";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteQuestionFileOption2_Click(object sender, EventArgs e)
     {
-        if (txtFileName2.Value.Trim() != "")
+        if (txtFileName2.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName2.Value.Trim()) == true)
+            if (DeleteFile(txtFileName2.Text.Trim()) == true)
             { lblMessage.Text = "File deleted successfully.."; }
             else lblMessage.Text = "File not found..";
-            txtFileName2.Value = "";
+            txtFileName2.Text = "";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteQuestionFileOption3_Click(object sender, EventArgs e)
     {
-        if (txtFileName3.Value.Trim() != "")
+        if (txtFileName3.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName3.Value.Trim()) == true)
+            if (DeleteFile(txtFileName3.Text.Trim()) == true)
             { lblMessage.Text = "File deleted successfully.."; }
             else lblMessage.Text = "File not found..";
-            txtFileName3.Value = "";
+            txtFileName3.Text = "";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteQuestionFileOption4_Click(object sender, EventArgs e)
     {
-        if (txtFileName4.Value.Trim() != "")
+        if (txtFileName4.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName4.Value.Trim()) == true)
+            if (DeleteFile(txtFileName4.Text.Trim()) == true)
             { lblMessage.Text = "File deleted successfully.."; }
             else lblMessage.Text = "File not found..";
-            txtFileName4.Value = "";
+            txtFileName4.Text = "";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteQuestionFileOption5_Click(object sender, EventArgs e)
     {
-        if (txtFileName5.Value.Trim() != "")
+        if (txtFileName5.Text.Trim() != "")
         {
-            if (DeleteFile(txtFileName5.Value.Trim()) == true)
+            if (DeleteFile(txtFileName5.Text.Trim()) == true)
             { lblMessage.Text = "File deleted successfully.."; }
             else lblMessage.Text = "File not found..";
-            txtFileName5.Value = "";
+            txtFileName5.Text = "";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeA.Value.Trim() != "")
+        if (txtfilenameMemTypeA.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeA.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeA.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeA.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeA.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages2_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeB.Value.Trim() != "")
+        if (txtfilenameMemTypeB.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeB.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeB.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeB.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeB.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages3_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeC.Value.Trim() != "")
+        if (txtfilenameMemTypeC.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeC.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeC.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeC.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeC.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages4_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeD.Value.Trim() != "")
+        if (txtfilenameMemTypeD.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeD.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeD.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeD.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeD.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages5_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeE.Value.Trim() != "")
+        if (txtfilenameMemTypeE.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeE.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeE.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeE.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeE.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages6_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeF.Value.Trim() != "")
+        if (txtfilenameMemTypeF.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeF.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeF.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeF.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeF.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages7_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeG.Value.Trim() != "")
+        if (txtfilenameMemTypeG.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeG.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeG.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeG.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeG.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages8_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeH.Value.Trim() != "")
+        if (txtfilenameMemTypeH.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeH.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeH.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeH.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeH.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages9_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeI.Value.Trim() != "")
+        if (txtfilenameMemTypeI.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeI.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeI.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeI.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeI.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages10_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeJ.Value.Trim() != "")
+        if (txtfilenameMemTypeJ.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeJ.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeJ.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeJ.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeJ.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages11_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeK.Value.Trim() != "")
+        if (txtfilenameMemTypeK.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeK.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeK.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeK.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeK.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages12_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeL.Value.Trim() != "")
+        if (txtfilenameMemTypeL.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeL.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeL.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeL.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeL.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages13_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeM.Value.Trim() != "")
+        if (txtfilenameMemTypeM.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeM.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeM.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeM.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeM.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages14_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeN.Value.Trim() != "")
+        if (txtfilenameMemTypeN.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeN.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeN.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeN.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeN.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
@@ -2543,60 +2543,60 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     protected void btnDeleteMemTypeImages15_Click(object sender, EventArgs e)
     {
 
-        if (txtfilenameMemTypeO.Value.Trim() != "")
+        if (txtfilenameMemTypeO.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeO.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeO.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeO.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeO.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages16_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeP.Value.Trim() != "")
+        if (txtfilenameMemTypeP.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeP.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeP.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeP.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeP.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages17_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeQ.Value.Trim() != "")
+        if (txtfilenameMemTypeQ.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeQ.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeQ.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeQ.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeQ.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages18_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeR.Value.Trim() != "")
+        if (txtfilenameMemTypeR.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeR.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeR.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeR.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeR.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages19_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeS.Value.Trim() != "")
+        if (txtfilenameMemTypeS.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeS.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeS.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeS.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeS.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";
     }
     protected void btnDeleteMemTypeImages20_Click(object sender, EventArgs e)
     {
-        if (txtfilenameMemTypeT.Value.Trim() != "")
+        if (txtfilenameMemTypeT.Text.Trim() != "")
         {
-            if (DeleteFile(txtfilenameMemTypeT.Value.Trim()) == true)
-            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeT.Value = ""; }
+            if (DeleteFile(txtfilenameMemTypeT.Text.Trim()) == true)
+            { lblMessage.Text = "File deleted successfully.."; txtfilenameMemTypeT.Text = ""; }
             else lblMessage.Text = "File not found..";
         }
         else lblMessage.Text = "Please select a file";

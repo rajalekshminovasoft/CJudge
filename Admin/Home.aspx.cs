@@ -19,4 +19,36 @@ public partial class Admin_Home : System.Web.UI.Page
         //Admin View
 
     }
+    protected void imgbtn_Report_Click(object sender, ImageClickEventArgs e)
+    {
+        //Response.Redirect("ViewUserTestDetails.aspx");
+    }
+    protected void imgbtn_User_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("AddUser.aspx");
+    }
+    protected void imgbtn_infokit_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("InfokitDetails.aspx");
+    }
+    protected void imgbtn_Qunbank_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("AddQuestions.aspx");
+    }
+    protected void imgbtn_assigntest_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("AssignTestByAdmin.aspx");
+    }
+    protected void imgbtn_repdescript_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+    protected void imgbtn_addspecialadmin_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+    protected void imgbtn_specialadpermission_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
 }

@@ -85,7 +85,7 @@
                 Payment Date
             </td>
             <td>
-                <asp:TextBox ID="txt_paydate" runat="server"></asp:TextBox>(dd-mm-yyyy)
+                <asp:TextBox ID="txt_paydate" runat="server"></asp:TextBox>(mm/dd/yyyy hh:mm:ss AM)
             </td>
         </tr>
         <tr>
@@ -107,12 +107,12 @@
         </tr>
         <tr>
             <td>Test Login Date</td>
-            <td>                <asp:TextBox ID="txt_Logindate" runat="server"></asp:TextBox>(dd-mm-yyyy hh:mm:ss)
+            <td>                <asp:TextBox ID="txt_Logindate" runat="server"></asp:TextBox>(mm/dd/yyyy hh:mm:ss AM)
 </td>
         </tr>
                 <tr>
             <td>Test Logout Date</td>
-            <td>                <asp:TextBox ID="txt_Logoutdate" runat="server"></asp:TextBox>(dd-mm-yyyy hh:mm:ss)
+            <td>                <asp:TextBox ID="txt_Logoutdate" runat="server"></asp:TextBox>(mm/dd/yyyy hh:mm:ss AM)
 </td>
         </tr>
         <tr>

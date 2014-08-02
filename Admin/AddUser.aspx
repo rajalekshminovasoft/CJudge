@@ -334,13 +334,13 @@
                             <td class="label">
                                 Login From Date:</td>
                             <td>
-                               <asp:TextBox ID="txtLoginFromDate" runat="server" ></asp:TextBox>
+                               <asp:TextBox ID="txtLoginFromDate" runat="server" ></asp:TextBox>(mm/dd/yyyy hh:mm:ss AM)
                                </td>
                       
                             <td class="label" >
                                 Login To Date:</td>
                             <td>
-                                <asp:TextBox ID="txtLoginToDate" runat="server"  ></asp:TextBox>
+                                <asp:TextBox ID="txtLoginToDate" runat="server"  ></asp:TextBox>(mm/dd/yyyy hh:mm:ss AM)
                                 </td>
                         </tr>
                         
@@ -362,7 +362,7 @@
                         </tr>--%>
             <tr><td>Are you recruited by someone?</td>
                 <td>
-                    <asp:DropDownList ID="drp_recruiter" runat="server"  AutoPostBack="True">
+                    <asp:DropDownList ID="drp_recruiter" runat="server"  AutoPostBack="True" OnSelectedIndexChanged="drp_recruiter_SelectedIndexChanged">
                         <asp:ListItem >Select</asp:ListItem>
                         <asp:ListItem>Yes</asp:ListItem>
                         <asp:ListItem>No</asp:ListItem>
@@ -430,7 +430,7 @@
                                 <EditRowStyle ForeColor="Maroon" />
                                 <RowStyle ForeColor="#800000" />
                             </asp:GridView>
-                <asp:LinqDataSource ID="LnqUserlist" runat="server" ContextTypeName="CJDataClassesDataContext" EnableDelete="True" EnableUpdate="True" OrderBy="UserId" TableName="UserProfiles">
+                <asp:LinqDataSource ID="LnqUserlist" runat="server" ContextTypeName="CJDataClassesDataContext" EnableDelete="True" EnableUpdate="True" OrderBy="UserId desc"  TableName="UserProfiles">
                 </asp:LinqDataSource>
             </td>
         </tr>

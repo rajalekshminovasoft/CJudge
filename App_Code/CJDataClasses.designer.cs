@@ -110,6 +110,9 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
   partial void InsertUserTestList(UserTestList instance);
   partial void UpdateUserTestList(UserTestList instance);
   partial void DeleteUserTestList(UserTestList instance);
+  partial void InsertUserTestSectionDetail(UserTestSectionDetail instance);
+  partial void UpdateUserTestSectionDetail(UserTestSectionDetail instance);
+  partial void DeleteUserTestSectionDetail(UserTestSectionDetail instance);
   #endregion
 	
 	public CJDataClassesDataContext() : 
@@ -443,6 +446,38 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<View_UserTest>();
+		}
+	}
+	
+	public System.Data.Linq.Table<UserTestSectionDetail> UserTestSectionDetails
+	{
+		get
+		{
+			return this.GetTable<UserTestSectionDetail>();
+		}
+	}
+	
+	public System.Data.Linq.Table<EvaluationResult> EvaluationResults
+	{
+		get
+		{
+			return this.GetTable<EvaluationResult>();
+		}
+	}
+	
+	public System.Data.Linq.Table<UserTestPageIndex_Temp> UserTestPageIndex_Temps
+	{
+		get
+		{
+			return this.GetTable<UserTestPageIndex_Temp>();
+		}
+	}
+	
+	public System.Data.Linq.Table<UserTestQuestions_Temp> UserTestQuestions_Temps
+	{
+		get
+		{
+			return this.GetTable<UserTestQuestions_Temp>();
 		}
 	}
 	
@@ -962,6 +997,41 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 	public int AddUserTestList([global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserTestId", DbType="Int")] System.Nullable<int> userTestId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PaymentStatus", DbType="VarChar(50)")] string paymentStatus, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestStatus", DbType="VarChar(50)")] string testStatus, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PaymentDate", DbType="DateTime")] System.Nullable<System.DateTime> paymentDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ReportAccess", DbType="Int")] System.Nullable<int> reportAccess, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestLoginDate", DbType="DateTime")] System.Nullable<System.DateTime> testLoginDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestLogoutDate", DbType="DateTime")] System.Nullable<System.DateTime> testLogoutDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestPrice", DbType="Int")] System.Nullable<int> testPrice)
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), testId, userTestId, userId, paymentStatus, testStatus, paymentDate, reportAccess, testLoginDate, testLogoutDate, testPrice);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.QuesAnswers")]
+	public int QuesAnswers([global::System.Data.Linq.Mapping.ParameterAttribute(Name="QuestionID", DbType="Int")] System.Nullable<int> questionID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserCode", DbType="VarChar(50)")] string userCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Question", DbType="VarChar(MAX)")] string question, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Answer", DbType="VarChar(200)")] string answer, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Category", DbType="VarChar(100)")] string category)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), questionID, userCode, question, answer, userId, testId, testSectionId, category);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUserTestSectionDetails")]
+	public int AddUserTestSectionDetails([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserTestSectionId", DbType="Int")] System.Nullable<int> userTestSectionId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrganizationId", DbType="Int")] System.Nullable<int> organizationId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userTestSectionId, userId, organizationId, testId, testSectionId);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUserTestQuestions_Temp")]
+	public int AddUserTestQuestions_Temp([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserID", DbType="Int")] System.Nullable<int> userID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstVariableId", DbType="Int")] System.Nullable<int> firstVariableId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SecondVariableId", DbType="Int")] System.Nullable<int> secondVariableId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QuestionId", DbType="Int")] System.Nullable<int> questionId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QuestionType", DbType="VarChar(200)")] string questionType)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID, testId, testSectionId, firstVariableId, secondVariableId, questionId, questionType);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddUserTestPageIndex_Temp")]
+	public int AddUserTestPageIndex_Temp([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserID", DbType="Int")] System.Nullable<int> userID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FirstVariableId", DbType="Int")] System.Nullable<int> firstVariableId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SecondVariableId", DbType="Int")] System.Nullable<int> secondVariableId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageIndex", DbType="Int")] System.Nullable<int> pageIndex, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="QuestionType", DbType="VarChar(200)")] string questionType)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID, testId, testSectionId, firstVariableId, secondVariableId, pageIndex, questionType);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteUserTest_TempValues")]
+	public int DeleteUserTest_TempValues([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserID", DbType="Int")] System.Nullable<int> userID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID, testId, testSectionId);
 		return ((int)(result.ReturnValue));
 	}
 }
@@ -13804,6 +13874,683 @@ public partial class View_UserTest
 			if ((this._OrganizationID != value))
 			{
 				this._OrganizationID = value;
+			}
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTestSectionDetails")]
+public partial class UserTestSectionDetail : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _UserTestSectionId;
+	
+	private System.Nullable<int> _UserId;
+	
+	private System.Nullable<int> _OrganizationId;
+	
+	private System.Nullable<int> _TestId;
+	
+	private System.Nullable<int> _TestSectionId;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnUserTestSectionIdChanging(int value);
+    partial void OnUserTestSectionIdChanged();
+    partial void OnUserIdChanging(System.Nullable<int> value);
+    partial void OnUserIdChanged();
+    partial void OnOrganizationIdChanging(System.Nullable<int> value);
+    partial void OnOrganizationIdChanged();
+    partial void OnTestIdChanging(System.Nullable<int> value);
+    partial void OnTestIdChanged();
+    partial void OnTestSectionIdChanging(System.Nullable<int> value);
+    partial void OnTestSectionIdChanged();
+    partial void OnCreatedOnChanging(System.Nullable<System.DateTime> value);
+    partial void OnCreatedOnChanged();
+    #endregion
+	
+	public UserTestSectionDetail()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserTestSectionId", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int UserTestSectionId
+	{
+		get
+		{
+			return this._UserTestSectionId;
+		}
+		set
+		{
+			if ((this._UserTestSectionId != value))
+			{
+				this.OnUserTestSectionIdChanging(value);
+				this.SendPropertyChanging();
+				this._UserTestSectionId = value;
+				this.SendPropertyChanged("UserTestSectionId");
+				this.OnUserTestSectionIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int")]
+	public System.Nullable<int> UserId
+	{
+		get
+		{
+			return this._UserId;
+		}
+		set
+		{
+			if ((this._UserId != value))
+			{
+				this.OnUserIdChanging(value);
+				this.SendPropertyChanging();
+				this._UserId = value;
+				this.SendPropertyChanged("UserId");
+				this.OnUserIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrganizationId", DbType="Int")]
+	public System.Nullable<int> OrganizationId
+	{
+		get
+		{
+			return this._OrganizationId;
+		}
+		set
+		{
+			if ((this._OrganizationId != value))
+			{
+				this.OnOrganizationIdChanging(value);
+				this.SendPropertyChanging();
+				this._OrganizationId = value;
+				this.SendPropertyChanged("OrganizationId");
+				this.OnOrganizationIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", DbType="Int")]
+	public System.Nullable<int> TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this.OnTestIdChanging(value);
+				this.SendPropertyChanging();
+				this._TestId = value;
+				this.SendPropertyChanged("TestId");
+				this.OnTestIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestSectionId", DbType="Int")]
+	public System.Nullable<int> TestSectionId
+	{
+		get
+		{
+			return this._TestSectionId;
+		}
+		set
+		{
+			if ((this._TestSectionId != value))
+			{
+				this.OnTestSectionIdChanging(value);
+				this.SendPropertyChanging();
+				this._TestSectionId = value;
+				this.SendPropertyChanged("TestSectionId");
+				this.OnTestSectionIdChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this.OnCreatedOnChanging(value);
+				this.SendPropertyChanging();
+				this._CreatedOn = value;
+				this.SendPropertyChanged("CreatedOn");
+				this.OnCreatedOnChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.EvaluationResult")]
+public partial class EvaluationResult
+{
+	
+	private int _QuestionID;
+	
+	private string _UserCode;
+	
+	private string _Question;
+	
+	private string _Answer;
+	
+	private System.Nullable<int> _UserId;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	private System.Nullable<System.DateTime> _ModifiedOn;
+	
+	private System.Nullable<int> _TestId;
+	
+	private System.Nullable<int> _TestSectionId;
+	
+	private string _Category;
+	
+	public EvaluationResult()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuestionID", DbType="Int NOT NULL")]
+	public int QuestionID
+	{
+		get
+		{
+			return this._QuestionID;
+		}
+		set
+		{
+			if ((this._QuestionID != value))
+			{
+				this._QuestionID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserCode", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string UserCode
+	{
+		get
+		{
+			return this._UserCode;
+		}
+		set
+		{
+			if ((this._UserCode != value))
+			{
+				this._UserCode = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question", DbType="VarChar(MAX) NOT NULL", CanBeNull=false)]
+	public string Question
+	{
+		get
+		{
+			return this._Question;
+		}
+		set
+		{
+			if ((this._Question != value))
+			{
+				this._Question = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer", DbType="VarChar(200) NOT NULL", CanBeNull=false)]
+	public string Answer
+	{
+		get
+		{
+			return this._Answer;
+		}
+		set
+		{
+			if ((this._Answer != value))
+			{
+				this._Answer = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int")]
+	public System.Nullable<int> UserId
+	{
+		get
+		{
+			return this._UserId;
+		}
+		set
+		{
+			if ((this._UserId != value))
+			{
+				this._UserId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this._CreatedOn = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ModifiedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> ModifiedOn
+	{
+		get
+		{
+			return this._ModifiedOn;
+		}
+		set
+		{
+			if ((this._ModifiedOn != value))
+			{
+				this._ModifiedOn = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", DbType="Int")]
+	public System.Nullable<int> TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this._TestId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestSectionId", DbType="Int")]
+	public System.Nullable<int> TestSectionId
+	{
+		get
+		{
+			return this._TestSectionId;
+		}
+		set
+		{
+			if ((this._TestSectionId != value))
+			{
+				this._TestSectionId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Category", DbType="VarChar(100)")]
+	public string Category
+	{
+		get
+		{
+			return this._Category;
+		}
+		set
+		{
+			if ((this._Category != value))
+			{
+				this._Category = value;
+			}
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTestPageIndex_Temp")]
+public partial class UserTestPageIndex_Temp
+{
+	
+	private System.Nullable<int> _UserId;
+	
+	private System.Nullable<int> _TestId;
+	
+	private System.Nullable<int> _TestSectionId;
+	
+	private System.Nullable<int> _FirstVariableId;
+	
+	private System.Nullable<int> _SecondVariableId;
+	
+	private System.Nullable<int> _PageIndex;
+	
+	private string _QuestionType;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	public UserTestPageIndex_Temp()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserId", DbType="Int")]
+	public System.Nullable<int> UserId
+	{
+		get
+		{
+			return this._UserId;
+		}
+		set
+		{
+			if ((this._UserId != value))
+			{
+				this._UserId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", DbType="Int")]
+	public System.Nullable<int> TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this._TestId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestSectionId", DbType="Int")]
+	public System.Nullable<int> TestSectionId
+	{
+		get
+		{
+			return this._TestSectionId;
+		}
+		set
+		{
+			if ((this._TestSectionId != value))
+			{
+				this._TestSectionId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstVariableId", DbType="Int")]
+	public System.Nullable<int> FirstVariableId
+	{
+		get
+		{
+			return this._FirstVariableId;
+		}
+		set
+		{
+			if ((this._FirstVariableId != value))
+			{
+				this._FirstVariableId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecondVariableId", DbType="Int")]
+	public System.Nullable<int> SecondVariableId
+	{
+		get
+		{
+			return this._SecondVariableId;
+		}
+		set
+		{
+			if ((this._SecondVariableId != value))
+			{
+				this._SecondVariableId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageIndex", DbType="Int")]
+	public System.Nullable<int> PageIndex
+	{
+		get
+		{
+			return this._PageIndex;
+		}
+		set
+		{
+			if ((this._PageIndex != value))
+			{
+				this._PageIndex = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuestionType", DbType="VarChar(200)")]
+	public string QuestionType
+	{
+		get
+		{
+			return this._QuestionType;
+		}
+		set
+		{
+			if ((this._QuestionType != value))
+			{
+				this._QuestionType = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this._CreatedOn = value;
+			}
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.UserTestQuestions_Temp")]
+public partial class UserTestQuestions_Temp
+{
+	
+	private System.Nullable<int> _UserID;
+	
+	private System.Nullable<int> _TestId;
+	
+	private System.Nullable<int> _TestSectionId;
+	
+	private System.Nullable<int> _FirstVariableId;
+	
+	private System.Nullable<int> _SecondVariableId;
+	
+	private System.Nullable<int> _QuestionId;
+	
+	private string _QuestionType;
+	
+	private System.Nullable<System.DateTime> _CreatedOn;
+	
+	public UserTestQuestions_Temp()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int")]
+	public System.Nullable<int> UserID
+	{
+		get
+		{
+			return this._UserID;
+		}
+		set
+		{
+			if ((this._UserID != value))
+			{
+				this._UserID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestId", DbType="Int")]
+	public System.Nullable<int> TestId
+	{
+		get
+		{
+			return this._TestId;
+		}
+		set
+		{
+			if ((this._TestId != value))
+			{
+				this._TestId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TestSectionId", DbType="Int")]
+	public System.Nullable<int> TestSectionId
+	{
+		get
+		{
+			return this._TestSectionId;
+		}
+		set
+		{
+			if ((this._TestSectionId != value))
+			{
+				this._TestSectionId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstVariableId", DbType="Int")]
+	public System.Nullable<int> FirstVariableId
+	{
+		get
+		{
+			return this._FirstVariableId;
+		}
+		set
+		{
+			if ((this._FirstVariableId != value))
+			{
+				this._FirstVariableId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SecondVariableId", DbType="Int")]
+	public System.Nullable<int> SecondVariableId
+	{
+		get
+		{
+			return this._SecondVariableId;
+		}
+		set
+		{
+			if ((this._SecondVariableId != value))
+			{
+				this._SecondVariableId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuestionId", DbType="Int")]
+	public System.Nullable<int> QuestionId
+	{
+		get
+		{
+			return this._QuestionId;
+		}
+		set
+		{
+			if ((this._QuestionId != value))
+			{
+				this._QuestionId = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuestionType", DbType="VarChar(200)")]
+	public string QuestionType
+	{
+		get
+		{
+			return this._QuestionType;
+		}
+		set
+		{
+			if ((this._QuestionType != value))
+			{
+				this._QuestionType = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CreatedOn", DbType="DateTime")]
+	public System.Nullable<System.DateTime> CreatedOn
+	{
+		get
+		{
+			return this._CreatedOn;
+		}
+		set
+		{
+			if ((this._CreatedOn != value))
+			{
+				this._CreatedOn = value;
 			}
 		}
 	}
