@@ -13,6 +13,8 @@ public partial class Admin_TestIntroduction : System.Web.UI.Page
     {
         if (!Page.IsPostBack)
         {
+            //check for user loginfromdate and Todate
+
             FillText();
         }
     }
@@ -47,6 +49,6 @@ public partial class Admin_TestIntroduction : System.Web.UI.Page
     }
     protected void btnProceed_Click(object sender, EventArgs e)
     {
-        Response.Redirect("TakeTest.aspx?Id=" + Request.QueryString["Id"].Trim() + "");
+        Response.Redirect("TestObjectiveQuestns.aspx?Id=" + Request.QueryString["Id"].Trim() + "");
     }
 }

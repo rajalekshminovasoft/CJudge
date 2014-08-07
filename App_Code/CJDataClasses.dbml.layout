@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 36.375, 15.375" name="CJDataClasses">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 38.625, 15.375" name="CJDataClasses">
   <DataContextMoniker Name="/CJDataClassesDataContext" />
   <nestedChildShapes>
     <classShape Id="3eba15d8-60c6-487c-87bb-04cfd4c29eb3" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
@@ -252,6 +252,12 @@
       <DataClassMoniker Name="/CJDataClassesDataContext/UserTestQuestions_Temp" />
       <nestedChildShapes>
         <elementListCompartment Id="7581baee-101e-4ac8-bd6a-95fc3901d98c" absoluteBounds="34.14, 3.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a57fe525-3ac2-49fe-978b-c81b185c8008" absoluteBounds="36.375, 0.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/CJDataClassesDataContext/TestBaseQuestionList_Temp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="412f23db-930f-4cd0-8a6d-a2a5a3e58363" absoluteBounds="36.39, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

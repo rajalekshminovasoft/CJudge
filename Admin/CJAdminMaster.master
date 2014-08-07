@@ -232,11 +232,11 @@
         </div>
     </div>
     <div id="main_box_bottom"></div>
-            <asp:ScriptManager runat="server" ID="Scriptmanager1" ></asp:ScriptManager>
+           <asp:ScriptManager runat="server" ID="Scriptmanager1" ></asp:ScriptManager>
                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+          
         </asp:ContentPlaceHolder>
-
+           
             </div>
 
 <div id="footer">

@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ObjectiveQuestns.ascx.cs" Inherits="Admin_ObjectiveQuestns" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ObjectiveQuestns.ascx.cs"   Inherits="Admin_ObjectiveQuestns" %>
   <div align="left" class="questiondisplaywindowtopspace">
     <asp:Panel ID="pnlMain" runat="server">
            
@@ -54,6 +54,8 @@
                             <asp:Label ID="lblA1" runat="server" Text="A" Visible="False"></asp:Label>
                         </td>
                         <td valign="top" style="text-align: left; vertical-align: middle">
+                           <%-- <asp:RadioButton ID="rbQues1Answer1" runat="server" GroupName="Q1" Visible="False" />--%>
+                            
                             <asp:RadioButton ID="rbQues1Answer1" runat="server" GroupName="Q1" Visible="False" />
                         </td>
                     </tr>

@@ -13,7 +13,7 @@ using System.Data.SqlClient;
 using System.Numeric;
 using System.Data;
 
-public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
+public partial class Admin_TestObjectiveQuestns : System.Web.UI.Page
 {
     CJDataClassesDataContext cjDataclass = new CJDataClassesDataContext();
     DBManagementClass clsclass = new DBManagementClass();
@@ -54,7 +54,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
             {
                 testId = int.Parse(Session["curtestid"].ToString());
                 if (Session["UserID"] != null)
-                   userid = int.Parse(Session["UserID"].ToString());
+                    userid = int.Parse(Session["UserID"].ToString());
                 //userid = 5;
                 SetTestTimeDetails();
 
@@ -559,7 +559,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
     }
     private void GoToResultPage()
     {
-        //Response.Redirect("Home.aspx");
+        Response.Redirect("Home.aspx");
     }
     private int GetTestVariableId(int testsectionId)
     {
@@ -852,9 +852,9 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
 
         ClearAllPageCountValues(0);
         Session["evaldirection"] = "Next";
-        Session["SubCtrl"] = "FillBalnksQues.ascx";
+        Session["SubCtrl"] = ".aspx";
 
-        Response.Redirect("TakeTest.aspx"); return;
+        Response.Redirect("TestFillBalnksQues.aspx"); return;
     }
     private void ShowNextControl_Timer(int index)
     {
@@ -1148,8 +1148,9 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
 
         ClearDataSetValues();
         Session["evaldirection"] = "Previous";
-        Session["SubCtrl"] = "RatingQuestions.ascx";
-        Response.Redirect("TakeTest.aspx");
+        Session["SubCtrl"] = "TestRatingQuestions.aspx";
+        //Response.Redirect("TakeTest.aspx");
+        Response.Redirect("TestRatingQuestions.aspx");
     }
     private void GoToPreviousPage()
     {
@@ -1450,7 +1451,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
                     {
                         if (j >= quesperPage) break;
                         string Answer = "";
-                        Session["CurrentControlCtrl"] = "ObjectiveQuestns.ascx";// bip 08012010
+                        Session["CurrentControlCtrl"] = "TestObjectiveQuestns.aspx";// bip 08012010
                         Session["ValueExists"] = "True";
 
                         int optindex = 1;
@@ -2767,7 +2768,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
         Session["timeExpired"] = null; Session["saved"] = null;
         cjDataclass.DeleteUserTest_TempValues(userid, 0, 0);
         Session.Clear();
-        //Response.Redirect("FJAHome.aspx"); 
+        Response.Redirect("Home.aspx"); 
     }
     protected void btnYes_timer_Click(object sender, EventArgs e)
     {
@@ -3017,7 +3018,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
     protected void btnNoExit_Click(object sender, EventArgs e)// bip 08052010 
     {
         DeleteTempValuesFromDB();
-        //Response.Redirect("FJAHome.aspx"); 
+        Response.Redirect("Home.aspx"); 
     }
     protected void btnNo_timer_Test_Click(object sender, EventArgs e)
     {
@@ -3028,7 +3029,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
         Session["timeExpired"] = null; Session["saved"] = null;
         cjDataclass.DeleteUserTest_TempValues(userid, 0, 0);
         Session.Clear();
-        //Response.Redirect("FJAHome.aspx");
+        Response.Redirect("Home.aspx");
     }
     protected void btnNo_Click(object sender, EventArgs e)
     {
@@ -3053,7 +3054,7 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
                 GetTestVariableId(testsectionid);
         }
         if (Session["CurrentControlCtrl"] != null)
-            if (Session["CurrentControlCtrl"].ToString() != "ObjectiveQuestns.ascx")
+            if (Session["CurrentControlCtrl"].ToString() != "TestObjectiveQuestns.aspx")
             {
                 Session["MemWordPrevious"] = "True";
                 Session["MemImagePrevious"] = "True";
@@ -3079,7 +3080,6 @@ public partial class Admin_ObjectiveQuestns : System.Web.UI.UserControl
     protected void btn_yes_Click(object sender, EventArgs e)
     {
         btnSubmit.Visible = false; btnPrevious.Visible = false;
-        
+
     }
-    
 }

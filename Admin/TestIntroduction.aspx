@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="TestIntroduction.aspx.cs" Inherits="Admin_TestIntroduction" %>
+﻿<%@ Page Title="" EnableEventValidation="false"  Language="C#" MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="TestIntroduction.aspx.cs" Inherits="Admin_TestIntroduction" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

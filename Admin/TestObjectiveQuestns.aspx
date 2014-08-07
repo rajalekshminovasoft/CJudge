@@ -1,10 +1,12 @@
-﻿<%@ Page Title="" Language="C#" EnableEventValidation="false" ValidateRequest="false"  MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="TakeTest.aspx.cs" Inherits="Admin_TakeTest" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/CJAdminMaster.master" AutoEventWireup="true" CodeFile="TestObjectiveQuestns.aspx.cs" Inherits="Admin_TestObjectiveQuestns" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-
-    <%--<div align="left" class="questiondisplaywindowtopspace">
+    <table width="75%" align="center">
+        <tr>
+            <td>
+                 <div align="left" class="questiondisplaywindowtopspace">
     <asp:Panel ID="pnlMain" runat="server">
            
         <table>
@@ -59,6 +61,8 @@
                             <asp:Label ID="lblA1" runat="server" Text="A" Visible="False"></asp:Label>
                         </td>
                         <td valign="top" style="text-align: left; vertical-align: middle">
+                           <%-- <asp:RadioButton ID="rbQues1Answer1" runat="server" GroupName="Q1" Visible="False" />--%>
+                            
                             <asp:RadioButton ID="rbQues1Answer1" runat="server" GroupName="Q1" Visible="False" />
                         </td>
                     </tr>
@@ -665,7 +669,7 @@
                     <tr>
                         <td>
                             &nbsp;</td>
-                        <td>  
+                        <td>
                 <asp:Button ID="btnPrevious" runat="server" onclick="ptnPrevious_Click" 
                     Text="Go to Previous Page" Width="175px" onclientclick="ResetScroll()" />
                         </td>
@@ -677,8 +681,7 @@
                           <asp:Button ID="btn_yes" runat="server" 
                     Text="Complete" onclientclick="ResetScroll()" Height="20px" OnClick="btn_yes_Click" Visible="false"  />  
 
-                          <asp:Button ID="btn_confirm" runat="server" 
-                    Text="Confirm" onclientclick="ResetScroll()" Height="20px" OnClick="btn_confirm_Click" Visible="false"   /> 
+                           
                         </td>
                     </tr>
                 </table>
@@ -781,7 +784,7 @@
                                     </Columns>
                 </asp:GridView>
                 <asp:LinqDataSource ID="LinqQuestionCount" runat="server" 
-                    ContextTypeName="CJDataClassesDataContext" 
+                    ContextTypeName="AssesmentDataClassesDataContext" 
                     Select="new (SectionName, SectionNameSub1, TestId, TestSectionId)" 
                     TableName="QuestionCounts">
                 </asp:LinqDataSource>
@@ -802,9 +805,11 @@
             </tr>
         </table>
         </asp:Panel>
-</div>--%>
-     <%-- </div>--%>
-        <%--<div align="center" class="questionpopup">
+</div>
+
+
+       <%-- </div>--%>
+        <div align="center" class="questionpopup">
             <asp:Panel ID="pnlpopup" runat="server" Visible="False" Width="300px">
                 <table class="missedquestionidpopup">
                     <tr>
@@ -837,12 +842,12 @@
                     </tr>
                 </table>
             </asp:Panel>
-        </div>--%>
+        </div>
 
 
        <%-- </div>--%>
 
-    <%--<div align="center" class="questionpopup" id="sessiontimeoutmsglayer">
+    <div align="center" class="questionpopup" id="sessiontimeoutmsglayer">
         <asp:Panel ID="pnlpopup_timer" runat="server" Visible="False" Width="500px">
             <table style="border: 5px groove #FF0066; width:100%; background-color: #9B9BBD;">
                 <tr>
@@ -889,15 +894,12 @@
                 </tr>
             </table>
         </asp:Panel>
-    </div>--%>
-
-
-
+    </div>
 
 
        <%-- </div>--%>
 
-    <%--<div align="center" class="questionpopup">
+    <div align="center" class="questionpopup">
         <asp:Panel ID="pnlpopup_previous" runat="server" Visible="False" Width="350px">
             <table style="border: 5px groove #FF0066; width:100%; background-color: #9B9BBD;">
                 <tr>
@@ -927,6 +929,9 @@
                 </tr>
             </table>
         </asp:Panel>
-    </div>--%>
+    </div>
+            </td>
+        </tr>
+    </table>
 </asp:Content>
 

@@ -481,6 +481,14 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
+	public System.Data.Linq.Table<TestBaseQuestionList_Temp> TestBaseQuestionList_Temps
+	{
+		get
+		{
+			return this.GetTable<TestBaseQuestionList_Temp>();
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddInfokitCategory")]
 	public int AddInfokitCategory([global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryId", DbType="Int")] System.Nullable<int> categoryId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryName", DbType="VarChar(250)")] string categoryName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DisplayOrder", DbType="Int")] System.Nullable<int> displayOrder, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Status", DbType="Int")] System.Nullable<int> status, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CreatedBy", DbType="Int")] System.Nullable<int> createdBy)
 	{
@@ -1032,6 +1040,20 @@ public partial class CJDataClassesDataContext : System.Data.Linq.DataContext
 	public int DeleteUserTest_TempValues([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserID", DbType="Int")] System.Nullable<int> userID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestId", DbType="Int")] System.Nullable<int> testId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TestSectionId", DbType="Int")] System.Nullable<int> testSectionId)
 	{
 		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID, testId, testSectionId);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DeleteTestBaseQuestionList_Temp")]
+	public int DeleteTestBaseQuestionList_Temp([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserID", DbType="Int")] System.Nullable<int> userID)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID);
+		return ((int)(result.ReturnValue));
+	}
+	
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AddTestBaseQuestionList_Temp")]
+	public int AddTestBaseQuestionList_Temp([global::System.Data.Linq.Mapping.ParameterAttribute(Name="QuestionID", DbType="Int")] System.Nullable<int> questionID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Question", DbType="VarChar(MAX)")] string question, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Answer", DbType="VarChar(200)")] string answer, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option1", DbType="VarChar(200)")] string option1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option2", DbType="VarChar(200)")] string option2, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option3", DbType="VarChar(200)")] string option3, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option4", DbType="VarChar(200)")] string option4, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option5", DbType="VarChar(200)")] string option5, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option6", DbType="VarChar(200)")] string option6, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option7", DbType="VarChar(200)")] string option7, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option8", DbType="VarChar(200)")] string option8, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option9", DbType="VarChar(200)")] string option9, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Option10", DbType="VarChar(200)")] string option10, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserId", DbType="Int")] System.Nullable<int> userId, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ScoringStyle", DbType="VarChar(50)")] string scoringStyle)
+	{
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), questionID, question, answer, option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, userId, scoringStyle);
 		return ((int)(result.ReturnValue));
 	}
 }
@@ -14551,6 +14573,285 @@ public partial class UserTestQuestions_Temp
 			if ((this._CreatedOn != value))
 			{
 				this._CreatedOn = value;
+			}
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TestBaseQuestionList_Temp")]
+public partial class TestBaseQuestionList_Temp
+{
+	
+	private System.Nullable<int> _QuestionID;
+	
+	private string _Question;
+	
+	private string _Answer;
+	
+	private string _Option1;
+	
+	private string _Option2;
+	
+	private string _Option3;
+	
+	private string _Option4;
+	
+	private string _Option5;
+	
+	private string _Option6;
+	
+	private string _Option7;
+	
+	private string _Option8;
+	
+	private string _Option9;
+	
+	private string _Option10;
+	
+	private System.Nullable<int> _UserID;
+	
+	private string _ScoringStyle;
+	
+	public TestBaseQuestionList_Temp()
+	{
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_QuestionID", DbType="Int")]
+	public System.Nullable<int> QuestionID
+	{
+		get
+		{
+			return this._QuestionID;
+		}
+		set
+		{
+			if ((this._QuestionID != value))
+			{
+				this._QuestionID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Question", DbType="VarChar(MAX)")]
+	public string Question
+	{
+		get
+		{
+			return this._Question;
+		}
+		set
+		{
+			if ((this._Question != value))
+			{
+				this._Question = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Answer", DbType="VarChar(200)")]
+	public string Answer
+	{
+		get
+		{
+			return this._Answer;
+		}
+		set
+		{
+			if ((this._Answer != value))
+			{
+				this._Answer = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option1", DbType="VarChar(200)")]
+	public string Option1
+	{
+		get
+		{
+			return this._Option1;
+		}
+		set
+		{
+			if ((this._Option1 != value))
+			{
+				this._Option1 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option2", DbType="VarChar(200)")]
+	public string Option2
+	{
+		get
+		{
+			return this._Option2;
+		}
+		set
+		{
+			if ((this._Option2 != value))
+			{
+				this._Option2 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option3", DbType="VarChar(200)")]
+	public string Option3
+	{
+		get
+		{
+			return this._Option3;
+		}
+		set
+		{
+			if ((this._Option3 != value))
+			{
+				this._Option3 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option4", DbType="VarChar(200)")]
+	public string Option4
+	{
+		get
+		{
+			return this._Option4;
+		}
+		set
+		{
+			if ((this._Option4 != value))
+			{
+				this._Option4 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option5", DbType="VarChar(200)")]
+	public string Option5
+	{
+		get
+		{
+			return this._Option5;
+		}
+		set
+		{
+			if ((this._Option5 != value))
+			{
+				this._Option5 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option6", DbType="VarChar(200)")]
+	public string Option6
+	{
+		get
+		{
+			return this._Option6;
+		}
+		set
+		{
+			if ((this._Option6 != value))
+			{
+				this._Option6 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option7", DbType="VarChar(200)")]
+	public string Option7
+	{
+		get
+		{
+			return this._Option7;
+		}
+		set
+		{
+			if ((this._Option7 != value))
+			{
+				this._Option7 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option8", DbType="VarChar(200)")]
+	public string Option8
+	{
+		get
+		{
+			return this._Option8;
+		}
+		set
+		{
+			if ((this._Option8 != value))
+			{
+				this._Option8 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option9", DbType="VarChar(200)")]
+	public string Option9
+	{
+		get
+		{
+			return this._Option9;
+		}
+		set
+		{
+			if ((this._Option9 != value))
+			{
+				this._Option9 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Option10", DbType="VarChar(200)")]
+	public string Option10
+	{
+		get
+		{
+			return this._Option10;
+		}
+		set
+		{
+			if ((this._Option10 != value))
+			{
+				this._Option10 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UserID", DbType="Int")]
+	public System.Nullable<int> UserID
+	{
+		get
+		{
+			return this._UserID;
+		}
+		set
+		{
+			if ((this._UserID != value))
+			{
+				this._UserID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ScoringStyle", DbType="VarChar(50)")]
+	public string ScoringStyle
+	{
+		get
+		{
+			return this._ScoringStyle;
+		}
+		set
+		{
+			if ((this._ScoringStyle != value))
+			{
+				this._ScoringStyle = value;
 			}
 		}
 	}

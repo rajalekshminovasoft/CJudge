@@ -713,6 +713,25 @@
       <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.TestBaseQuestionList_Temp" Member="TestBaseQuestionList_Temps">
+    <Type Name="TestBaseQuestionList_Temp">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Question" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Answer" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option1" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option2" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option3" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option4" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option5" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option6" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option7" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option8" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option9" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Option10" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ScoringStyle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.AddInfokitCategory" Method="AddInfokitCategory">
     <Parameter Name="CategoryId" Parameter="categoryId" Type="System.Int32" DbType="Int" />
     <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="VarChar(250)" />
@@ -1334,6 +1353,28 @@
     <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
     <Parameter Name="TestId" Parameter="testId" Type="System.Int32" DbType="Int" />
     <Parameter Name="TestSectionId" Parameter="testSectionId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteTestBaseQuestionList_Temp" Method="DeleteTestBaseQuestionList_Temp">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddTestBaseQuestionList_Temp" Method="AddTestBaseQuestionList_Temp">
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Question" Parameter="question" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="Answer" Parameter="answer" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option1" Parameter="option1" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option2" Parameter="option2" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option3" Parameter="option3" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option4" Parameter="option4" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option5" Parameter="option5" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option6" Parameter="option6" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option7" Parameter="option7" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option8" Parameter="option8" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option9" Parameter="option9" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="Option10" Parameter="option10" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ScoringStyle" Parameter="scoringStyle" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
 </Database>
