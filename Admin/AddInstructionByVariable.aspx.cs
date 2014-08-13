@@ -402,8 +402,18 @@ public partial class Admin_AddInstructionByVariable : System.Web.UI.Page
                     {
                         imagefile2 = GetImageNameWithoutSpace(FileUpload2.FileName.Trim());
                         oldfilename = Session["instructionimage2"].ToString();
-                        string imagePath = "QuestionAnswerFiles/InstructionImages/" + FileUpload2.FileName.Trim();
-                        FileUpload2.SaveAs(imagePath);
+                        string imagefilePath = FileUpload2.PostedFile.FileName;
+                        String[] strs = FileUpload2.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                        if (strs.Length > 0)
+                        {
+                            String imageFleName = strs[strs.Length - 1];
+                            String[] testImg = imageFleName.Split(new char[] { '.' });
+                            int index = testImg.Count() - 1;
+                            FileUpload2.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                        }
+
+                        //string imagePath = "QuestionAnswerFiles/InstructionImages/" + FileUpload2.FileName.Trim();
+                        //FileUpload2.SaveAs(imagePath);
                         SaveFile(FileUpload2.FileName.Trim(), oldfilename);
                         updation = true;
                     }

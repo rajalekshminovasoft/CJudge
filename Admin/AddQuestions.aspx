@@ -729,7 +729,7 @@
                                             Question<br />
                                             File</td>
                                         <td>
-                                                 <asp:FileUpload ID="FileUpload21" runat="server" />
+                                                 <asp:FileUpload ID="FileUpload21" runat="server" OnDataBinding="FileUpload21_DataBinding" />
                                           <asp:TextBox ID="txtFileName_main" runat="server"></asp:TextBox>
                                          <%--   <asp:Button ID="btnBrowse_main" runat="server" onclick="btnDeleteMemTypeImages20_Click" Text="Delete" />--%>
 
@@ -751,7 +751,7 @@
                                                             Question<br />
                                                             File (Sub)</td>
                                                         <td>
-                                                            <asp:FileUpload ID="FileUpload22" runat="server" />
+                                                            <asp:FileUpload ID="FileUpload22" runat="server" OnDataBinding="FileUpload22_DataBinding" />
                                           <asp:TextBox ID="txtFileName_sub" runat="server"></asp:TextBox>
                                                           <%--  <input ID="txtFileName_sub" runat="server" readonly="readonly" 
                                                                 style="width: 350px" type="text" /><input ID="btnBrowse_sub" 
@@ -963,8 +963,7 @@
                                         <td width="60">
                                             Answer</td>
                                         <td>
-                                            <asp:DropDownList ID="ddlOption" runat="server" AppendDataBoundItems="True" 
-                                                AutoPostBack="True" onselectedindexchanged="ddlOption_SelectedIndexChanged" 
+                                            <asp:DropDownList ID="ddlOption" runat="server" AppendDataBoundItems="True" onselectedindexchanged="ddlOption_SelectedIndexChanged" 
                                                 Width="100px">
                                                 <asp:ListItem Value="0">-- Select --</asp:ListItem>
                                             </asp:DropDownList>
@@ -1040,9 +1039,9 @@
                                 SortExpression="QuestionCode" />
                             <asp:BoundField DataField="SectionName" HeaderText="Section" 
                                 SortExpression="SectionName" />
-                            <asp:BoundField DataField="Question" HeaderText="Question  " ReadOnly="True" 
+                            <asp:BoundField DataField="Question" HeaderText="Question  " ReadOnly="True"  
                                 SortExpression="Question">
-                                <ItemStyle Wrap="False" />
+                                <ItemStyle Wrap="True" Width="20%" />
                             </asp:BoundField>
                             <asp:BoundField DataField="Answer" HeaderText="Answer  " ReadOnly="True" 
                                 SortExpression="Answer">
@@ -1066,7 +1065,7 @@
                     Width="650px">
                     <asp:GridView ID="gvwWordTypeMemQuestions" runat="server" 
                         AutoGenerateColumns="False" 
-                        onselectedindexchanged="gvwWordTypeMemQuestions_SelectedIndexChanged" AllowPaging="True" DataKeyNames="QuestionID" DataSourceID="lnqwordmemQn" EnableModelValidation="True">
+                        onselectedindexchanged="gvwWordTypeMemQuestions_SelectedIndexChanged" AllowPaging="True" DataKeyNames="QuestionID"  EnableModelValidation="True">
                         <Columns>
  <asp:CommandField SelectText="Edit" ShowSelectButton="True" />
                             <asp:BoundField DataField="QuestionCode" HeaderText="QuestionCode" 
@@ -1074,7 +1073,9 @@
                             <asp:BoundField DataField="SectionName" HeaderText="SectionName" 
                                 ReadOnly="True" SortExpression="SectionName" />
                             <asp:BoundField DataField="Question" HeaderText="Question" ReadOnly="True" 
-                                SortExpression="Question" />
+                                SortExpression="Question" >
+                                <ItemStyle Wrap="True" Width="20%" />
+                            </asp:BoundField>
                             <asp:BoundField DataField="Answer" HeaderText="Answer" ReadOnly="True" 
                                 SortExpression="Answer" />
                             <asp:BoundField DataField="DisplayDuration" HeaderText="Duration (in sec)" 
@@ -1102,7 +1103,9 @@
                             <asp:BoundField DataField="SectionName" HeaderText="SectionName" 
                                 ReadOnly="True" SortExpression="SectionName" />
                             <asp:BoundField DataField="Question" HeaderText="Question" ReadOnly="True" 
-                                SortExpression="Question" />
+                                SortExpression="Question" >
+                                <ItemStyle Wrap="True" Width="20%" />
+                            </asp:BoundField>
                             <asp:BoundField DataField="Answer" HeaderText="Answer" ReadOnly="True" 
                                 SortExpression="Answer" />
                             <asp:BoundField DataField="DisplayDuration" HeaderText="Duration (in sec)" 

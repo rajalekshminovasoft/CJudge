@@ -18,6 +18,7 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     CJDataClassesDataContext cjDataclass = new CJDataClassesDataContext();
     bool specialadmin = false;
     int OrganizationID = 0;
+    string imagefilePath;
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -45,9 +46,6 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
                     if (perassigned == false)
                     { lblMessage.Text = "Please contact your site admin to approve question types to get permissions to add questions"; return; }
                 }
-
-
-                //FillSessionslist(); 
                 FillSectionCategory();
 
                 int catindex = 0;
@@ -65,6 +63,359 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
 
                 FillAnswerOptions();
             }
+            if (FileUpload21.HasFile == true)
+            {
+                imagefilePath = FileUpload21.PostedFile.FileName;
+                String[] strs = FileUpload21.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload21.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName_main.Text = FileUpload21.FileName;
+            }
+            if (FileUpload22.HasFile == true)
+            {
+                imagefilePath = FileUpload22.PostedFile.FileName;
+                String[] strs = FileUpload22.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload22.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName_sub.Text = FileUpload22.FileName;
+            }
+            if (FileUpload23.HasFile == true)
+            {
+                imagefilePath = FileUpload23.PostedFile.FileName;
+                String[] strs = FileUpload23.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload23.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName1.Text = FileUpload23.FileName;
+            }
+            if (FileUpload24.HasFile == true)
+            {
+                imagefilePath = FileUpload24.PostedFile.FileName;
+                String[] strs = FileUpload24.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload24.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName2.Text = FileUpload24.FileName;
+            }
+            if (FileUpload25.HasFile == true)
+            {
+                imagefilePath = FileUpload25.PostedFile.FileName;
+                string imageUrl = "";
+                String[] strs = FileUpload25.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload25.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName3.Text = FileUpload25.FileName;
+            }
+            if (FileUpload26.HasFile == true)
+            {
+                imagefilePath = FileUpload26.PostedFile.FileName;
+                String[] strs = FileUpload26.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload26.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName4.Text = FileUpload26.FileName;
+            }
+            if (FileUpload27.HasFile == true)
+            {
+                imagefilePath = FileUpload27.PostedFile.FileName;
+                String[] strs = FileUpload27.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload27.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtFileName5.Text = FileUpload27.FileName;
+            }
+            if (FileUpload1.HasFile == true)
+            {
+                imagefilePath = FileUpload1.PostedFile.FileName;
+                String[] strs = FileUpload1.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload1.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeA.Text = FileUpload1.FileName;
+            }
+            if (FileUpload2.HasFile == true)
+            {
+                imagefilePath = FileUpload2.PostedFile.FileName;
+                String[] strs = FileUpload2.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload2.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeB.Text = FileUpload2.FileName;
+            }
+            if (FileUpload3.HasFile == true)
+            {
+                imagefilePath = FileUpload3.PostedFile.FileName;
+                String[] strs = FileUpload3.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload3.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeC.Text = FileUpload3.FileName;
+            }
+            if (FileUpload4.HasFile == true)
+            {
+                imagefilePath = FileUpload4.PostedFile.FileName;
+                String[] strs = FileUpload4.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload4.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeD.Text = FileUpload4.FileName;
+            }
+            if (FileUpload5.HasFile == true)
+            {
+                imagefilePath = FileUpload5.PostedFile.FileName;
+                String[] strs = FileUpload5.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload5.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeE.Text = FileUpload5.FileName;
+            }
+            if (FileUpload6.HasFile == true)
+            {
+                imagefilePath = FileUpload6.PostedFile.FileName;
+                String[] strs = FileUpload6.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload6.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeF.Text = FileUpload6.FileName;
+            }
+            if (FileUpload7.HasFile == true)
+            {
+                imagefilePath = FileUpload7.PostedFile.FileName;
+                String[] strs = FileUpload7.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload7.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeG.Text = FileUpload7.FileName;
+            }
+            if (FileUpload8.HasFile == true)
+            {
+                imagefilePath = FileUpload8.PostedFile.FileName;
+                String[] strs = FileUpload8.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload8.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeH.Text = FileUpload8.FileName;
+            }
+            if (FileUpload9.HasFile == true)
+            {
+                imagefilePath = FileUpload9.PostedFile.FileName;
+                String[] strs = FileUpload9.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload9.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeI.Text = FileUpload9.FileName;
+            }
+            if (FileUpload10.HasFile == true)
+            {
+                imagefilePath = FileUpload10.PostedFile.FileName;
+                String[] strs = FileUpload10.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload10.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeJ.Text = FileUpload10.FileName;
+            }
+            if (FileUpload11.HasFile == true)
+            {
+                imagefilePath = FileUpload11.PostedFile.FileName;
+                String[] strs = FileUpload11.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload11.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeK.Text = FileUpload11.FileName;
+            }
+            if (FileUpload12.HasFile == true)
+            {
+                imagefilePath = FileUpload12.PostedFile.FileName;
+                String[] strs = FileUpload12.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload12.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeL.Text = FileUpload12.FileName;
+            }
+            if (FileUpload13.HasFile == true)
+            {
+                imagefilePath = FileUpload13.PostedFile.FileName;
+                String[] strs = FileUpload13.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload13.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeM.Text = FileUpload13.FileName;
+            }
+            if (FileUpload14.HasFile == true)
+            {
+                imagefilePath = FileUpload14.PostedFile.FileName;
+                String[] strs = FileUpload14.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload14.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeN.Text = FileUpload14.FileName;
+            }
+            if (FileUpload15.HasFile == true)
+            {
+                imagefilePath = FileUpload15.PostedFile.FileName;
+                String[] strs = FileUpload15.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload15.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeO.Text = FileUpload15.FileName;
+            }
+            if (FileUpload16.HasFile == true)
+            {
+                imagefilePath = FileUpload16.PostedFile.FileName;
+                String[] strs = FileUpload16.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload16.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeP.Text = FileUpload16.FileName;
+            }
+            if (FileUpload17.HasFile == true)
+            {
+                imagefilePath = FileUpload17.PostedFile.FileName;
+                String[] strs = FileUpload17.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload17.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeQ.Text = FileUpload17.FileName;
+            }
+            if (FileUpload18.HasFile == true)
+            {
+                imagefilePath = FileUpload18.PostedFile.FileName;
+                String[] strs = FileUpload18.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload18.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeR.Text = FileUpload18.FileName;
+            }
+            if (FileUpload19.HasFile == true)
+            {
+                imagefilePath = FileUpload19.PostedFile.FileName;
+                String[] strs = FileUpload19.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload19.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeS.Text = FileUpload19.FileName;
+            }
+            if (FileUpload20.HasFile == true)
+            {
+                imagefilePath = FileUpload20.PostedFile.FileName;
+                String[] strs = FileUpload20.PostedFile.FileName.Split(new char[] { '\\', '\\' });
+                if (strs.Length > 0)
+                {
+                    String imageFleName = strs[strs.Length - 1];
+                    String[] testImg = imageFleName.Split(new char[] { '.' });
+                    int index = testImg.Count() - 1;
+                    FileUpload20.PostedFile.SaveAs(Server.MapPath("UploadedImages/" + imageFleName));
+                }
+                txtfilenameMemTypeT.Text = FileUpload20.FileName;
+            }
+
         }
         catch (Exception ex)
         { }
@@ -1474,6 +1825,22 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
     }
     protected void ddlOption_SelectedIndexChanged(object sender, EventArgs e)
     {
+        ////
+        //if (FileUpload21.HasFile == true)
+        //    txtFileName_main.Text = FileUpload21.FileName;
+        //if (FileUpload22.HasFile == true)
+        //    txtFileName_sub.Text = FileUpload22.FileName;
+        //if (FileUpload23.HasFile == true)
+        //    txtFileName1.Text = FileUpload23.FileName;
+        //if (FileUpload24.HasFile == true)
+        //    txtFileName2.Text = FileUpload24.FileName;
+        //if (FileUpload25.HasFile == true)
+        //    txtFileName3.Text = FileUpload25.FileName;
+        //if (FileUpload26.HasFile == true)
+        //    txtFileName4.Text = FileUpload26.FileName;
+        //if (FileUpload27.HasFile == true)
+        //    txtFileName5.Text = FileUpload27.FileName;
+        //
         if (ddlOption.SelectedIndex > 0)
             Session["optionIndex"] = ddlOption.SelectedIndex.ToString();
         else Session["optionIndex"] = null;
@@ -1571,6 +1938,7 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
 
 
     }
+
     private void SaveFile(string filename)
     {
         string sourcepath, destinationpath;
@@ -1883,17 +2251,7 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
         return Answer;
     }    
 
-
-
-
-
-
-
-
-
-
-
-
+    
     protected void btnAdd_Click(object sender, EventArgs e)
     {
         if (validateSelection() == false) return;
@@ -2625,4 +2983,18 @@ public partial class Admin_AddQuestions : System.Web.UI.Page
 
 
 
+    protected void FileUpload21_DataBinding(object sender, EventArgs e)
+    {
+        if (FileUpload21.HasFile)
+        {
+            txtFileName_main.Text = FileUpload21.FileName;
+        }
+    }
+    protected void FileUpload22_DataBinding(object sender, EventArgs e)
+    {
+        if (FileUpload22.HasFile)
+        {
+            txtFileName_sub.Text = FileUpload22.FileName;
+        }
+    }
 }

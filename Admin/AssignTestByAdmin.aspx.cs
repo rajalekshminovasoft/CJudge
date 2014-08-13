@@ -54,6 +54,9 @@ public partial class Admin_AssignTestByAdmin : System.Web.UI.Page
         if (txt_Logindate.Text != "" && txt_Logoutdate.Text != "" && txt_paydate.Text != "")
         {
             int repacc;
+            DateTime frmdate = Convert.ToDateTime(txt_Logindate.Text.Trim());
+            DateTime todate = Convert.ToDateTime(txt_Logoutdate.Text.Trim());
+            DateTime paydate = Convert.ToDateTime(txt_paydate.Text.Trim());
             if(chk_repaccess.Checked==true)
             {
                 repacc = 1;
@@ -69,7 +72,7 @@ public partial class Admin_AssignTestByAdmin : System.Web.UI.Page
                 Label Pric=(Label)item.FindControl("Price"); 
                 if (myCheckBox.Checked)
                 {
-                    cjDataclass.AddUserTestList(0, int.Parse(test.Text), int.Parse(drp_users.SelectedValue), drp_paidstatus.SelectedItem.Text, "NOTTAKEN", Convert.ToDateTime(txt_paydate.Text), repacc, Convert.ToDateTime(txt_Logindate.Text), Convert.ToDateTime(txt_Logoutdate.Text), int.Parse(Pric.Text));
+                    cjDataclass.AddUserTestList(0, int.Parse(test.Text), int.Parse(drp_users.SelectedValue), drp_paidstatus.SelectedItem.Text, "NOTTAKEN", paydate , repacc, frmdate , todate , int.Parse(Pric.Text));
                     lbl_msg.Text = "Test Assigned";
                 }
             }
